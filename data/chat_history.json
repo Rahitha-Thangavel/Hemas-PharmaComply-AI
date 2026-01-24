@@ -1,0 +1,604 @@
+{
+  "2276f7c8-94f4-417e-8b2a-bb1faae1eb94": {
+    "created_at": "2026-01-22 23:42:22",
+    "updated_at": "2026-01-22 23:46:38",
+    "title": "i need to know information abo...",
+    "messages": [
+      {
+        "role": "user",
+        "content": "i need to know information about below, Financial and Legal Notices: There are various notices related to loan defaults, legal actions, and property sales via public auction to recover loans."
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the provided gazette documents, specifically the \"Notice of Sale under Section 9 of the Recovery of Loans by Banks (Special Provisions) Act, No. 04 of 1990\", the following information is available:\n\n* A public auction is being held to recover a loan default by Gossina Baduge Amal Priyankara, the Obligor/mortgagor.\n* The loan default amount is Rupees Thirty Eight Million Two Hundred and Thirty Four Thousand Seven Hundred and Three and Cents Twenty Nine (Rs. 38,234,703.29), with further interest from 18.09.2025.\n* The capital outstanding on the Term Loan Facility as at 17.09.2025 is Rupees Thirty Three Million Six Hundred and Thirty Thousand (Rs. 33,630,000.00).\n* The property being sold is described in the Schedule, which includes an allotment of land marked Lot (further details not provided in the excerpt).\n* The auction is being conducted by B. M. R. Basnayake, and the sale is in favor of Cargills Bank PLC, bearing Registration No. PQ 00293614.\n* The mortgage bonds involved are No. 6482 dated 28.02.2020 and No. 7843 dated 20.09.2023, both attested by R. J. A. Wathsala Kumari Herath, Notary Public. \n\nSource: Notice of Sale under Section 9 of the Recovery of Loans by Banks (Special Provisions) Act, No. 04 of 1990.",
+        "sources": [
+          {
+            "document": "2025-12-12(I-I)E.pdf",
+            "page": 26,
+            "excerpt": "by the said Bond;\nIt is hereby resolved under the powers vested by Recovery \nof Loans by Banks (Special Provisions) Act, No. 4 of 1990 \nthat the rights property and premises morefully described in \nth...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-I)E.pdf",
+            "page": 26,
+            "excerpt": "by the said Bond;\nIt is hereby resolved under the powers vested by Recovery \nof Loans by Banks (Special Provisions) Act, No. 4 of 1990 \nthat the rights property and premises morefully described in \nth...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-05(I-IIB)E.pdf",
+            "page": 25,
+            "excerpt": "Notice of Sale under Section 9 of the Recovery of \nLoans by Banks (Special Provisions) Act, No. 04 of \n1990\nPUBLiC  AUCTiON\nWHEREAS  Gossina Baduge Amal Priyankara as the \nObligor/mortgagor has made d...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-05(I-IIB)E.pdf",
+            "page": 25,
+            "excerpt": "Notice of Sale under Section 9 of the Recovery of \nLoans by Banks (Special Provisions) Act, No. 04 of \n1990\nPUBLiC  AUCTiON\nWHEREAS  Gossina Baduge Amal Priyankara as the \nObligor/mortgagor has made d...",
+            "similarity": "High"
+          }
+        ],
+        "suggestions": [
+          "What is the auction date?",
+          "Is the property vacant?",
+          "Who is the obligor?"
+        ]
+      },
+      {
+        "role": "user",
+        "content": "give below information in points form, i need to know information about below, Financial and Legal Notices: There are various notices related to loan defaults, legal actions, and property sales via public auction to recover loans."
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the provided gazette documents, the following information is available regarding financial and legal notices related to loan defaults, legal actions, and property sales via public auction to recover loans:\n\n1. **Loan Default and Recovery**: A sum of Rupees Thirty Eight Million Two Hundred and Thirty Four Thousand Seven Hundred and Three and Cents Twenty Nine (Rs. 38,234,703.29) is to be recovered, with further interest from 18.09.2025, as agreed on a sum of Rupees Thirty Three Million Six Hundred and Thirty Thousand (Rs. 33,630,000.00) being the capital outstanding on the Term Loan Facility as at 17.09.2025.\n2. **Public Auction**: The properties mortgaged to the bank are to be sold by public auction by B. M. R. Basnayake and Thusith Karunarathne, Licensed Auctioneer, for the recovery of the said sums.\n3. **Legal Action**: The actions are taken under the powers vested by the Recovery of Loans by Banks (Special Provisions) Act, No. 4 of 1990, specifically Section 4 and Section 13.\n4. **Property Description**: The properties to be sold are described in the Schedule and First & Second Schedules, which include divided and defined allotments of land.\n5. **Interest and Costs**: Interest, attendant costs, statutory levies, costs of advertising, and any other charges incurred are to be recovered, less payments (if any) since received.\n\nSource: Recovery of Loans by Banks (Special Provisions) Act, No. 4 of 1990, as mentioned in the gazette documents.",
+        "sources": [
+          {
+            "document": "2025-12-12(I-I)E.pdf",
+            "page": 26,
+            "excerpt": "by the said Bond;\nIt is hereby resolved under the powers vested by Recovery \nof Loans by Banks (Special Provisions) Act, No. 4 of 1990 \nthat the rights property and premises morefully described in \nth...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-I)E.pdf",
+            "page": 26,
+            "excerpt": "by the said Bond;\nIt is hereby resolved under the powers vested by Recovery \nof Loans by Banks (Special Provisions) Act, No. 4 of 1990 \nthat the rights property and premises morefully described in \nth...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-I)E.pdf",
+            "page": 38,
+            "excerpt": "and cents Sixty-four (Rs. 5,841,128.64) from 05.06.2025 \ntill the date of payment in full on the said Mortgage Bond  \nNo. 257 and 259. \nIt is hereby Resolved:\nthat in terms of Section 4 of the Recover...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-I)E.pdf",
+            "page": 38,
+            "excerpt": "and cents Sixty-four (Rs. 5,841,128.64) from 05.06.2025 \ntill the date of payment in full on the said Mortgage Bond  \nNo. 257 and 259. \nIt is hereby Resolved:\nthat in terms of Section 4 of the Recover...",
+            "similarity": "High"
+          }
+        ],
+        "suggestions": [
+          "What is the auction date?",
+          "How many properties are listed?",
+          "What is the minimum bid?"
+        ]
+      }
+    ]
+  },
+  "3be91c63-1cab-4e87-b582-e90ec3a85be7": {
+    "created_at": "2026-01-23 01:36:24",
+    "updated_at": "2026-01-23 01:38:10",
+    "title": "give me the application post f...",
+    "messages": [
+      {
+        "role": "user",
+        "content": "give me the application post for army"
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the provided gazette documents, I cannot find information about the application process or available positions for joining the army. The context provided only discusses the process for Public Service officers to apply for new appointments and the consideration of their service for pension or gratuity purposes, as stated in the \"Minutes\" document. There is no mention of joining the army.",
+        "sources": [
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 1,
+            "excerpt": "their posts in the  Public Service. Notwithstanding anything  to the contrary \nin these Minutes the unforefeited full pay service of any member of the \nArmed Forces who is released  to accept an appoi...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-11-28(I-IIA)E.pdf",
+            "page": 1,
+            "excerpt": "their posts in the  Public Service. Notwithstanding anything  to the contrary \nin these Minutes the unforefeited full pay service of any member of the \nArmed Forces who is released  to accept an appoi...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-05(I-IIA)E.pdf",
+            "page": 1,
+            "excerpt": "their posts in the  Public Service. Notwithstanding anything  to the contrary \nin these Minutes the unforefeited full pay service of any member of the \nArmed Forces who is released  to accept an appoi...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 1,
+            "excerpt": "their posts in the  Public Service. Notwithstanding anything  to the contrary \nin these Minutes the unforefeited full pay service of any member of the \nArmed Forces who is released  to accept an appoi...",
+            "similarity": "High"
+          }
+        ],
+        "suggestions": [
+          "What are the army's recruitment documents?",
+          "Where can I find army application forms?",
+          "How to join the army then?"
+        ]
+      },
+      {
+        "role": "user",
+        "content": "What are the army's recruitment documents?"
+      },
+      {
+        "role": "assistant",
+        "content": "According to the gazette context, the required recruitment documents for the Sri Lanka Army include:\n\n1. Certificates from two referees who are personally acquainted with the candidate, one of whom should be the Principal of the last school attended by the candidate.\n2. Other relevant certificates.\n3. A photocopy of the National Identity Card.\n4. A recently obtained photograph (Passport size: 2'' x 2 1/2'') attested by the Grama Niladhari or an Attorney at-Law.\n\nThese documents should be submitted along with the application, as specified in the gazette context.",
+        "sources": [
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 6,
+            "excerpt": "certificate) who are personally acquainted with the \ncandidate, one of whom should be the Principal of \nthe last school attended by the candidate.\nh. Other relevant certificates.\ni. Further, a photoco...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 6,
+            "excerpt": "certificate) who are personally acquainted with the \ncandidate, one of whom should be the Principal of \nthe last school attended by the candidate.\nh. Other relevant certificates.\ni. Further, a photoco...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 6,
+            "excerpt": "certificate) who are personally acquainted with the \ncandidate, one of whom should be the Principal of \nthe last school attended by the candidate.\nh. Other relevant certificates.\ni. Further, a photoco...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "cards issued by the Department of Registration of Persons \nor Postmaster General and Driving licenses issued by the \nCommissioner of Motor Traffic will be accepted for this \npurpose.\n16. Applications ...",
+            "similarity": "High"
+          }
+        ],
+        "suggestions": [
+          "What is the application deadline?",
+          "Are online applications accepted?",
+          "Can referees be family members?"
+        ]
+      },
+      {
+        "role": "user",
+        "content": "What is the application deadline?"
+      },
+      {
+        "role": "assistant",
+        "content": "According to the gazette excerpt, the closing date for applications is **28.12.2025**.",
+        "sources": [
+          {
+            "document": "2025-11-28(I-IIA)E.pdf",
+            "page": 3,
+            "excerpt": "for the Post of State Counsel - 2025\" should be clearly \nindicated at the top most left corner of the envelope.  \n(a) Closing date of the calling of Applications will be \n28.12.2025.\nNote: Complaints ...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 6,
+            "excerpt": "certificate) who are personally acquainted with the \ncandidate, one of whom should be the Principal of \nthe last school attended by the candidate.\nh. Other relevant certificates.\ni. Further, a photoco...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 6,
+            "excerpt": "certificate) who are personally acquainted with the \ncandidate, one of whom should be the Principal of \nthe last school attended by the candidate.\nh. Other relevant certificates.\ni. Further, a photoco...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 6,
+            "excerpt": "certificate) who are personally acquainted with the \ncandidate, one of whom should be the Principal of \nthe last school attended by the candidate.\nh. Other relevant certificates.\ni. Further, a photoco...",
+            "similarity": "High"
+          }
+        ],
+        "suggestions": [
+          "What is the application process?",
+          "Is the date subject to change?",
+          "Where to submit applications?"
+        ]
+      }
+    ]
+  },
+  "cb08ecde-cb69-41e7-8afe-80a9148a30da": {
+    "created_at": "2026-01-23 01:39:22",
+    "updated_at": "2026-01-23 01:41:42",
+    "title": "give me the recent legal lows",
+    "messages": [
+      {
+        "role": "user",
+        "content": "give me the recent legal lows"
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the provided gazette documents, the recent legal law mentioned is the Electronic Transactions Act, No. 19 of 2006, specifically Section 9. This section states that the requirement of publishing a proclamation, rule, regulation, order, by-law, notification, or other matter in the Gazette is deemed satisfied if such publication is made. (Source: Electronic Transactions Act, No. 19 of 2006 - Section 9)",
+        "sources": [
+          {
+            "document": "2025-12-05(I-I)E.pdf",
+            "page": 0,
+            "excerpt": "both from the date of despatch of notices to Govt. Press and from the date of publication, thereby enabling those interested in the contents of such \nnotices to actively and positively participate ple...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-05(I-I)E.pdf",
+            "page": 0,
+            "excerpt": "both from the date of despatch of notices to Govt. Press and from the date of publication, thereby enabling those interested in the contents of such \nnotices to actively and positively participate ple...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-11-28(I-I)E.pdf",
+            "page": 0,
+            "excerpt": "both from the date of despatch of notices to Govt. Press and from the date of publication, thereby enabling those interested in the contents of such \nnotices to actively and positively participate ple...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-05(I-IIB)E.pdf",
+            "page": 0,
+            "excerpt": "both from the date of despatch of notices to Govt. Press and from the date of publication, thereby enabling those interested in the contents of such \nnotices to actively and positively participate ple...",
+            "similarity": "High"
+          }
+        ],
+        "suggestions": [
+          "What is the purpose of Section 9?",
+          "Is it applicable to all documents?",
+          "When did it come into effect?"
+        ]
+      }
+    ]
+  },
+  "c5ac3f88-1462-459f-ad01-7cd3a7c90fa8": {
+    "created_at": "2026-01-23 01:45:27",
+    "updated_at": "2026-01-23 01:47:27",
+    "title": "do you know any details about ...",
+    "messages": [
+      {
+        "role": "user",
+        "content": "do you know any details about the sri lanka regular army post application "
+      },
+      {
+        "role": "assistant",
+        "content": "According to the gazette context, the details about the Sri Lanka regular army post application are as follows:\n\n1. **Application Submission**: Applications should be submitted in the candidate's handwriting and forwarded to the Directorate of Personnel Administration, Sri Lanka Army Headquarters, Defence Headquarters Complex, Akuregoda Road, Battaramulla.\n2. **Deadline**: Applications should reach the above address not later than **12:00 hrs on 31.01.2026** by registered post.\n3. **Envelope Marking**: The phrase \"Application for the Post of Officer Cadet Intake 96 (Degree) in Regular Force of the Sri Lanka Army\" should be marked at the top left corner of the envelope enclosing the application.\n4. **Acceptable Identification**: Cards issued by the Department of Registration of Persons or Postmaster General and Driving licenses issued by the Commissioner of Motor Traffic will be accepted for identification purposes.\n5. **Government Service Candidates**: Applications from candidates in government service should be forwarded through the Head of the Department concerned and should bear a certificate to the effect that the candidates can be released if selected.\n\nSource: Gazette context (no specific document name mentioned)",
+        "sources": [
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "cards issued by the Department of Registration of Persons \nor Postmaster General and Driving licenses issued by the \nCommissioner of Motor Traffic will be accepted for this \npurpose.\n16. Applications ...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "cards issued by the Department of Registration of Persons \nor Postmaster General and Driving licenses issued by the \nCommissioner of Motor Traffic will be accepted for this \npurpose.\n16. Applications ...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "cards issued by the Department of Registration of Persons \nor Postmaster General and Driving licenses issued by the \nCommissioner of Motor Traffic will be accepted for this \npurpose.\n16. Applications ...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 7,
+            "excerpt": "mentioning the date of commencement and the \ndate of conclusion of the period of service may \nbe rejected without notice.\n  * A legal position means a post in which the basic \nqualification is a Unive...",
+            "similarity": "High"
+          }
+        ],
+        "suggestions": []
+      },
+      {
+        "role": "user",
+        "content": "what are the qualification need to apply this "
+      },
+      {
+        "role": "assistant",
+        "content": "According to the gazette context, to apply for the Sri Lanka regular army post, the qualifications needed are:\n\n1. Passed 4 subjects in one sitting, including Botany and Zoology, with at least a credit pass.\n   OR\n   Passed 3 subjects in one sitting (excluding the General Common Test), with at least a credit pass in Biology, under the new syllabus of the G.C.E. (A/L) Examination.\n\nAdditionally, the applicant must:\n- Be a citizen of Sri Lanka (Section III)\n- Be of excellent character (Section IV)\n- Be physically and mentally fit to serve in any part of Sri Lanka (Section VI)\n- Be a male applicant with a minimum height of 5 feet 4 inches and a chest measurement of 32 inches (Section VII)\n\nNote: These qualifications are mentioned in the context as part of the eligibility requirements for recruitment. (Source: Gazette context, Sections III, IV, VI, and VII)",
+        "sources": [
+          {
+            "document": "2025-12-05(I-IIA)E.pdf",
+            "page": 20,
+            "excerpt": "(04) subjects in one sitting, including Botany and \nZoology, with at least a credit pass.\n  OR\n  Under the new syllabus of the G.C.E. (A/L) \nExamination, candidates must have passed three \n(03) subjec...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-05(I-IIA)E.pdf",
+            "page": 20,
+            "excerpt": "(04) subjects in one sitting, including Botany and \nZoology, with at least a credit pass.\n  OR\n  Under the new syllabus of the G.C.E. (A/L) \nExamination, candidates must have passed three \n(03) subjec...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-11-28(IV-B)E.pdf",
+            "page": 8,
+            "excerpt": "subjects must have been passed in one sitting.\n\t \t Only\t in\tcases\twhere\tthere\tare\tno\tapplicants\twho\tmeet\tthe\tabove\tqualifications,\trecruitment\twill\tbe\tmade\tby\t\nreducing\tthe\tabove\tqualifications\tto\tcom...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 3,
+            "excerpt": "of training.\n \nb. Must be in good physical condition and all \nCandidates who are selected for the interview are \nrequired to pass the medical examination conducted \nby the Sri Lanka Army before enlist...",
+            "similarity": "High"
+          }
+        ],
+        "suggestions": []
+      }
+    ]
+  },
+  "6db5f223-e879-4f6b-9de2-e51e4f1fe1b3": {
+    "created_at": "2026-01-23 01:51:33",
+    "updated_at": "2026-01-23 01:56:42",
+    "title": "what are the information do yo...",
+    "messages": [
+      {
+        "role": "user",
+        "content": "what are the information do you know"
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the provided gazette documents, I can find the following information:\n\n1. A plan was made by H. S. L. Fernando, L. S., on 22.10.1970, related to Lot 38 in Plan No. 1018 and Lot 78 in Plan No. 791.\n2. R. A. P. Rajapaksha is the Company Secretary, as stated on 25.03.2024 (Source: Gazette excerpt).\n3. Financial information for the years 2023 and 2024, including:\n   - Rs. 387,956,913 and other financial figures for 2023.\n   - Compensation paid to key management personnel of the Foundation.\n4. The Foundation has transactions with related parties, specifically the Bandaranaike Academy for Leadership and Public Policy (BALPP), with a balance of Rs. 154,330,673 as at 31 December 2024, and Rs. 9,389,888 as at 31 December 2023.\n5. There were no material capital commitments, contingencies, litigations, or claims that require adjustments or disclosure in the Financial Statements as at the reporting date (Source: Gazette excerpt, sections 21 and 22).",
+        "sources": [
+          {
+            "document": "2025-12-05(I-I)E.pdf",
+            "page": 17,
+            "excerpt": "and 78 in Plan No. 791 and over Lot 38 in Plan No. 1018 \ndated 22.10.1970 made by H. S. L. Fernando, L. S.\n R. A. P. Rajapaksha,\n Company Secretary. \n25.03.2024.\n12-102...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-05(I-I)E.pdf",
+            "page": 17,
+            "excerpt": "and 78 in Plan No. 791 and over Lot 38 in Plan No. 1018 \ndated 22.10.1970 made by H. S. L. Fernando, L. S.\n R. A. P. Rajapaksha,\n Company Secretary. \n25.03.2024.\n12-102...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-I)E.pdf",
+            "page": 25,
+            "excerpt": "2023 \nRs. \n387,956,913 \n26,217,171 \n35,681,464 \n146,095,967 \n5,965,130 \n57,222,735 \nThe Foundation considers its member of the Board of Management as key management personnel of the Foundation. \nCompe...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-I)E.pdf",
+            "page": 25,
+            "excerpt": "2023 \nRs. \n387,956,913 \n26,217,171 \n35,681,464 \n146,095,967 \n5,965,130 \n57,222,735 \nThe Foundation considers its member of the Board of Management as key management personnel of the Foundation. \nCompe...",
+            "similarity": "High"
+          }
+        ],
+        "suggestions": []
+      }
+    ]
+  },
+  "a62becaa-db42-4803-b1cd-aec60df4abeb": {
+    "created_at": "2026-01-23 02:01:41",
+    "updated_at": "2026-01-23 02:02:06",
+    "title": "do you know diploma course ava...",
+    "messages": [
+      {
+        "role": "user",
+        "content": "do you know diploma course available in medical sector "
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the provided gazette documents, I cannot find information about diploma courses available in the medical sector. The context only mentions educational qualifications for various designations such as Audio Visual Unit Officer, Technical Officer (Planning), and Technical Officer (Electrical), but does not provide information about diploma courses in the medical sector.",
+        "sources": [
+          {
+            "document": "2025-12-05(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "two other subjects.\nDesignations Educational  Qualifications\nHaving passed the general \ncertificate of education Advanced \nlevel examination in one sitting \nwith two subjects from the \nscience/mathema...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-05(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "two other subjects.\nDesignations Educational  Qualifications\nHaving passed the general \ncertificate of education Advanced \nlevel examination in one sitting \nwith two subjects from the \nscience/mathema...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-05(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "with above subjects )\nTechnical \nOfficer  \n(Planning )\nHaving passed the G.C.E. \nOrdinary Level examination in \none sitting, with six subjects, \nincluding credit passes in Sinhala/\nTamil/English, Math...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-05(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "with above subjects )\nTechnical \nOfficer  \n(Planning )\nHaving passed the G.C.E. \nOrdinary Level examination in \none sitting, with six subjects, \nincluding credit passes in Sinhala/\nTamil/English, Math...",
+            "similarity": "High"
+          }
+        ],
+        "suggestions": []
+      }
+    ]
+  },
+  "470171f1-a020-43c7-9136-330f69da51c2": {
+    "created_at": "2026-01-23 12:44:27",
+    "updated_at": "2026-01-23 12:44:27",
+    "title": "New Chat - 2026-01-23 12:44:27",
+    "messages": []
+  },
+  "97e3688d-52ba-4f08-9e6e-3becc2ae765d": {
+    "created_at": "2026-01-23 12:44:27",
+    "updated_at": "2026-01-23 12:45:43",
+    "title": "give detail about regural army...",
+    "messages": [
+      {
+        "role": "user",
+        "content": "give detail about regural army post application "
+      },
+      {
+        "role": "assistant",
+        "content": "According to the gazette context, applications for the post of Officer Cadet Intake 96 (Degree) in the Regular Force of the Sri Lanka Army should be submitted as follows:\n\n1. **Eligibility**: Applications from candidates in government service should be forwarded through the Head of the Department concerned, with a certificate stating that the candidate can be released if selected (Section 16).\n2. **Application Submission**: Applications should be submitted in the candidate's handwriting, using the specified forms, and forwarded to the Directorate of Personnel Administration, Sri Lanka Army Headquarters, Defence Headquarters Complex, Akuregoda Road, Battaramulla (Section 17).\n3. **Deadline**: Applications should reach the Directorate of Personnel Administration by registered post not later than **12:00 hrs on 31.01.2026** (Section 17).\n4. **Envelope Marking**: The envelope enclosing the application should be marked with the phrase \"Application for the Post of Officer Cadet Intake 96 (Degree) in Regular Force of the Sri Lanka Army\" at the top left corner (Section 17).\n5. **Required Documents**: Candidates may be required to present themselves for interview, and documents such as cards issued by the Department of Registration of Persons, Postmaster General, and Driving licenses issued by the Commissioner of Motor Traffic will be accepted for identification purposes (Section 5:2).\n\nSource: Gazette context, Sections 16 and 17.",
+        "sources": [
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 1,
+            "excerpt": "their posts in the  Public Service. Notwithstanding anything  to the contrary \nin these Minutes the unforefeited full pay service of any member of the \nArmed Forces who is released  to accept an appoi...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-05(I-IIA)E.pdf",
+            "page": 1,
+            "excerpt": "their posts in the  Public Service. Notwithstanding anything  to the contrary \nin these Minutes the unforefeited full pay service of any member of the \nArmed Forces who is released  to accept an appoi...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 1,
+            "excerpt": "their posts in the  Public Service. Notwithstanding anything  to the contrary \nin these Minutes the unforefeited full pay service of any member of the \nArmed Forces who is released  to accept an appoi...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-11-28(I-IIA)E.pdf",
+            "page": 1,
+            "excerpt": "their posts in the  Public Service. Notwithstanding anything  to the contrary \nin these Minutes the unforefeited full pay service of any member of the \nArmed Forces who is released  to accept an appoi...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-05(I-IIA)E.pdf",
+            "page": 1,
+            "excerpt": "their posts in the  Public Service. Notwithstanding anything  to the contrary \nin these Minutes the unforefeited full pay service of any member of the \nArmed Forces who is released  to accept an appoi...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 1,
+            "excerpt": "their posts in the  Public Service. Notwithstanding anything  to the contrary \nin these Minutes the unforefeited full pay service of any member of the \nArmed Forces who is released  to accept an appoi...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "cards issued by the Department of Registration of Persons \nor Postmaster General and Driving licenses issued by the \nCommissioner of Motor Traffic will be accepted for this \npurpose.\n16. Applications ...",
+            "similarity": "High"
+          }
+        ],
+        "suggestions": [
+          "What is the age limit for applicants?",
+          "Can foreigners apply for the position?",
+          "Is experience required for applicants?"
+        ]
+      },
+      {
+        "role": "user",
+        "content": "What is the age limit for applicants?"
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the provided gazette documents, I cannot find information about the age limit for applicants for the post of Officer Cadet Intake 96 (Degree) in the Regular Force of the Sri Lanka Army.",
+        "sources": [
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "for the Post of Officer Cadet Intake 96 (Degree) in Regular \nForce of the Sri Lanka Army” should be marked at the \ntop left corner of the envelope enclosing the application. \nApplications received at ...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "for the Post of Officer Cadet Intake 96 (Degree) in Regular \nForce of the Sri Lanka Army” should be marked at the \ntop left corner of the envelope enclosing the application. \nApplications received at ...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "for the Post of Officer Cadet Intake 96 (Degree) in Regular \nForce of the Sri Lanka Army” should be marked at the \ntop left corner of the envelope enclosing the application. \nApplications received at ...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 3,
+            "excerpt": "of training.\n \nb. Must be in good physical condition and all \nCandidates who are selected for the interview are \nrequired to pass the medical examination conducted \nby the Sri Lanka Army before enlist...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 3,
+            "excerpt": "of training.\n \nb. Must be in good physical condition and all \nCandidates who are selected for the interview are \nrequired to pass the medical examination conducted \nby the Sri Lanka Army before enlist...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 3,
+            "excerpt": "of training.\n \nb. Must be in good physical condition and all \nCandidates who are selected for the interview are \nrequired to pass the medical examination conducted \nby the Sri Lanka Army before enlist...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 3,
+            "excerpt": "I fldgi : (IIw) fPoh    ‑ YS% ,xld m%cd;dka;s%l iudcjd§ ckrcfha .eiÜ m;%h ‑ 2025'12'12\nPART  I :  SEC.  (IIA) – GAZETTE OF THE DEMOCRATIC SOCIALIST REPUBLIC OF SRI LANKA – 12.12.2025\n2810\nPosts - Vaca...",
+            "similarity": "High"
+          }
+        ],
+        "suggestions": []
+      },
+      {
+        "role": "user",
+        "content": "i need more details"
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the provided gazette documents, the following details are already specified regarding the application for the post of Officer Cadet Intake 96 (Degree) in the Regular Force of the Sri Lanka Army:\n\n1. The phrase \"Application for the Post of Officer Cadet Intake 96 (Degree) in Regular Force of the Sri Lanka Army\" should be marked at the top left corner of the envelope enclosing the application.\n2. Applications should be submitted in the candidate's handwriting.\n3. Applications should be forwarded to the Directorate of Personnel Administration, Sri Lanka Army Headquarters, Defence Headquarters Complex, Akuregoda Road, Battaramulla.\n4. The deadline for submitting applications is 12:00 hrs on 31.01.2026 by registered post.\n5. Candidates in government service should forward their applications through the Head of the Department concerned, with a certificate stating that they can be released if selected.\n\nTo provide a complete answer, additional details that might be needed include:\n- Eligibility criteria (e.g., age, education, physical requirements)\n- Required documents to be attached with the application\n- The format of the application form\n- Contact information for inquiries or clarification\n\nHowever, based on the provided gazette documents, I cannot find information about these additional details.",
+        "sources": [
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "for the Post of Officer Cadet Intake 96 (Degree) in Regular \nForce of the Sri Lanka Army” should be marked at the \ntop left corner of the envelope enclosing the application. \nApplications received at ...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "for the Post of Officer Cadet Intake 96 (Degree) in Regular \nForce of the Sri Lanka Army” should be marked at the \ntop left corner of the envelope enclosing the application. \nApplications received at ...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "for the Post of Officer Cadet Intake 96 (Degree) in Regular \nForce of the Sri Lanka Army” should be marked at the \ntop left corner of the envelope enclosing the application. \nApplications received at ...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "cards issued by the Department of Registration of Persons \nor Postmaster General and Driving licenses issued by the \nCommissioner of Motor Traffic will be accepted for this \npurpose.\n16. Applications ...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "cards issued by the Department of Registration of Persons \nor Postmaster General and Driving licenses issued by the \nCommissioner of Motor Traffic will be accepted for this \npurpose.\n16. Applications ...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 5,
+            "excerpt": "cards issued by the Department of Registration of Persons \nor Postmaster General and Driving licenses issued by the \nCommissioner of Motor Traffic will be accepted for this \npurpose.\n16. Applications ...",
+            "similarity": "High"
+          },
+          {
+            "document": "2025-12-12(I-IIA)E.pdf",
+            "page": 3,
+            "excerpt": "I fldgi : (IIw) fPoh    ‑ YS% ,xld m%cd;dka;s%l iudcjd§ ckrcfha .eiÜ m;%h ‑ 2025'12'12\nPART  I :  SEC.  (IIA) – GAZETTE OF THE DEMOCRATIC SOCIALIST REPUBLIC OF SRI LANKA – 12.12.2025\n2810\nPosts - Vaca...",
+            "similarity": "High"
+          }
+        ],
+        "suggestions": [
+          "What are the eligibility criteria for the post?",
+          "What documents are required with the application?",
+          "How to contact for inquiries?"
+        ]
+      }
+    ]
+  },
+  "d1184152-1c23-4b87-907d-4934c458f5a7": {
+    "created_at": "2026-01-23 12:46:02",
+    "updated_at": "2026-01-23 12:46:02",
+    "title": "New Chat - 2026-01-23 12:46:02",
+    "messages": []
+  }
+}
