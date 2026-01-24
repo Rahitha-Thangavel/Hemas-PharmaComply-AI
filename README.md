@@ -112,6 +112,3 @@ gazette-chatbot/
 *   **L.J. Thilukshika** ([@ThilukshikaLJ](https://github.com/ThilukshikaLJ))
 *   **S. Thushanthi** ([@Thushanthi124](https://github.com/Thushanthi124))
 
-## 📄 License
-
-[MIT License](LICENSE)
