@@ -1,0 +1,32 @@
+llm_provider: groq
+
+groq:
+  model: llama-3.3-70b-versatile
+  temperature: 0.1
+  max_tokens: 1024
+
+openai:
+  model: gpt-3.5-turbo
+  temperature: 0.1
+  max_tokens: 1024
+
+ollama:
+  model: llama3.2:3b
+  temperature: 0.1
+
+embeddings:
+  model: all-MiniLM-L6-v2
+
+chunking:
+  chunk_size: 1000
+  chunk_overlap: 200
+
+retrieval:
+  top_k: 7
+  # similarity_threshold: 0.7
+
+paths:
+  data_dir: ./data
+  vector_store: ./vector_store
+
+auto_load: true
