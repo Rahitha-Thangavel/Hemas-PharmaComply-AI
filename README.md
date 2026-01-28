@@ -98,6 +98,9 @@ gazette-chatbot/
 ├── requirements_fixed.txt  # Project dependencies
 └── README.md               # This file
 ```
+## Project Demo
+
+https://github.com/user-attachments/assets/2d644518-00a3-482f-baaa-d79572ee16cf
 
 ## 🧩 Troubleshooting
 
