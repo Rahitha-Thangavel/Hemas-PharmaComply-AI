@@ -158,16 +158,9 @@ class HemasPharmaComplyAI:
             self.total_tokens += len(question) + len(answer)
             query_time = time.time() - start_time
             
-            suggestions = self._generate_followup_questions(answer)
-            
-            sources = []
-            if 'source_documents' in result:
-                for doc in result['source_documents']:
-                    sources.append({
-                        "document": doc.metadata.get('source', 'Unknown'),
-                        "page": doc.metadata.get('page', 'N/A'),
-                        "excerpt": doc.page_content[:200] + "...",
-                    })
+            show_sources = self._should_show_sources(question, answer)
+            suggestions = self._generate_followup_questions(answer) if show_sources else []
+            sources = self._extract_sources(result) if show_sources else []
             
             return {
                 "answer": answer,
@@ -222,15 +215,9 @@ class HemasPharmaComplyAI:
                     self.query_count += 1
                     self.total_tokens += len(question) + len(answer_accumulated)
                     
-                    suggestions = self._generate_followup_questions(item['answer'])
-                    sources = []
-                    if 'source_documents' in item:
-                        for doc in item['source_documents']:
-                            sources.append({
-                                "document": doc.metadata.get('source', 'Unknown'),
-                                "page": doc.metadata.get('page', 'N/A'),
-                                "excerpt": doc.page_content[:200] + "...",
-                            })
+                    show_sources = self._should_show_sources(question, item['answer'])
+                    suggestions = self._generate_followup_questions(item['answer']) if show_sources else []
+                    sources = self._extract_sources(item) if show_sources else []
                             
                     yield {
                         "type": "final",
@@ -267,3 +254,41 @@ class HemasPharmaComplyAI:
             return final_questions[:3]
         except:
             return []
+
+    def _extract_sources(self, result):
+        sources = []
+        seen = set()
+
+        for doc in result.get('source_documents', []):
+            document = doc.metadata.get('source', 'Unknown')
+            page = doc.metadata.get('page', 'N/A')
+            excerpt = doc.page_content[:200].strip()
+            key = (document, page, excerpt)
+
+            if key in seen:
+                continue
+
+            seen.add(key)
+            sources.append({
+                "document": document,
+                "page": page,
+                "excerpt": f"{excerpt}..." if excerpt else "No excerpt available."
+            })
+
+        return sources
+
+    def _should_show_sources(self, question, answer):
+        normalized_question = (question or "").strip().lower()
+        normalized_answer = (answer or "").strip().lower()
+
+        greeting_inputs = {"hi", "hello", "hey", "good morning", "good afternoon", "good evening"}
+        refusal_markers = (
+            "i can only answer questions about nmra pharmaceutical price regulations",
+            "i cannot find information about",
+            "hello. i am hemas pharmacomply ai."
+        )
+
+        if normalized_question in greeting_inputs:
+            return False
+
+        return not any(marker in normalized_answer for marker in refusal_markers)

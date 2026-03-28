@@ -1,7 +1,6 @@
 import streamlit as st
 import yaml
 from pathlib import Path
-from services.history_manager import HistoryManager
 
 def render_sidebar():
     # Inject Custom CSS for Premium Design (Sidebar and Global overrides)
