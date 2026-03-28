@@ -1,553 +1,7 @@
 {
-  "2276f7c8-94f4-417e-8b2a-bb1faae1eb94": {
-    "created_at": "2026-01-22 23:42:22",
-    "updated_at": "2026-01-22 23:46:38",
-    "title": "i need to know information abo...",
-    "messages": [
-      {
-        "role": "user",
-        "content": "i need to know information about below, Financial and Legal Notices: There are various notices related to loan defaults, legal actions, and property sales via public auction to recover loans."
-      },
-      {
-        "role": "assistant",
-        "content": "Based on the provided gazette documents, specifically the \"Notice of Sale under Section 9 of the Recovery of Loans by Banks (Special Provisions) Act, No. 04 of 1990\", the following information is available:\n\n* A public auction is being held to recover a loan default by Gossina Baduge Amal Priyankara, the Obligor/mortgagor.\n* The loan default amount is Rupees Thirty Eight Million Two Hundred and Thirty Four Thousand Seven Hundred and Three and Cents Twenty Nine (Rs. 38,234,703.29), with further interest from 18.09.2025.\n* The capital outstanding on the Term Loan Facility as at 17.09.2025 is Rupees Thirty Three Million Six Hundred and Thirty Thousand (Rs. 33,630,000.00).\n* The property being sold is described in the Schedule, which includes an allotment of land marked Lot (further details not provided in the excerpt).\n* The auction is being conducted by B. M. R. Basnayake, and the sale is in favor of Cargills Bank PLC, bearing Registration No. PQ 00293614.\n* The mortgage bonds involved are No. 6482 dated 28.02.2020 and No. 7843 dated 20.09.2023, both attested by R. J. A. Wathsala Kumari Herath, Notary Public. \n\nSource: Notice of Sale under Section 9 of the Recovery of Loans by Banks (Special Provisions) Act, No. 04 of 1990.",
-        "sources": [
-          {
-            "document": "2025-12-12(I-I)E.pdf",
-            "page": 26,
-            "excerpt": "by the said Bond;\nIt is hereby resolved under the powers vested by Recovery \nof Loans by Banks (Special Provisions) Act, No. 4 of 1990 \nthat the rights property and premises morefully described in \nth...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-I)E.pdf",
-            "page": 26,
-            "excerpt": "by the said Bond;\nIt is hereby resolved under the powers vested by Recovery \nof Loans by Banks (Special Provisions) Act, No. 4 of 1990 \nthat the rights property and premises morefully described in \nth...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-05(I-IIB)E.pdf",
-            "page": 25,
-            "excerpt": "Notice of Sale under Section 9 of the Recovery of \nLoans by Banks (Special Provisions) Act, No. 04 of \n1990\nPUBLiC  AUCTiON\nWHEREAS  Gossina Baduge Amal Priyankara as the \nObligor/mortgagor has made d...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-05(I-IIB)E.pdf",
-            "page": 25,
-            "excerpt": "Notice of Sale under Section 9 of the Recovery of \nLoans by Banks (Special Provisions) Act, No. 04 of \n1990\nPUBLiC  AUCTiON\nWHEREAS  Gossina Baduge Amal Priyankara as the \nObligor/mortgagor has made d...",
-            "similarity": "High"
-          }
-        ],
-        "suggestions": [
-          "What is the auction date?",
-          "Is the property vacant?",
-          "Who is the obligor?"
-        ]
-      },
-      {
-        "role": "user",
-        "content": "give below information in points form, i need to know information about below, Financial and Legal Notices: There are various notices related to loan defaults, legal actions, and property sales via public auction to recover loans."
-      },
-      {
-        "role": "assistant",
-        "content": "Based on the provided gazette documents, the following information is available regarding financial and legal notices related to loan defaults, legal actions, and property sales via public auction to recover loans:\n\n1. **Loan Default and Recovery**: A sum of Rupees Thirty Eight Million Two Hundred and Thirty Four Thousand Seven Hundred and Three and Cents Twenty Nine (Rs. 38,234,703.29) is to be recovered, with further interest from 18.09.2025, as agreed on a sum of Rupees Thirty Three Million Six Hundred and Thirty Thousand (Rs. 33,630,000.00) being the capital outstanding on the Term Loan Facility as at 17.09.2025.\n2. **Public Auction**: The properties mortgaged to the bank are to be sold by public auction by B. M. R. Basnayake and Thusith Karunarathne, Licensed Auctioneer, for the recovery of the said sums.\n3. **Legal Action**: The actions are taken under the powers vested by the Recovery of Loans by Banks (Special Provisions) Act, No. 4 of 1990, specifically Section 4 and Section 13.\n4. **Property Description**: The properties to be sold are described in the Schedule and First & Second Schedules, which include divided and defined allotments of land.\n5. **Interest and Costs**: Interest, attendant costs, statutory levies, costs of advertising, and any other charges incurred are to be recovered, less payments (if any) since received.\n\nSource: Recovery of Loans by Banks (Special Provisions) Act, No. 4 of 1990, as mentioned in the gazette documents.",
-        "sources": [
-          {
-            "document": "2025-12-12(I-I)E.pdf",
-            "page": 26,
-            "excerpt": "by the said Bond;\nIt is hereby resolved under the powers vested by Recovery \nof Loans by Banks (Special Provisions) Act, No. 4 of 1990 \nthat the rights property and premises morefully described in \nth...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-I)E.pdf",
-            "page": 26,
-            "excerpt": "by the said Bond;\nIt is hereby resolved under the powers vested by Recovery \nof Loans by Banks (Special Provisions) Act, No. 4 of 1990 \nthat the rights property and premises morefully described in \nth...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-I)E.pdf",
-            "page": 38,
-            "excerpt": "and cents Sixty-four (Rs. 5,841,128.64) from 05.06.2025 \ntill the date of payment in full on the said Mortgage Bond  \nNo. 257 and 259. \nIt is hereby Resolved:\nthat in terms of Section 4 of the Recover...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-I)E.pdf",
-            "page": 38,
-            "excerpt": "and cents Sixty-four (Rs. 5,841,128.64) from 05.06.2025 \ntill the date of payment in full on the said Mortgage Bond  \nNo. 257 and 259. \nIt is hereby Resolved:\nthat in terms of Section 4 of the Recover...",
-            "similarity": "High"
-          }
-        ],
-        "suggestions": [
-          "What is the auction date?",
-          "How many properties are listed?",
-          "What is the minimum bid?"
-        ]
-      }
-    ]
-  },
-  "3be91c63-1cab-4e87-b582-e90ec3a85be7": {
-    "created_at": "2026-01-23 01:36:24",
-    "updated_at": "2026-01-23 01:38:10",
-    "title": "give me the application post f...",
-    "messages": [
-      {
-        "role": "user",
-        "content": "give me the application post for army"
-      },
-      {
-        "role": "assistant",
-        "content": "Based on the provided gazette documents, I cannot find information about the application process or available positions for joining the army. The context provided only discusses the process for Public Service officers to apply for new appointments and the consideration of their service for pension or gratuity purposes, as stated in the \"Minutes\" document. There is no mention of joining the army.",
-        "sources": [
-          {
-            "document": "2025-12-12(I-IIA)E.pdf",
-            "page": 1,
-            "excerpt": "their posts in the  Public Service. Notwithstanding anything  to the contrary \nin these Minutes the unforefeited full pay service of any member of the \nArmed Forces who is released  to accept an appoi...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-11-28(I-IIA)E.pdf",
-            "page": 1,
-            "excerpt": "their posts in the  Public Service. Notwithstanding anything  to the contrary \nin these Minutes the unforefeited full pay service of any member of the \nArmed Forces who is released  to accept an appoi...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-05(I-IIA)E.pdf",
-            "page": 1,
-            "excerpt": "their posts in the  Public Service. Notwithstanding anything  to the contrary \nin these Minutes the unforefeited full pay service of any member of the \nArmed Forces who is released  to accept an appoi...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-IIA)E.pdf",
-            "page": 1,
-            "excerpt": "their posts in the  Public Service. Notwithstanding anything  to the contrary \nin these Minutes the unforefeited full pay service of any member of the \nArmed Forces who is released  to accept an appoi...",
-            "similarity": "High"
-          }
-        ],
-        "suggestions": [
-          "What are the army's recruitment documents?",
-          "Where can I find army application forms?",
-          "How to join the army then?"
-        ]
-      },
-      {
-        "role": "user",
-        "content": "What are the army's recruitment documents?"
-      },
-      {
-        "role": "assistant",
-        "content": "According to the gazette context, the required recruitment documents for the Sri Lanka Army include:\n\n1. Certificates from two referees who are personally acquainted with the candidate, one of whom should be the Principal of the last school attended by the candidate.\n2. Other relevant certificates.\n3. A photocopy of the National Identity Card.\n4. A recently obtained photograph (Passport size: 2'' x 2 1/2'') attested by the Grama Niladhari or an Attorney at-Law.\n\nThese documents should be submitted along with the application, as specified in the gazette context.",
-        "sources": [
-          {
-            "document": "2025-12-12(I-IIA)E.pdf",
-            "page": 6,
-            "excerpt": "certificate) who are personally acquainted with the \ncandidate, one of whom should be the Principal of \nthe last school attended by the candidate.\nh. Other relevant certificates.\ni. Further, a photoco...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-IIA)E.pdf",
-            "page": 6,
-            "excerpt": "certificate) who are personally acquainted with the \ncandidate, one of whom should be the Principal of \nthe last school attended by the candidate.\nh. Other relevant certificates.\ni. Further, a photoco...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-IIA)E.pdf",
-            "page": 6,
-            "excerpt": "certificate) who are personally acquainted with the \ncandidate, one of whom should be the Principal of \nthe last school attended by the candidate.\nh. Other relevant certificates.\ni. Further, a photoco...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-IIA)E.pdf",
-            "page": 5,
-            "excerpt": "cards issued by the Department of Registration of Persons \nor Postmaster General and Driving licenses issued by the \nCommissioner of Motor Traffic will be accepted for this \npurpose.\n16. Applications ...",
-            "similarity": "High"
-          }
-        ],
-        "suggestions": [
-          "What is the application deadline?",
-          "Are online applications accepted?",
-          "Can referees be family members?"
-        ]
-      },
-      {
-        "role": "user",
-        "content": "What is the application deadline?"
-      },
-      {
-        "role": "assistant",
-        "content": "According to the gazette excerpt, the closing date for applications is **28.12.2025**.",
-        "sources": [
-          {
-            "document": "2025-11-28(I-IIA)E.pdf",
-            "page": 3,
-            "excerpt": "for the Post of State Counsel - 2025\" should be clearly \nindicated at the top most left corner of the envelope.  \n(a) Closing date of the calling of Applications will be \n28.12.2025.\nNote: Complaints ...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-IIA)E.pdf",
-            "page": 6,
-            "excerpt": "certificate) who are personally acquainted with the \ncandidate, one of whom should be the Principal of \nthe last school attended by the candidate.\nh. Other relevant certificates.\ni. Further, a photoco...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-IIA)E.pdf",
-            "page": 6,
-            "excerpt": "certificate) who are personally acquainted with the \ncandidate, one of whom should be the Principal of \nthe last school attended by the candidate.\nh. Other relevant certificates.\ni. Further, a photoco...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-IIA)E.pdf",
-            "page": 6,
-            "excerpt": "certificate) who are personally acquainted with the \ncandidate, one of whom should be the Principal of \nthe last school attended by the candidate.\nh. Other relevant certificates.\ni. Further, a photoco...",
-            "similarity": "High"
-          }
-        ],
-        "suggestions": [
-          "What is the application process?",
-          "Is the date subject to change?",
-          "Where to submit applications?"
-        ]
-      }
-    ]
-  },
-  "cb08ecde-cb69-41e7-8afe-80a9148a30da": {
-    "created_at": "2026-01-23 01:39:22",
-    "updated_at": "2026-01-23 01:41:42",
-    "title": "give me the recent legal lows",
-    "messages": [
-      {
-        "role": "user",
-        "content": "give me the recent legal lows"
-      },
-      {
-        "role": "assistant",
-        "content": "Based on the provided gazette documents, the recent legal law mentioned is the Electronic Transactions Act, No. 19 of 2006, specifically Section 9. This section states that the requirement of publishing a proclamation, rule, regulation, order, by-law, notification, or other matter in the Gazette is deemed satisfied if such publication is made. (Source: Electronic Transactions Act, No. 19 of 2006 - Section 9)",
-        "sources": [
-          {
-            "document": "2025-12-05(I-I)E.pdf",
-            "page": 0,
-            "excerpt": "both from the date of despatch of notices to Govt. Press and from the date of publication, thereby enabling those interested in the contents of such \nnotices to actively and positively participate ple...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-05(I-I)E.pdf",
-            "page": 0,
-            "excerpt": "both from the date of despatch of notices to Govt. Press and from the date of publication, thereby enabling those interested in the contents of such \nnotices to actively and positively participate ple...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-11-28(I-I)E.pdf",
-            "page": 0,
-            "excerpt": "both from the date of despatch of notices to Govt. Press and from the date of publication, thereby enabling those interested in the contents of such \nnotices to actively and positively participate ple...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-05(I-IIB)E.pdf",
-            "page": 0,
-            "excerpt": "both from the date of despatch of notices to Govt. Press and from the date of publication, thereby enabling those interested in the contents of such \nnotices to actively and positively participate ple...",
-            "similarity": "High"
-          }
-        ],
-        "suggestions": [
-          "What is the purpose of Section 9?",
-          "Is it applicable to all documents?",
-          "When did it come into effect?"
-        ]
-      }
-    ]
-  },
-  "c5ac3f88-1462-459f-ad01-7cd3a7c90fa8": {
-    "created_at": "2026-01-23 01:45:27",
-    "updated_at": "2026-01-23 01:47:27",
-    "title": "do you know any details about ...",
-    "messages": [
-      {
-        "role": "user",
-        "content": "do you know any details about the sri lanka regular army post application "
-      },
-      {
-        "role": "assistant",
-        "content": "According to the gazette context, the details about the Sri Lanka regular army post application are as follows:\n\n1. **Application Submission**: Applications should be submitted in the candidate's handwriting and forwarded to the Directorate of Personnel Administration, Sri Lanka Army Headquarters, Defence Headquarters Complex, Akuregoda Road, Battaramulla.\n2. **Deadline**: Applications should reach the above address not later than **12:00 hrs on 31.01.2026** by registered post.\n3. **Envelope Marking**: The phrase \"Application for the Post of Officer Cadet Intake 96 (Degree) in Regular Force of the Sri Lanka Army\" should be marked at the top left corner of the envelope enclosing the application.\n4. **Acceptable Identification**: Cards issued by the Department of Registration of Persons or Postmaster General and Driving licenses issued by the Commissioner of Motor Traffic will be accepted for identification purposes.\n5. **Government Service Candidates**: Applications from candidates in government service should be forwarded through the Head of the Department concerned and should bear a certificate to the effect that the candidates can be released if selected.\n\nSource: Gazette context (no specific document name mentioned)",
-        "sources": [
-          {
-            "document": "2025-12-12(I-IIA)E.pdf",
-            "page": 5,
-            "excerpt": "cards issued by the Department of Registration of Persons \nor Postmaster General and Driving licenses issued by the \nCommissioner of Motor Traffic will be accepted for this \npurpose.\n16. Applications ...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-IIA)E.pdf",
-            "page": 5,
-            "excerpt": "cards issued by the Department of Registration of Persons \nor Postmaster General and Driving licenses issued by the \nCommissioner of Motor Traffic will be accepted for this \npurpose.\n16. Applications ...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-IIA)E.pdf",
-            "page": 5,
-            "excerpt": "cards issued by the Department of Registration of Persons \nor Postmaster General and Driving licenses issued by the \nCommissioner of Motor Traffic will be accepted for this \npurpose.\n16. Applications ...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-IIA)E.pdf",
-            "page": 7,
-            "excerpt": "mentioning the date of commencement and the \ndate of conclusion of the period of service may \nbe rejected without notice.\n  * A legal position means a post in which the basic \nqualification is a Unive...",
-            "similarity": "High"
-          }
-        ],
-        "suggestions": []
-      },
-      {
-        "role": "user",
-        "content": "what are the qualification need to apply this "
-      },
-      {
-        "role": "assistant",
-        "content": "According to the gazette context, to apply for the Sri Lanka regular army post, the qualifications needed are:\n\n1. Passed 4 subjects in one sitting, including Botany and Zoology, with at least a credit pass.\n   OR\n   Passed 3 subjects in one sitting (excluding the General Common Test), with at least a credit pass in Biology, under the new syllabus of the G.C.E. (A/L) Examination.\n\nAdditionally, the applicant must:\n- Be a citizen of Sri Lanka (Section III)\n- Be of excellent character (Section IV)\n- Be physically and mentally fit to serve in any part of Sri Lanka (Section VI)\n- Be a male applicant with a minimum height of 5 feet 4 inches and a chest measurement of 32 inches (Section VII)\n\nNote: These qualifications are mentioned in the context as part of the eligibility requirements for recruitment. (Source: Gazette context, Sections III, IV, VI, and VII)",
-        "sources": [
-          {
-            "document": "2025-12-05(I-IIA)E.pdf",
-            "page": 20,
-            "excerpt": "(04) subjects in one sitting, including Botany and \nZoology, with at least a credit pass.\n  OR\n  Under the new syllabus of the G.C.E. (A/L) \nExamination, candidates must have passed three \n(03) subjec...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-05(I-IIA)E.pdf",
-            "page": 20,
-            "excerpt": "(04) subjects in one sitting, including Botany and \nZoology, with at least a credit pass.\n  OR\n  Under the new syllabus of the G.C.E. (A/L) \nExamination, candidates must have passed three \n(03) subjec...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-11-28(IV-B)E.pdf",
-            "page": 8,
-            "excerpt": "subjects must have been passed in one sitting.\n\t \t Only\t in\tcases\twhere\tthere\tare\tno\tapplicants\twho\tmeet\tthe\tabove\tqualifications,\trecruitment\twill\tbe\tmade\tby\t\nreducing\tthe\tabove\tqualifications\tto\tcom...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-IIA)E.pdf",
-            "page": 3,
-            "excerpt": "of training.\n \nb. Must be in good physical condition and all \nCandidates who are selected for the interview are \nrequired to pass the medical examination conducted \nby the Sri Lanka Army before enlist...",
-            "similarity": "High"
-          }
-        ],
-        "suggestions": []
-      }
-    ]
-  },
-  "6db5f223-e879-4f6b-9de2-e51e4f1fe1b3": {
-    "created_at": "2026-01-23 01:51:33",
-    "updated_at": "2026-01-23 01:56:42",
-    "title": "what are the information do yo...",
-    "messages": [
-      {
-        "role": "user",
-        "content": "what are the information do you know"
-      },
-      {
-        "role": "assistant",
-        "content": "Based on the provided gazette documents, I can find the following information:\n\n1. A plan was made by H. S. L. Fernando, L. S., on 22.10.1970, related to Lot 38 in Plan No. 1018 and Lot 78 in Plan No. 791.\n2. R. A. P. Rajapaksha is the Company Secretary, as stated on 25.03.2024 (Source: Gazette excerpt).\n3. Financial information for the years 2023 and 2024, including:\n   - Rs. 387,956,913 and other financial figures for 2023.\n   - Compensation paid to key management personnel of the Foundation.\n4. The Foundation has transactions with related parties, specifically the Bandaranaike Academy for Leadership and Public Policy (BALPP), with a balance of Rs. 154,330,673 as at 31 December 2024, and Rs. 9,389,888 as at 31 December 2023.\n5. There were no material capital commitments, contingencies, litigations, or claims that require adjustments or disclosure in the Financial Statements as at the reporting date (Source: Gazette excerpt, sections 21 and 22).",
-        "sources": [
-          {
-            "document": "2025-12-05(I-I)E.pdf",
-            "page": 17,
-            "excerpt": "and 78 in Plan No. 791 and over Lot 38 in Plan No. 1018 \ndated 22.10.1970 made by H. S. L. Fernando, L. S.\n R. A. P. Rajapaksha,\n Company Secretary. \n25.03.2024.\n12-102...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-05(I-I)E.pdf",
-            "page": 17,
-            "excerpt": "and 78 in Plan No. 791 and over Lot 38 in Plan No. 1018 \ndated 22.10.1970 made by H. S. L. Fernando, L. S.\n R. A. P. Rajapaksha,\n Company Secretary. \n25.03.2024.\n12-102...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-I)E.pdf",
-            "page": 25,
-            "excerpt": "2023 \nRs. \n387,956,913 \n26,217,171 \n35,681,464 \n146,095,967 \n5,965,130 \n57,222,735 \nThe Foundation considers its member of the Board of Management as key management personnel of the Foundation. \nCompe...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-I)E.pdf",
-            "page": 25,
-            "excerpt": "2023 \nRs. \n387,956,913 \n26,217,171 \n35,681,464 \n146,095,967 \n5,965,130 \n57,222,735 \nThe Foundation considers its member of the Board of Management as key management personnel of the Foundation. \nCompe...",
-            "similarity": "High"
-          }
-        ],
-        "suggestions": []
-      }
-    ]
-  },
-  "a62becaa-db42-4803-b1cd-aec60df4abeb": {
-    "created_at": "2026-01-23 02:01:41",
-    "updated_at": "2026-01-23 02:02:06",
-    "title": "do you know diploma course ava...",
-    "messages": [
-      {
-        "role": "user",
-        "content": "do you know diploma course available in medical sector "
-      },
-      {
-        "role": "assistant",
-        "content": "Based on the provided gazette documents, I cannot find information about diploma courses available in the medical sector. The context only mentions educational qualifications for various designations such as Audio Visual Unit Officer, Technical Officer (Planning), and Technical Officer (Electrical), but does not provide information about diploma courses in the medical sector.",
-        "sources": [
-          {
-            "document": "2025-12-05(I-IIA)E.pdf",
-            "page": 5,
-            "excerpt": "two other subjects.\nDesignations Educational  Qualifications\nHaving passed the general \ncertificate of education Advanced \nlevel examination in one sitting \nwith two subjects from the \nscience/mathema...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-05(I-IIA)E.pdf",
-            "page": 5,
-            "excerpt": "two other subjects.\nDesignations Educational  Qualifications\nHaving passed the general \ncertificate of education Advanced \nlevel examination in one sitting \nwith two subjects from the \nscience/mathema...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-05(I-IIA)E.pdf",
-            "page": 5,
-            "excerpt": "with above subjects )\nTechnical \nOfficer  \n(Planning )\nHaving passed the G.C.E. \nOrdinary Level examination in \none sitting, with six subjects, \nincluding credit passes in Sinhala/\nTamil/English, Math...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-05(I-IIA)E.pdf",
-            "page": 5,
-            "excerpt": "with above subjects )\nTechnical \nOfficer  \n(Planning )\nHaving passed the G.C.E. \nOrdinary Level examination in \none sitting, with six subjects, \nincluding credit passes in Sinhala/\nTamil/English, Math...",
-            "similarity": "High"
-          }
-        ],
-        "suggestions": []
-      }
-    ]
-  },
-  "470171f1-a020-43c7-9136-330f69da51c2": {
-    "created_at": "2026-01-23 12:44:27",
-    "updated_at": "2026-01-23 12:44:27",
-    "title": "New Chat - 2026-01-23 12:44:27",
-    "messages": []
-  },
-  "1b80e240-535f-41e9-99b7-4adaaf09a705": {
-    "created_at": "2026-03-27 00:07:38",
-    "updated_at": "2026-03-27 00:07:46",
-    "title": "i need to know information abo...",
-    "messages": [
-      {
-        "role": "user",
-        "content": "i need to know information about below, Financial and Legal Notices: There are various notices related to loan defaults, legal actions, and property sales via public auction to recover loans."
-      },
-      {
-        "role": "assistant",
-        "content": "Based on the provided gazette documents, there are several notices related to loan defaults and property sales via public auction to recover loans. \n\nSpecifically, the notices mention the following:\n\n1. **Recovery of Loans by Banks (Special Provisions) Act, No. 4 of 1990**: This act is cited in multiple notices as the basis for the recovery of loans and the sale of properties via public auction.\n2. **Loan Defaults**: Several individuals and companies, including Gossina Baduge Amal Priyankara, Ahamed Mohamed Riffai, and OLYMPUS CONSTRUCTION (PRIVATE) LIMITED, have made default in repayment of loans.\n3. **Properties for Sale**: Various properties are being sold via public auction to recover loans, including land parcels and premises mortgaged to banks such as Cargills Bank PLC, Seylan Bank PLC, and Commercial Bank of Ceylon PLC.\n4. **Auction Details**: The notices provide details of the auctions, including the dates, times, and locations, as well as the contact information of the licensed auctioneers and the banks involved.\n\nSome specific examples of notices include:\n\n* A notice for the sale of a property mortgaged to Cargills Bank PLC, with a total sum of Rupees 38,234,703.29 due for recovery (Source: Notice of Sale under Section 9 of the Recovery of Loans by Banks (Special Provisions) Act, No. 04 of 1990).\n* A notice for the sale of a property mortgaged to Seylan Bank PLC, with a total sum of Rupees 6,155,283.05 due for recovery (Source: Sale under Section 09 of the Recovery of Loans by Banks (Special Provisions) Act, No. 04 of 1990).\n* A notice for the sale of a property mortgaged to Commercial Bank of Ceylon PLC, with a total sum of UNITED STATES DOLLARS 1,713,852.63 due for recovery (Source: Notice of Sale under the Recovery of Loans by Banks (Special Provisions) Act, No. 4 of 1990).\n\nThese notices demonstrate the legal actions being taken by banks to recover loans and the sale of properties via public auction to achieve this goal.",
-        "sources": [
-          {
-            "document": "2025-12-12(I-I)E.pdf",
-            "page": 26,
-            "excerpt": "by the said Bond;\nIt is hereby resolved under the powers vested by Recovery \nof Loans by Banks (Special Provisions) Act, No. 4 of 1990 \nthat the rights property and premises morefully described in \nth...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-05(I-IIB)E.pdf",
-            "page": 25,
-            "excerpt": "Notice of Sale under Section 9 of the Recovery of \nLoans by Banks (Special Provisions) Act, No. 04 of \n1990\nPUBLiC  AUCTiON\nWHEREAS  Gossina Baduge Amal Priyankara as the \nObligor/mortgagor has made d...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-I)E.pdf",
-            "page": 38,
-            "excerpt": "and cents Sixty-four (Rs. 5,841,128.64) from 05.06.2025 \ntill the date of payment in full on the said Mortgage Bond  \nNo. 257 and 259. \nIt is hereby Resolved:\nthat in terms of Section 4 of the Recover...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-I)E.pdf",
-            "page": 37,
-            "excerpt": "It is hereby Resolved:\nthat in terms of Section 4 of the Recovery of Loans by \nBanks (Special Provisions) Act, No. 4 of 1990 P. K. E. \nSenapathy, Licensed Auctioneer at No. 134, Baddagana \nRoad, Kotte...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-12(I-IIB)E.pdf",
-            "page": 35,
-            "excerpt": "Colombo 03. Telephone : 011-2456494, 011-2456498.\n “The Bank has the right to stay/cancel the above auction \nwithout prior notice”\n Thusith Karunaratne,\n Licensed Auctioneer,\n Commissioner for Courts....",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-11-28(I-I)E.pdf",
-            "page": 14,
-            "excerpt": "OLYMPUS CONSTRUCTION (PRIV ATE) LIMITED \n[Formerly known as Daya Constructions (Private) Limited] \nhave made default on payment due under the said Mortgage \nBond, though demanded.  \nAND WHEREAS there ...",
-            "similarity": "High"
-          },
-          {
-            "document": "2025-12-05(I-I)E.pdf",
-            "page": 17,
-            "excerpt": "And whereas there is, inter alia, now due and owing to \nthe Commercial Bank of Ceylon PLC on account of capital \nand interest up to 07th February, 2024, an aggregate sum of \nRupees Thirty-eight Millio...",
-            "similarity": "High"
-          }
-        ],
-        "suggestions": [
-          "What is the Recovery of Loans Act?",
-          "How are auctions conducted?",
-          "What properties are for sale?"
-        ]
-      }
-    ]
-  },
-  "6bb7909b-872e-48e3-98f6-ca3f9c0e1ff0": {
-    "created_at": "2026-03-28 15:52:11",
-    "updated_at": "2026-03-28 15:52:51",
-    "title": "what is the price of Aripipraz...",
-    "messages": [
-      {
-        "role": "user",
-        "content": "what is the price of Aripiprazole?"
-      },
-      {
-        "role": "assistant",
-        "content": "According to the NMRA document, the prices of Aripiprazole are as follows:\n- Aripiprazole Tablet 10 mg: 44.00/ Tablet (Regulation details: ARITERO 10, Hetero Labs, India, Mansel Ceylon)\n- Aripiprazole Tablet 15 mg: 62.13/ Tablet (Regulation details: ARITERO 15, Hetero Labs, India, Mansel Ceylon)\n- Aripiprazole Tablet 5 mg: 20.72/ Tablet (Regulation details: ARITERO 5, Hetero Labs, India, Mansel Ceylon)\n(Source document name: NMRA document, no specific dates or deadlines mentioned for Aripiprazole)",
-        "sources": [
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 1,
-            "excerpt": "15 AmLodipine Tablet 5 mg AMLODAC 5  Zydus Life Sciences, India  Sunshine \nHealthcare 10.76/ Tablet \n16 Aripiprazole Tablet 10 mg ARITERO 10 Hetero Labs, India  Mansel Ceylon 44.00/ Tablet \n17 Aripipr...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 10,
-            "excerpt": "159 Montelukast Tablet \n(chewable)  5 mg MOTELAST 5  Cadila Pharmaceuticals, India  Sunshine \nHealthcare 11.00/Tablet \n160 Mycophenolate Tablet (gastro \nresistant) 180 mg MYFORTIC 180MG  Norvatis, Swi...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 6,
-            "excerpt": "97 Sitagliptin Tablet 50 mg GENSITA 50 Newgen, Sri Lanka.  Newgen, Sri \nLanka. 32.50/ Tablet \n98 Glimepiride Tablet 1 mg GLIMPIR 1 Celogen, Sri Lanka  Celogen, Sri \nLanka 12.00/ Tablet \n99 Amphoterici...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 20,
-            "excerpt": "303 \nBrimonidine Tartrate 2 \nmg/mL+ Timolol 5 \nmg/mL \nEye Drops - COMBIGAN Allergan Pharmaceuticals, \nIreland \nHemas \nPharmaceuticals  3,003.35/5mL \n304 \nBrimonidine \nTartrate Ophthalmic \nSolution 0.1...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 19,
-            "excerpt": "291 Atorvastatin Tablet 40mg LIPITOR Viatris \nPhamaceuticals,Germany  \nHemas \nPharmaceuticals  49.17/Tablet \n292 Azithromycin Tablet 500mg Zydzith - 500 Cadila Healthcare,India  Sunshine \nHealthcare L...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 7,
-            "excerpt": "112 Irinotecan Injection 100 mg/5 mL Irinotecan Getwell Pharma, India  Esses Pharmacy 10,487.33/ Vial \n113 Iohexol Injection 350 mg I/mL JODASCAN 350 Jodas Expoim, India  Softcare \nInternational  980....",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 13,
-            "excerpt": "203 Ranitidine Injection 25 mg/mL RANITID Sakar Healthcare, India.  Ceyoka (Pvt) Ltd.  111.46/2 mL \n204 Diazepam Injection 5 mg/mL RELIVIUM HBM Pharma, Latvia  Baur Life Science  500.19/2 mL \n205 Infl...",
-            "similarity": "High"
-          }
-        ],
-        "suggestions": []
-      }
-    ]
-  },
-  "113c5835-594d-4194-8cb0-c31556c1be0c": {
-    "created_at": "2026-03-28 16:09:56",
-    "updated_at": "2026-03-28 16:10:23",
+  "fffc5a59-af88-44cf-b0ef-156f5e7837fa": {
+    "created_at": "2026-03-28 23:40:23",
+    "updated_at": "2026-03-28 23:41:42",
     "title": "hi",
     "messages": [
       {
@@ -557,225 +11,16 @@
       {
         "role": "assistant",
         "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
-        "sources": [
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 7,
-            "excerpt": "126 Leucovorin calcium  Injection 15 mg/2 mL LEUCOWEL Getwell Pharma, India  Esses Pharmacy 446.64/ Ampoule  \n127 Levetiracetam Tablet 750 mg LEVETAM 750  Newgen, Sri Lanka.  Newgen, Sri \nLanka. 90.00...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 0,
-            "excerpt": "Lanka \nKelun \nLifesciences, Sri \nLanka \n425.00/ 2 mL \n14 Aminophylline Injection 25 mg/mL Aminophylline Kelun Lifesciences, Sri \nLanka \nKelun \nLifesciences, Sri \nLanka \n620.00/ 10 mL...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 14,
-            "excerpt": "227 Cefuroxime Injection 250mg SHAMCEF 250 Shamshree, India  Omacx Healthcare  452.00/ Vial \n228 Sildenafil Tablet 20 mg SILATIO Unison, Thailand  Sunshine \nHealthcare 41.81/ Tablet...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 2,
-            "excerpt": "47 Carbamazepine Tablet 100 mg Carbamazepine Sands Active, Sri Lanka  Sands active, Sri \nLanka \n15/ Tablet (Blister) \n14.10/ Tablet (Bulk) \n48 Carbimazole Tablet 5 mg CARBIMOLE 5 Newgen, Sri Lanka.  N...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 21,
-            "excerpt": "Sri Lanka 208.00/100mL \n328 Chlorpheniramine \nMaleate  Oral Solution  2 mg/5mL Hymine ACE Healthcare , Sri Lanka  ACE Healthcare , \nSri Lanka 650.00/500mL \n329 Chlorpheniramine \nMaleate  Tablet 4mg AL...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 15,
-            "excerpt": "243 Tetracycline Capsule 250 mg TETRET 250 Leben, India.  Ceyoka (Pvt) Ltd.  5.98/Capsule (Blister) \n5.39/Capsule (Bulk)  \n244 \nTheophylline \nControlled Release \nCapsules \nCapsule 200mg Theophylline R...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 0,
-            "excerpt": "No Generic Name Dosage \nForm Strength Brand Name Manufacturer, Country \nMarket \nAuthorization \nHolder \nMaximum Retail \nPrice (per unit) (LKR) \n1 Aspirin Tablet (Delayed \nrelease) 75 mg A PRIN 75 Ace H...",
-            "similarity": "High"
-          }
-        ],
+        "sources": [],
         "suggestions": []
       },
       {
         "role": "user",
-        "content": "what is the capital of  SriLanka"
+        "content": "what prize of Clotrimazole ?"
       },
       {
         "role": "assistant",
-        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
-        "sources": [
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 21,
-            "excerpt": "Sri Lanka 208.00/100mL \n328 Chlorpheniramine \nMaleate  Oral Solution  2 mg/5mL Hymine ACE Healthcare , Sri Lanka  ACE Healthcare , \nSri Lanka 650.00/500mL \n329 Chlorpheniramine \nMaleate  Tablet 4mg AL...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 0,
-            "excerpt": "Lanka \nKelun \nLifesciences, Sri \nLanka \n425.00/ 2 mL \n14 Aminophylline Injection 25 mg/mL Aminophylline Kelun Lifesciences, Sri \nLanka \nKelun \nLifesciences, Sri \nLanka \n620.00/ 10 mL...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 7,
-            "excerpt": "126 Leucovorin calcium  Injection 15 mg/2 mL LEUCOWEL Getwell Pharma, India  Esses Pharmacy 446.64/ Ampoule  \n127 Levetiracetam Tablet 750 mg LEVETAM 750  Newgen, Sri Lanka.  Newgen, Sri \nLanka. 90.00...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 2,
-            "excerpt": "47 Carbamazepine Tablet 100 mg Carbamazepine Sands Active, Sri Lanka  Sands active, Sri \nLanka \n15/ Tablet (Blister) \n14.10/ Tablet (Bulk) \n48 Carbimazole Tablet 5 mg CARBIMOLE 5 Newgen, Sri Lanka.  N...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 3,
-            "excerpt": "64 Darbepoetin Alfa Injection 25 mcg/ 0.42 \nmL DERISE 25 Hetero Drugs, India  Divasa Pharma 7,020.00 / Pre-filled \nsyringe \n65 Cholecalciferol Capsule 10,000 IU DEUP 10K Celogen, Sri Lanka  Celogen, S...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 7,
-            "excerpt": "Lanka 125.23/ Tablet \n119 Calcium + \nCholecalciferol \nTablet \n(chewable)  \n500 mg + 400 \nIU KACO-D 500 Gamma Interpharm, Sri \nLanka. \nGamma \nInterpharm, Sri \nLanka. \n22.67/ Tablet \n120 Cefuroxime Inje...",
-            "similarity": "High"
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 0,
-            "excerpt": "No Generic Name Dosage \nForm Strength Brand Name Manufacturer, Country \nMarket \nAuthorization \nHolder \nMaximum Retail \nPrice (per unit) (LKR) \n1 Aspirin Tablet (Delayed \nrelease) 75 mg A PRIN 75 Ace H...",
-            "similarity": "High"
-          }
-        ],
-        "suggestions": []
-      }
-    ]
-  },
-  "fed8fb57-ba03-4284-859d-5a2aeae2e160": {
-    "created_at": "2026-03-28 16:58:28",
-    "updated_at": "2026-03-28 16:58:28",
-    "title": "New Chat - 2026-03-28 16:58:28",
-    "messages": []
-  },
-  "7e1f6892-3dc0-485d-8260-92ad718190df": {
-    "created_at": "2026-03-28 17:03:13",
-    "updated_at": "2026-03-28 17:52:13",
-    "title": "hi",
-    "messages": [
-      {
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "role": "assistant",
-        "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
-        "sources": [
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 7,
-            "excerpt": "126 Leucovorin calcium  Injection 15 mg/2 mL LEUCOWEL Getwell Pharma, India  Esses Pharmacy 446.64/ Ampoule  \n127 Levetiracetam Tablet 750 mg LEVETAM 750  Newgen, Sri Lanka.  Newgen, Sri \nLanka. 90.00..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 0,
-            "excerpt": "Lanka \nKelun \nLifesciences, Sri \nLanka \n425.00/ 2 mL \n14 Aminophylline Injection 25 mg/mL Aminophylline Kelun Lifesciences, Sri \nLanka \nKelun \nLifesciences, Sri \nLanka \n620.00/ 10 mL..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 14,
-            "excerpt": "227 Cefuroxime Injection 250mg SHAMCEF 250 Shamshree, India  Omacx Healthcare  452.00/ Vial \n228 Sildenafil Tablet 20 mg SILATIO Unison, Thailand  Sunshine \nHealthcare 41.81/ Tablet..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 2,
-            "excerpt": "47 Carbamazepine Tablet 100 mg Carbamazepine Sands Active, Sri Lanka  Sands active, Sri \nLanka \n15/ Tablet (Blister) \n14.10/ Tablet (Bulk) \n48 Carbimazole Tablet 5 mg CARBIMOLE 5 Newgen, Sri Lanka.  N..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 21,
-            "excerpt": "Sri Lanka 208.00/100mL \n328 Chlorpheniramine \nMaleate  Oral Solution  2 mg/5mL Hymine ACE Healthcare , Sri Lanka  ACE Healthcare , \nSri Lanka 650.00/500mL \n329 Chlorpheniramine \nMaleate  Tablet 4mg AL..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 15,
-            "excerpt": "243 Tetracycline Capsule 250 mg TETRET 250 Leben, India.  Ceyoka (Pvt) Ltd.  5.98/Capsule (Blister) \n5.39/Capsule (Bulk)  \n244 \nTheophylline \nControlled Release \nCapsules \nCapsule 200mg Theophylline R..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 0,
-            "excerpt": "No Generic Name Dosage \nForm Strength Brand Name Manufacturer, Country \nMarket \nAuthorization \nHolder \nMaximum Retail \nPrice (per unit) (LKR) \n1 Aspirin Tablet (Delayed \nrelease) 75 mg A PRIN 75 Ace H..."
-          }
-        ],
-        "suggestions": [
-          "What are the current NMRA price regulations that I need to be aware of?",
-          "How do I stay updated on compliance deadlines to avoid any penalties?",
-          "Can you provide an example of an impact analysis for a pharmaceutical product under NMRA regulations?"
-        ]
-      },
-      {
-        "role": "user",
-        "content": "How do I stay updated on compliance deadlines to avoid any penalties?"
-      },
-      {
-        "role": "assistant",
-        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
-        "sources": [
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 22,
-            "excerpt": "330 Cholecalciferol Tablet 1000IU Prove D3-1000IU PT Dankos Pharma \n,Indonesia \nHemas \nPharmaceutical  13.23/Tablet \n331 Ciprofloxacin Eye/Ear Drop  0.30% CIPROCIN Square Pharmaceuticals, \nBangladesh ..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 2,
-            "excerpt": "32 Beclomethasone Inhalation \nCapsules 400 mcg BECLOHALE Emergen, Sri Lanka  Emergen, Sri \nLanka 10.92/ Capsule \n33 Clobetasol Cream 0.05% BELTAPRO CREAM  Tabros Pharma, Pakistan  Associated \nLaborato..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 1,
-            "excerpt": "15 AmLodipine Tablet 5 mg AMLODAC 5  Zydus Life Sciences, India  Sunshine \nHealthcare 10.76/ Tablet \n16 Aripiprazole Tablet 10 mg ARITERO 10 Hetero Labs, India  Mansel Ceylon 44.00/ Tablet \n17 Aripipr..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 4,
-            "excerpt": "80 Etomidate Injection 20 mg/10 mL Etomidate Mercury Laboratories, India  Yaden \nInternational 1,740/ 10 mL \n81 Etomidate Injection 20 mg/10 mL ETUDAT Kelun Lifesciences, Sri \nLanka \nKelun \nLifescienc..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 5,
-            "excerpt": "Lanka \n82 Cefixime Tablet \n(dispersible)  100 mg EXTACEF 100 DT  Blue Cross, India  Sunshine \nHealthcare 39.09/ Tablet \n83 Famotidine Tablet 20 mg FAMTIN 20 Celogen, Sri Lanka  Celogen, Sri \nLanka 11...."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 3,
-            "excerpt": "Lanka 84.81 / Tablet \n56 Cisatracurium Besylate  Injection 10mg/5mL CISATRA Themis Medicare Limited, \nIndia. \nSunshine \nHealthcare Lanka \nLimited \n2,610.38 / Vial \n57 Clindamycin Capsule 150 mg Clinda..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 13,
-            "excerpt": "203 Ranitidine Injection 25 mg/mL RANITID Sakar Healthcare, India.  Ceyoka (Pvt) Ltd.  111.46/2 mL \n204 Diazepam Injection 5 mg/mL RELIVIUM HBM Pharma, Latvia  Baur Life Science  500.19/2 mL \n205 Infl..."
-          }
-        ],
-        "suggestions": [
-          "What are the key factors that determine medicine pricing under NMRA regulations?",
-          "How do pharmaceutical companies ensure compliance with regulatory deadlines for price submissions?",
-          "What are the consequences of non-compliance with NMRA pharmaceutical price regulations for manufacturers and distributors?"
-        ]
-      },
-      {
-        "role": "user",
-        "content": "what is the price of Sterile Cardioplagia \nsolution "
-      },
-      {
-        "role": "assistant",
-        "content": "The price of Sterile Cardioplagia solution is 868.72 per Vial. (NMRA gazette context: 40 Sterile Cardioplagia solution Infusion 20 mL BIOPLAGIA United Biotech, India  Klintas (Pvt) Ltd.  868.72./ Vial)",
+        "content": "The price of Clotrimazole varies depending on the formulation. \n\n- Clotrimazole Cream 1% (CANBEN) is priced at 203.00/ 15 g (as per the gazette).\n- Clotrimazole Vaginal Tablet 100mg (Mycoril) is priced at 175.87/Tablet (as per the gazette).\n\nPlease note that prices may be subject to change, and it's always best to verify with the latest NMRA gazette for the most up-to-date information.",
         "sources": [
           {
             "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
@@ -784,8 +29,94 @@
           },
           {
             "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 12,
-            "excerpt": "Solution for Infusion \n100g/1000mL \nInfusion 100g/1000mL PRIVIGEN CSL Behring, Switzerland  ABC Pharma \nServices 491,521.00/200 mL  \n195 \nHuman Normal \nImmunoglobulin \nSolution for Infusion \n100g/1000..."
+            "page": 22,
+            "excerpt": "337 Clotrimazole Vaginal Tablet 100mg Mycoril Remedica,Cyprus Kandana Foods \nand Drugs 175.87/Tablet \n338 Co-amoxiclav Injection 1.2g CLANEKSI PT Sanbe ,Indonesia  Softlogic \nPharmaceuticals  1,025.54..."
+          },
+          {
+            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
+            "page": 22,
+            "excerpt": "330 Cholecalciferol Tablet 1000IU Prove D3-1000IU PT Dankos Pharma \n,Indonesia \nHemas \nPharmaceutical  13.23/Tablet \n331 Ciprofloxacin Eye/Ear Drop  0.30% CIPROCIN Square Pharmaceuticals, \nBangladesh..."
+          }
+        ],
+        "suggestions": [
+          "What is the NMRA gazette, and where can I find it to verify the prices?",
+          "How often are the prices of Clotrimazole formulations updated in the gazette?",
+          "Are there any other formulations of Clotrimazole available, and what are their prices?"
+        ]
+      }
+    ]
+  },
+  "4638a57c-180f-4ef2-9c00-360327f9e04c": {
+    "created_at": "2026-03-28 23:59:01",
+    "updated_at": "2026-03-28 23:59:39",
+    "title": "hi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "role": "assistant",
+        "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
+        "sources": [],
+        "suggestions": []
+      }
+    ]
+  },
+  "94f76b83-e4c6-4012-b463-1539f792e995": {
+    "created_at": "2026-03-29 00:12:30",
+    "updated_at": "2026-03-29 00:13:27",
+    "title": "hi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "role": "assistant",
+        "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
+        "sources": [],
+        "suggestions": []
+      },
+      {
+        "role": "user",
+        "content": "nothing"
+      },
+      {
+        "role": "assistant",
+        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
+        "sources": [],
+        "suggestions": []
+      }
+    ]
+  },
+  "b6ab72df-fbae-4679-bd9d-27aa8f033e20": {
+    "created_at": "2026-03-29 01:05:00",
+    "updated_at": "2026-03-29 01:06:18",
+    "title": "hi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "role": "assistant",
+        "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
+        "sources": [],
+        "suggestions": []
+      },
+      {
+        "role": "user",
+        "content": "What is the price of Paracetomal"
+      },
+      {
+        "role": "assistant",
+        "content": "The price of Paracetamol Tablet 500 mg (PARAMOL 500) is 3.20/Tablet, as per the NMRA gazette (item 182).",
+        "sources": [
+          {
+            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
+            "page": 11,
+            "excerpt": "175 Carboxymethylcellulose \n+ Glycerin Eye drops 0.5% + 0.9% OPTIVE Allergen LLC, USA  Hemas \nPharmaceuticals  1,476.00/15 mL Vial  \n176 Loratadine Suspension 5 mg/ 5mL Oradin Eskayef Bangladesh \nLimi..."
           },
           {
             "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
@@ -794,236 +125,175 @@
           },
           {
             "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 3,
-            "excerpt": "64 Darbepoetin Alfa Injection 25 mcg/ 0.42 \nmL DERISE 25 Hetero Drugs, India  Divasa Pharma 7,020.00 / Pre-filled \nsyringe \n65 Cholecalciferol Capsule 10,000 IU DEUP 10K Celogen, Sri Lanka  Celogen, S..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 14,
-            "excerpt": "213 Rosuvastatin Tablet 10 mg ROSUKE 10 Finecure, India.  Bio Life 54.00/Tablet \n214 Rosuvastatin Tablet 5 mg Rosuvastatin Sands active, Sri Lanka  Sands active, Sri \nLanka \n42.00/Tablet (Blister) \n37..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 10,
-            "excerpt": "172 Ciprofloxacin Infusion 200 mg/100 mL NIRCIP Aculife Healthcare, India  Emerchemie NB  153.84/Vial \n173 Thiamine hydrochloride  Injection 100 mg/ 2 mL ONE B Kelun Lifescience, Sri Lanka  Kelun Life..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 11,
-            "excerpt": "175 Carboxymethylcellulose \n+ Glycerin Eye drops 0.5% + 0.9% OPTIVE Allergen LLC, USA  Hemas \nPharmaceuticals  1,476.00/15 mL Vial  \n176 Loratadine Suspension 5 mg/ 5mL Oradin Eskayef Bangladesh \nLimi..."
+            "page": 4,
+            "excerpt": "66 Dexmedetomidine Injection 200 mcg/2 mL Dexmedetomidine Kelun Lifesciences , Sri \nLanka \nKelun \nLifesciences, Sri \nLanka \n3,853.98/ Ampoule  \n67 Metformin Tablet 850 mg DIAMET 850 Sands active, Sri..."
           }
         ],
         "suggestions": [
-          "What is the volume of each vial of Sterile Cardioplagia solution?",
-          "Is the price of Sterile Cardioplagia solution inclusive of all taxes and charges?",
-          "What is the recommended dosage and administration frequency for Sterile Cardioplagia solution?"
+          "What is the NMRA gazette and how often is it updated?",
+          "Is the price of PARAMOL 500 subject to change over time?",
+          "Are there any other strengths or forms of Paracetamol available under the PARAMOL brand?"
         ]
       },
       {
         "role": "user",
-        "content": "What is the recommended dosage and administration frequency for Sterile Cardioplagia solution?"
+        "content": "Is the price of PARAMOL 500 subject to change over time?"
+      },
+      {
+        "role": "assistant",
+        "content": "The provided NMRA gazette context lists the price of Paracetamol Tablet 500 mg as 3.20/Tablet (entry 182). However, it does not explicitly state whether the price is subject to change over time. The context only provides a snapshot of the current prices, but it does not include information about price fluctuations or updates. Therefore, I cannot find information about the price change of Paracetamol Tablet 500 mg in the loaded NMRA gazettes. Please check if the relevant gazette has been uploaded.",
+        "sources": [],
+        "suggestions": []
+      }
+    ]
+  },
+  "ccf7b945-d4a3-49ef-8882-af221bb9c699": {
+    "created_at": "2026-03-29 01:33:49",
+    "updated_at": "2026-03-29 01:34:56",
+    "title": "what is the definition of medi...",
+    "messages": [
+      {
+        "role": "user",
+        "content": "what is the definition of medicine"
       },
       {
         "role": "assistant",
         "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
+        "sources": [],
+        "suggestions": []
+      }
+    ]
+  },
+  "93088434-d225-435d-90b2-fc40c55cd6fe": {
+    "created_at": "2026-03-29 01:35:32",
+    "updated_at": "2026-03-29 01:36:15",
+    "title": "what is the definition of Medi...",
+    "messages": [
+      {
+        "role": "user",
+        "content": "what is the definition of Medicine"
+      },
+      {
+        "role": "assistant",
+        "content": "According to the NMRA gazette, a Medicine is defined as \"Any Substance Or Mixture Of Substances Manufactured, Sold, Offered For Sale Or Represented For Use In The Diagnosis, Treatment, Mitigation Or Prevention Of Disease, Abnormal Physical States Or The Symptoms Thereof In Man Or Animal. Restoring, Correcting Or Modifying Functions Of Organs In Man Or Animal. A Medicine Or Combination Of Medicine Ready For Use And Placed On The Market Under A Special Name Or In A Characteristic Form, Both Patent And Non-Proprietary Preparations. A Product Made Out Of Medicinal Herbal Extract. Nutraceutical With Therapeutic Claims And Vaccines And Sera, but Does Not Include An Ayurvedic Medicine Or A Homoeopathic Medicine.\"",
         "sources": [
           {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 2,
-            "excerpt": "Healthcare 10.47/ Tablet \n40 Sterile Cardioplagia \nsolution Infusion 20 mL BIOPLAGIA United Biotech, India  Klintas (Pvt) Ltd.  868.72./ Vial \n41 Bisoprolol Tablet 2.5 mg BISOPRACE 2.5 Ace Healthcare,..."
+            "document": "Regulatory Overview.txt",
+            "page": "N/A",
+            "excerpt": "Definition of a Medicine\nAny Substance Or Mixture Of Substances Manufactured, Sold, Offered For Sale Or Represented For Use In\nThe Diagnosis, Treatment, Mitigation Or Prevention Of Disease, Abnormal P..."
+          },
+          {
+            "document": "Regulatory Overview.txt",
+            "page": "N/A",
+            "excerpt": "This Section Explains What Is Termed As A Medicine And Their Different Categories.\nInformation Is Also Given To Provide Guidance On The Type Of Applications And How To Apply For The Approval Of Medici..."
+          },
+          {
+            "document": "Regulatory Overview.txt",
+            "page": "N/A",
+            "excerpt": "National Medicines Regulatory Authority (NMRA) Will Thereby Regulate And Control Manufacture, Importation, Storage, Distribution, Transportation, Pricing, Wholesale And Retail Sale, Advertising, And D..."
+          },
+          {
+            "document": "Regulatory Overview.txt",
+            "page": "N/A",
+            "excerpt": "The National Medicines Regulatory Authority Act Specifies That No Person Shall Manufacture Or Import Any Medicine Without Registering Such Medicines With The NMRA.\n\nThe Medicines Evaluation Committee..."
           },
           {
             "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 8,
-            "excerpt": "136 Linezolid Injection 600 mg/300 mL LINZO-R ER. K. Laboratories, India.  PTC Medical  2,184.35/ Ampoule  \n137 Atorvastatin Tablet 10 mg LIPITOR Pfizer, Germany  Hemas \nPharmaceuticals  22.10/ Tablet..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 14,
-            "excerpt": "213 Rosuvastatin Tablet 10 mg ROSUKE 10 Finecure, India.  Bio Life 54.00/Tablet \n214 Rosuvastatin Tablet 5 mg Rosuvastatin Sands active, Sri Lanka  Sands active, Sri \nLanka \n42.00/Tablet (Blister) \n37..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 13,
-            "excerpt": "203 Ranitidine Injection 25 mg/mL RANITID Sakar Healthcare, India.  Ceyoka (Pvt) Ltd.  111.46/2 mL \n204 Diazepam Injection 5 mg/mL RELIVIUM HBM Pharma, Latvia  Baur Life Science  500.19/2 mL \n205 Infl..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 4,
-            "excerpt": "66 Dexmedetomidine Injection 200 mcg/2 mL Dexmedetomidine Kelun Lifesciences , Sri \nLanka \nKelun \nLifesciences, Sri \nLanka \n3,853.98/ Ampoule  \n67 Metformin Tablet 850 mg DIAMET 850 Sands active, Sri ..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 13,
-            "excerpt": "197 \nHuman Normal \nImmunoglobulin \nSolution for Infusion \n100g/1000mL \nInfusion 100g/1000mL PRIVIGEN CSL Behring, Switzerland  ABC Pharma \nServices 61,440.00/25 mL  \n198 Promethazine Oral solution  5 ..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 7,
-            "excerpt": "112 Irinotecan Injection 100 mg/5 mL Irinotecan Getwell Pharma, India  Esses Pharmacy 10,487.33/ Vial \n113 Iohexol Injection 350 mg I/mL JODASCAN 350 Jodas Expoim, India  Softcare \nInternational  980...."
+            "page": 0,
+            "excerpt": "Lanka \nKelun \nLifesciences, Sri \nLanka \n425.00/ 2 mL \n14 Aminophylline Injection 25 mg/mL Aminophylline Kelun Lifesciences, Sri \nLanka \nKelun \nLifesciences, Sri \nLanka \n620.00/ 10 mL..."
           }
         ],
         "suggestions": [
-          "What are the key factors that determine medicine pricing under NMRA regulations?",
-          "How do pharmaceutical companies ensure compliance with regulatory deadlines for price submissions?",
-          "What are the consequences of non-compliance with NMRA pharmaceutical price regulations for manufacturers and distributors?"
+          "What are the key differences between a medicine and an ayurvedic or homoeopathic medicine as per the NMRA gazette definition?",
+          "Are all substances that claim to have health benefits considered medicines under this definition, or are there specific exemptions or exclusions?",
+          "How do regulatory bodies like the NMRA ensure that products labeled as medicines adhere to the defined criteria and are safe for human or animal use?"
         ]
       }
     ]
   },
-  "380a1fef-462e-4ad2-b07d-f7341670d55d": {
-    "created_at": "2026-03-28 23:17:16",
-    "updated_at": "2026-03-28 23:18:42",
-    "title": "hi",
+  "1e283013-0dff-4869-a285-0385b3ad9a4e": {
+    "created_at": "2026-03-29 01:50:37",
+    "updated_at": "2026-03-29 01:55:50",
+    "title": "how to register Cosmetios",
     "messages": [
       {
         "role": "user",
-        "content": "hi"
+        "content": "how to register Cosmetios"
       },
       {
         "role": "assistant",
-        "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
-        "sources": [
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 7,
-            "excerpt": "126 Leucovorin calcium  Injection 15 mg/2 mL LEUCOWEL Getwell Pharma, India  Esses Pharmacy 446.64/ Ampoule  \n127 Levetiracetam Tablet 750 mg LEVETAM 750  Newgen, Sri Lanka.  Newgen, Sri \nLanka. 90.00..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 7,
-            "excerpt": "126 Leucovorin calcium  Injection 15 mg/2 mL LEUCOWEL Getwell Pharma, India  Esses Pharmacy 446.64/ Ampoule  \n127 Levetiracetam Tablet 750 mg LEVETAM 750  Newgen, Sri Lanka.  Newgen, Sri \nLanka. 90.00..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 7,
-            "excerpt": "126 Leucovorin calcium  Injection 15 mg/2 mL LEUCOWEL Getwell Pharma, India  Esses Pharmacy 446.64/ Ampoule  \n127 Levetiracetam Tablet 750 mg LEVETAM 750  Newgen, Sri Lanka.  Newgen, Sri \nLanka. 90.00..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 0,
-            "excerpt": "Lanka \nKelun \nLifesciences, Sri \nLanka \n425.00/ 2 mL \n14 Aminophylline Injection 25 mg/mL Aminophylline Kelun Lifesciences, Sri \nLanka \nKelun \nLifesciences, Sri \nLanka \n620.00/ 10 mL..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 0,
-            "excerpt": "Lanka \nKelun \nLifesciences, Sri \nLanka \n425.00/ 2 mL \n14 Aminophylline Injection 25 mg/mL Aminophylline Kelun Lifesciences, Sri \nLanka \nKelun \nLifesciences, Sri \nLanka \n620.00/ 10 mL..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 0,
-            "excerpt": "Lanka \nKelun \nLifesciences, Sri \nLanka \n425.00/ 2 mL \n14 Aminophylline Injection 25 mg/mL Aminophylline Kelun Lifesciences, Sri \nLanka \nKelun \nLifesciences, Sri \nLanka \n620.00/ 10 mL..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 14,
-            "excerpt": "227 Cefuroxime Injection 250mg SHAMCEF 250 Shamshree, India  Omacx Healthcare  452.00/ Vial \n228 Sildenafil Tablet 20 mg SILATIO Unison, Thailand  Sunshine \nHealthcare 41.81/ Tablet..."
-          }
-        ],
-        "suggestions": [
-          "What are the current NMRA price regulations that I need to be aware of?",
-          "How do I stay updated on compliance deadlines to avoid any penalties?",
-          "Can you provide an example of an impact analysis for a pharmaceutical product under NMRA regulations?"
-        ]
+        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
+        "sources": [],
+        "suggestions": []
       },
       {
         "role": "user",
-        "content": "What are the current NMRA price regulations that I need to be aware of?"
+        "content": "what are the condions for sales of Cosmetics?"
       },
       {
         "role": "assistant",
-        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements. \n\nIf you have a specific question regarding the prices of certain medications, such as the ones listed in the provided context (e.g., Montelukast, Mycophenolate, Midazolam, etc.), I can provide you with the corresponding prices as per the NMRA gazette. For example, the price of Montelukast Tablet (chewable) 5 mg is 11.00/Tablet. \n\nPlease provide a specific question related to NMRA pharmaceutical price regulations, and I will do my best to assist you.",
-        "sources": [
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 10,
-            "excerpt": "159 Montelukast Tablet \n(chewable)  5 mg MOTELAST 5  Cadila Pharmaceuticals, India  Sunshine \nHealthcare 11.00/Tablet \n160 Mycophenolate Tablet (gastro \nresistant) 180 mg MYFORTIC 180MG  Norvatis, Swi..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 10,
-            "excerpt": "159 Montelukast Tablet \n(chewable)  5 mg MOTELAST 5  Cadila Pharmaceuticals, India  Sunshine \nHealthcare 11.00/Tablet \n160 Mycophenolate Tablet (gastro \nresistant) 180 mg MYFORTIC 180MG  Norvatis, Swi..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 10,
-            "excerpt": "159 Montelukast Tablet \n(chewable)  5 mg MOTELAST 5  Cadila Pharmaceuticals, India  Sunshine \nHealthcare 11.00/Tablet \n160 Mycophenolate Tablet (gastro \nresistant) 180 mg MYFORTIC 180MG  Norvatis, Swi..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 8,
-            "excerpt": "128 Lidocaine Injection 2% LICAN Kelun Lifesciences, Sri \nLanka \nKelun \nLifesciences, Sri \nLanka \n180.00/ 5mL \n129 Lidocaine Injection 2% LICAN Kelun Lifesciences, Sri \nLanka \nKelun \nLifesciences, Sri..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 8,
-            "excerpt": "128 Lidocaine Injection 2% LICAN Kelun Lifesciences, Sri \nLanka \nKelun \nLifesciences, Sri \nLanka \n180.00/ 5mL \n129 Lidocaine Injection 2% LICAN Kelun Lifesciences, Sri \nLanka \nKelun \nLifesciences, Sri..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 8,
-            "excerpt": "128 Lidocaine Injection 2% LICAN Kelun Lifesciences, Sri \nLanka \nKelun \nLifesciences, Sri \nLanka \n180.00/ 5mL \n129 Lidocaine Injection 2% LICAN Kelun Lifesciences, Sri \nLanka \nKelun \nLifesciences, Sri..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 4,
-            "excerpt": "80 Etomidate Injection 20 mg/10 mL Etomidate Mercury Laboratories, India  Yaden \nInternational 1,740/ 10 mL \n81 Etomidate Injection 20 mg/10 mL ETUDAT Kelun Lifesciences, Sri \nLanka \nKelun \nLifescienc..."
-          }
-        ],
-        "suggestions": [
-          "What are the regulatory deadlines for pharmaceutical companies to comply with NMRA price regulations?",
-          "What are the compliance requirements for pharmacies to display NMRA-regulated medicine prices?",
-          "How often are the prices of medications like Montelukast and Mycophenolate updated in the NMRA gazette?"
-        ]
+        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
+        "sources": [],
+        "suggestions": []
       },
       {
         "role": "user",
-        "content": "What are the regulatory deadlines for pharmaceutical companies to comply with NMRA price regulations?"
+        "content": "which deadline is coming"
       },
       {
         "role": "assistant",
-        "content": "I cannot find information about regulatory deadlines in the loaded NMRA gazettes. Please check if the relevant gazette has been uploaded.",
+        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
+        "sources": [],
+        "suggestions": []
+      },
+      {
+        "role": "user",
+        "content": "what is the Pricing Mechanism for the Maximum Retail Price (MRP) ?"
+      },
+      {
+        "role": "assistant",
+        "content": "The Pricing Mechanism for the Maximum Retail Price (MRP) is calculated according to the following formula: \nMRP = CIF + DT + SCTM, \nwhere MRP denotes the Maximum Retail Price, CIF denotes Cost, Insurance and Freight, DT denotes Duties and Taxes paid, and SCTM denotes Supply Chain Total Markup (Regulation 4).",
         "sources": [
           {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 13,
-            "excerpt": "203 Ranitidine Injection 25 mg/mL RANITID Sakar Healthcare, India.  Ceyoka (Pvt) Ltd.  111.46/2 mL \n204 Diazepam Injection 5 mg/mL RELIVIUM HBM Pharma, Latvia  Baur Life Science  500.19/2 mL \n205 Infl..."
+            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
+            "page": 1,
+            "excerpt": "accepted tolerance level which the Authority will consider necessary in the public interest.\n 10. It shall be lawful for the Authority to recall MRPs issued based on market conditions as well as to im..."
           },
           {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 13,
-            "excerpt": "203 Ranitidine Injection 25 mg/mL RANITID Sakar Healthcare, India.  Ceyoka (Pvt) Ltd.  111.46/2 mL \n204 Diazepam Injection 5 mg/mL RELIVIUM HBM Pharma, Latvia  Baur Life Science  500.19/2 mL \n205 Infl..."
+            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
+            "page": 0,
+            "excerpt": "“Authority”), Consumer Affairs Authority established under the provisions of the Consumer Affairs Authority Act, No. 9 of \n2003 and all stakeholders and taking into consideration all other relevant fa..."
           },
           {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 13,
-            "excerpt": "203 Ranitidine Injection 25 mg/mL RANITID Sakar Healthcare, India.  Ceyoka (Pvt) Ltd.  111.46/2 mL \n204 Diazepam Injection 5 mg/mL RELIVIUM HBM Pharma, Latvia  Baur Life Science  500.19/2 mL \n205 Infl..."
+            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
+            "page": 1,
+            "excerpt": "I fldgi ( ^I& fPoh - YS% ,xld m%cd;dka;s%l iudcjd§ ckrcfha w;s úfYI .eiÜ m;%h - 2025'07'21\nPart  I : Sec . (I) - GAZETTE EXTRAORDINARY OF THE DEMOCRATIC SOCIALIST REPUBLIC OF SRI LANKA - 21.07.2025\n2A..."
           },
           {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 10,
-            "excerpt": "159 Montelukast Tablet \n(chewable)  5 mg MOTELAST 5  Cadila Pharmaceuticals, India  Sunshine \nHealthcare 11.00/Tablet \n160 Mycophenolate Tablet (gastro \nresistant) 180 mg MYFORTIC 180MG  Norvatis, Swi..."
+            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
+            "page": 3,
+            "excerpt": "same strength and dosage form; and \n  “retail price” means the ceiling price or the retail price including taxes and duties as applicable, at which the drug \nshall be sold to the ultimate consumer and..."
           },
           {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 10,
-            "excerpt": "159 Montelukast Tablet \n(chewable)  5 mg MOTELAST 5  Cadila Pharmaceuticals, India  Sunshine \nHealthcare 11.00/Tablet \n160 Mycophenolate Tablet (gastro \nresistant) 180 mg MYFORTIC 180MG  Norvatis, Swi..."
+            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
+            "page": 2,
+            "excerpt": "generic) (n), the median retail price of such medicines shall be considered as the value at position  \n(n+1)/ 2; \n   (ii)  if the medicine has an even number of all available versions of individual pr..."
           },
           {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 10,
-            "excerpt": "159 Montelukast Tablet \n(chewable)  5 mg MOTELAST 5  Cadila Pharmaceuticals, India  Sunshine \nHealthcare 11.00/Tablet \n160 Mycophenolate Tablet (gastro \nresistant) 180 mg MYFORTIC 180MG  Norvatis, Swi..."
+            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
+            "page": 1,
+            "excerpt": "using external and internal reference pricing approaches.\n 6.  The average United States Dollar exchange (Selling) rate of the past three months, published by the Authority based \non the exchange rate..."
           },
           {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 7,
-            "excerpt": "112 Irinotecan Injection 100 mg/5 mL Irinotecan Getwell Pharma, India  Esses Pharmacy 10,487.33/ Vial \n113 Iohexol Injection 350 mg I/mL JODASCAN 350 Jodas Expoim, India  Softcare \nInternational  980...."
+            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
+            "page": 2,
+            "excerpt": "14.  The MRPs of all branded or generic versions including the originator of an individual product determined by the \nAuthority which are lower than the MCP shall not be increased.\n 15.  Any new regis..."
           }
         ],
         "suggestions": [
-          "How can I verify if the relevant gazette has been uploaded to the system?",
-          "What are the typical steps to take when a gazette is not found in the loaded NMRA gazettes?",
-          "Are there alternative sources where I can find information about regulatory deadlines?"
+          "What is the typical range of values for the Supply Chain Total Markup (SCTM) in the given formula?",
+          "How are the Duties and Taxes (DT) calculated and what factors influence their amount?",
+          "Can the formula for calculating the Maximum Retail Price (MRP) vary depending on the type of product or industry?"
         ]
       }
     ]

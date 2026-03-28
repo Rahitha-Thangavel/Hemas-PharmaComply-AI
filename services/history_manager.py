@@ -41,7 +41,7 @@ class HistoryManager:
             st.error(f"Error saving chat history: {e}")
 
     def create_new_session(self) -> str:
-        """Create a new chat session and return its ID"""
+        """Create a new chat session and return its ID (not saved to file until first message)"""
         session_id = str(uuid.uuid4())
         timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
         self.history[session_id] = {
@@ -50,7 +50,7 @@ class HistoryManager:
             "title": f"New Chat - {timestamp}",
             "messages": []
         }
-        self._save_to_file(self.history)
+        # Do not save to file until a message is added
         return session_id
 
     def save_session(self, session_id: str, messages: List[Dict]):
@@ -78,15 +78,17 @@ class HistoryManager:
         return self.history.get(session_id, {})
 
     def get_all_sessions(self) -> List[Dict]:
-        """Get all sessions sorted by updated_at (newest first)"""
+        """Get all sessions with at least one message, sorted by updated_at (newest first)"""
         sessions = []
         for sess_id, data in self.history.items():
-            sessions.append({
-                "id": sess_id,
-                "title": data.get("title", "Untitled Chat"),
-                "updated_at": data.get("updated_at", ""),
-                "message_count": len(data.get("messages", []))
-            })
+            msg_count = len(data.get("messages", []))
+            if msg_count > 0:
+                sessions.append({
+                    "id": sess_id,
+                    "title": data.get("title", "Untitled Chat"),
+                    "updated_at": data.get("updated_at", ""),
+                    "message_count": msg_count
+                })
         
         # Sort by updated_at descending
         return sorted(sessions, key=lambda x: x["updated_at"], reverse=True)

@@ -26,7 +26,7 @@ retrieval:
   # similarity_threshold: 0.7
 
 paths:
-  data_dir: ./data
+  data_dir: ./data/raw
   vector_store: ./vector_store
 
 auto_load: true

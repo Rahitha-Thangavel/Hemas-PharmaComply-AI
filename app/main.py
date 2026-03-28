@@ -13,35 +13,26 @@ import streamlit as st
 import streamlit.components.v1 as components
 from app.core.config_loader import load_config
 from app.core.chatbot import HemasPharmaComplyAI
-from utils.sidebar import render_sidebar
+from utils.sidebar_clean import render_sidebar
 from services.history_manager import HistoryManager
 
 def run_chat_interface():
-    # 0. ALL SESSION STATE INITIALIZATION MUST BE FIRST
+    # Always create a fresh chat for each new app session, but keep autosaving
+    # the active conversation so abrupt closes do not lose the current thread.
     if 'history_manager' not in st.session_state:
         st.session_state.history_manager = HistoryManager()
-    
-    # Initialize chatbot and flags if not present
+
     if 'chatbot' not in st.session_state:
         st.session_state.chatbot = None
         st.session_state.initialized = False
         st.session_state.messages = []
-    
-    # Initialize and sync session ID if not present
-    if 'current_session_id' not in st.session_state:
-        sessions = st.session_state.history_manager.get_all_sessions()
-        if sessions:
-            st.session_state.current_session_id = sessions[0]['id']
-            st.session_state.messages = st.session_state.history_manager.get_session(sessions[0]['id']).get('messages', [])
-        else:
-            new_id = st.session_state.history_manager.create_new_session()
-            st.session_state.current_session_id = new_id
-            st.session_state.messages = []
 
-    # 1. Now render the synchronized sidebar
+    if 'current_session_id' not in st.session_state:
+        st.session_state.current_session_id = st.session_state.history_manager.create_new_session()
+        st.session_state.messages = []
+
     render_sidebar()
 
-    # 2. Title Section
     col1, col2 = st.columns([0.15, 0.85])
     with col1:
         st.image("assets/logo.png", width=70)
