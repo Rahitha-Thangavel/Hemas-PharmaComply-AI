@@ -1,0 +1,23 @@
+# Environments
+.env
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Chroma Vector Store
+vector_store/
+
+# Data
+# Uncomment the below if you don't want to push your gazette documents
+# data/*.pdf
+# data/*.txt
+# data/*.docx
+
+# OS specific
+.DS_Store
+Thumbs.db

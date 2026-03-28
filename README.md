@@ -1,4 +1,4 @@
-# Gazette Chatbot
+# Hemas PharmaComply AI
 
 A powerful RAG (Retrieval-Augmented Generation) chatbot designed to answer questions based on Gazette documents. Built with **Streamlit**, **LangChain**, and **Groq**, this application provides fast, accurate answers with citations and persistent chat history.
 
@@ -22,8 +22,8 @@ A powerful RAG (Retrieval-Augmented Generation) chatbot designed to answer quest
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/archchika02/gazette-chatbot.git
-    cd gazette-chatbot
+    git clone https://github.com/archchika02/hemas-pharmacomply-ai.git
+    cd hemas-pharmacomply-ai
     ```
 
 2.  **Create a virtual environment (Recommended):**
@@ -88,7 +88,7 @@ The app will automatically process new files in the `data/` folder and build the
 ## 📂 Project Structure
 
 ```
-gazette-chatbot/
+hemas-pharmacomply-ai/
 ├── assets/                 # Images and static assets
 ├── data/                   # Place your source documents here
 ├── vector_store/           # ChromaDB persistence directory (auto-generated)
