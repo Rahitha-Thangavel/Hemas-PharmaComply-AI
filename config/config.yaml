@@ -27,6 +27,6 @@ retrieval:
 
 paths:
   data_dir: ./data/raw
-  vector_store: ./vector_store
+  vector_store: ./vector_store_v2
 
 auto_load: true

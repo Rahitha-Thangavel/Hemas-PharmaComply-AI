@@ -4,6 +4,48 @@ from pathlib import Path
 from services.history_manager import HistoryManager
 
 
+from services.history_manager import HistoryManager
+
+
+@st.dialog("🗑️ Clear All History")
+def confirm_clear_all_history():
+    st.markdown("### Are you sure?")
+    st.write("This will permanently delete ALL your previous conversations. This action cannot be undone.")
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("Yes, Clear All", type="primary", use_container_width=True):
+            st.session_state.history_manager.clear_all_history()
+            st.session_state.current_session_id = st.session_state.history_manager.create_new_session()
+            st.session_state.messages = []
+            st.toast("History cleared!")
+            st.rerun()
+    with col2:
+        if st.button("Cancel", use_container_width=True):
+            st.rerun()
+
+
+@st.dialog("🗑️ Delete Chat")
+def confirm_delete_session(session_id, title):
+    st.markdown(f"### Delete this chat?")
+    st.write(f"Are you sure you want to delete: **'{title}'**?")
+    
+    is_curr = session_id == st.session_state.get("current_session_id")
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("Yes, Delete", type="primary", use_container_width=True):
+            st.session_state.history_manager.delete_session(session_id)
+            if is_curr:
+                st.session_state.current_session_id = st.session_state.history_manager.create_new_session()
+                st.session_state.messages = []
+            st.toast("Chat deleted!")
+            st.rerun()
+    with col2:
+        if st.button("Cancel", use_container_width=True):
+            st.rerun()
+
+
 def render_sidebar():
     # Inject Custom CSS for Premium Design
     st.markdown(
@@ -112,6 +154,41 @@ def render_sidebar():
             margin-bottom: 1rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
+        
+        /* Delete Button Specifics */
+        .clear-btn [data-testid="stBaseButton-secondary"] {
+            background-color: rgba(239, 68, 68, 0.05) !important;
+            border: 1px solid #3b82f6 !important;
+            color: #3b82f6 !important;
+            margin-bottom: 10px !important;
+            width: 100% !important;
+        }
+        .clear-btn [data-testid="stBaseButton-secondary"]:hover {
+            background-color: #3b82f6 !important;
+            color: white !important;
+            border: none !important;
+        }
+
+        
+        /* Individual Delete Button */
+        .del-btn [data-testid="stBaseButton-secondary"] {
+            background-color: transparent !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            padding: 0 !important;
+            min-width: 35px !important;
+        }
+        .del-btn [data-testid="stBaseButton-secondary"]:hover {
+            background-color: rgba(239, 68, 68, 0.2) !important;
+            border-color: #ef4444 !important;
+        }
+
+        
+        .chat-row {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            width: 100%;
+        }
         </style>
         """,
         unsafe_allow_html=True,
@@ -123,7 +200,7 @@ def render_sidebar():
             st.image("assets/logo.png", use_container_width=True)
         except Exception:
             try:
-                st.image("assets/logo.png", use_column_width=True)
+                st.image("assets/logo.png", use_container_width=True)
             except:
                 st.subheader("💊 Hemas PharmaComply")
         
@@ -189,6 +266,14 @@ def render_sidebar():
             if not sessions:
                 st.caption("No previous conversations.")
             else:
+                # 5.2 Clear All Button
+                st.markdown('<div class="clear-btn">', unsafe_allow_html=True)
+                if st.button("🗑️ Clear All History", key="btn_clear_history_v7", use_container_width=True, help="Permanently delete all conversations"):
+                    confirm_clear_all_history()
+                st.markdown('</div>', unsafe_allow_html=True)
+
+
+
                 show_full = st.session_state.get('show_full_history', False)
                 visible_sessions = sessions if show_full else sessions[:3]
                 
@@ -199,11 +284,23 @@ def render_sidebar():
                     if is_curr:
                         label = f"👉 {title} (Active)"
                     
-                    if st.button(label, key=f"hbtn_v6_{session['id']}", disabled=is_curr, use_container_width=True):
-                        st.session_state.current_session_id = session["id"]
-                        st.session_state.messages = st.session_state.history_manager.get_session(session["id"]).get("messages", [])
-                        st.session_state.show_full_history = False
-                        st.rerun()
+                    col_link, col_del = st.columns([0.8, 0.2])
+                    
+                    with col_link:
+                        if st.button(label, key=f"hbtn_v7_{session['id']}", disabled=is_curr, use_container_width=True):
+                            st.session_state.current_session_id = session["id"]
+                            st.session_state.messages = st.session_state.history_manager.get_session(session["id"]).get("messages", [])
+                            st.session_state.show_full_history = False
+                            st.rerun()
+                    
+                    with col_del:
+                        st.markdown('<div class="del-btn">', unsafe_allow_html=True)
+                        if st.button("🗑️", key=f"del_v7_{session['id']}", help="Delete this chat"):
+                            confirm_delete_session(session["id"], session["title"])
+                        st.markdown('</div>', unsafe_allow_html=True)
+
+
+
 
                 # More / Less toggle
                 if len(sessions) > 3:

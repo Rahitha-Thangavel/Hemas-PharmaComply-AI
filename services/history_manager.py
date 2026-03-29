@@ -98,3 +98,9 @@ class HistoryManager:
         if session_id in self.history:
             del self.history[session_id]
             self._save_to_file(self.history)
+
+    def clear_all_history(self):
+        """Clear all chat history"""
+        self.history = {}
+        self._save_to_file(self.history)
+
