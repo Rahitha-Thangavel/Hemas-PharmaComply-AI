@@ -22,7 +22,7 @@ A powerful RAG (Retrieval-Augmented Generation) chatbot designed to answer quest
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/archchika02/hemas-pharmacomply-ai.git
+    git clone https://github.com/Rahitha-Thangavel/hemas-pharmacomply-ai.git
     cd hemas-pharmacomply-ai
     ```
 
