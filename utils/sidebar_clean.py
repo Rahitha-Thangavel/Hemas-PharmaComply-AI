@@ -164,7 +164,7 @@ def render_sidebar():
         st.page_link("pages/dashboard.py", label="Deadline Tracker", icon=":material/schedule:", help="Track implementation deadlines")
         st.page_link("pages/compliance_checker.py", label="Risk Evaluator", icon=":material/warning:", help="Check compliance of proposed actions")
         st.page_link("pages/impact_analysis.py", label="Impact Predictor", icon=":material/monitoring:", help="Analyze regulation impact on Hemas products")
-        st.page_link("pages/reports.py", label="Change Detector", icon=":material/autorenew:", help="Monitor new gazette publications")
+        st.page_link("pages/reports.py", label="Change Detector", icon=":material/autorenew:", help="Detect changes between new and previous price gazettes")
 
         st.markdown("---")
 

@@ -16,9 +16,10 @@ def get_qa_prompt():
                 - Compliance requirements (pricing rules, formula, calculations)
                 - NMRA gazettes (price lists, regulations, notices)
 
-                **RESPONSE FORMAT:**
                 - If question is IN SCOPE + context available:
-                Provide factual answer with citation
+                Provide factual answer with citation.
+                For price comparisons or summmaries of changes, YOU MUST use a markdown table with these columns:
+                | Generic Name | Strength | Previous Price (SLR) | New Price (LKR) | Change (%) |
                 - If question is OUT OF SCOPE:
                 Say: "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements."
                 - If question is IN SCOPE but context missing:
