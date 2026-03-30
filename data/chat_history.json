@@ -1,7 +1,13 @@
 {
-  "fffc5a59-af88-44cf-b0ef-156f5e7837fa": {
-    "created_at": "2026-03-28 23:40:23",
-    "updated_at": "2026-03-28 23:41:42",
+  "278ff0bb-9d2c-4f73-9d72-21e9b0e3abbb": {
+    "created_at": "2026-03-29 14:51:10",
+    "updated_at": "2026-03-29 14:51:10",
+    "title": "New Chat - 2026-03-29 14:51:10",
+    "messages": []
+  },
+  "fd9a396b-64b4-4413-947d-593381f3faed": {
+    "created_at": "2026-03-29 14:52:22",
+    "updated_at": "2026-03-29 14:52:58",
     "title": "hi",
     "messages": [
       {
@@ -16,61 +22,7 @@
       },
       {
         "role": "user",
-        "content": "what prize of Clotrimazole ?"
-      },
-      {
-        "role": "assistant",
-        "content": "The price of Clotrimazole varies depending on the formulation. \n\n- Clotrimazole Cream 1% (CANBEN) is priced at 203.00/ 15 g (as per the gazette).\n- Clotrimazole Vaginal Tablet 100mg (Mycoril) is priced at 175.87/Tablet (as per the gazette).\n\nPlease note that prices may be subject to change, and it's always best to verify with the latest NMRA gazette for the most up-to-date information.",
-        "sources": [
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 2,
-            "excerpt": "Healthcare 10.47/ Tablet \n40 Sterile Cardioplagia \nsolution Infusion 20 mL BIOPLAGIA United Biotech, India  Klintas (Pvt) Ltd.  868.72./ Vial \n41 Bisoprolol Tablet 2.5 mg BISOPRACE 2.5 Ace Healthcare,..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 22,
-            "excerpt": "337 Clotrimazole Vaginal Tablet 100mg Mycoril Remedica,Cyprus Kandana Foods \nand Drugs 175.87/Tablet \n338 Co-amoxiclav Injection 1.2g CLANEKSI PT Sanbe ,Indonesia  Softlogic \nPharmaceuticals  1,025.54..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 22,
-            "excerpt": "330 Cholecalciferol Tablet 1000IU Prove D3-1000IU PT Dankos Pharma \n,Indonesia \nHemas \nPharmaceutical  13.23/Tablet \n331 Ciprofloxacin Eye/Ear Drop  0.30% CIPROCIN Square Pharmaceuticals, \nBangladesh..."
-          }
-        ],
-        "suggestions": [
-          "What is the NMRA gazette, and where can I find it to verify the prices?",
-          "How often are the prices of Clotrimazole formulations updated in the gazette?",
-          "Are there any other formulations of Clotrimazole available, and what are their prices?"
-        ]
-      }
-    ]
-  },
-  "4638a57c-180f-4ef2-9c00-360327f9e04c": {
-    "created_at": "2026-03-28 23:59:01",
-    "updated_at": "2026-03-28 23:59:39",
-    "title": "hi",
-    "messages": [
-      {
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "role": "assistant",
-        "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
-        "sources": [],
-        "suggestions": []
-      }
-    ]
-  },
-  "94f76b83-e4c6-4012-b463-1539f792e995": {
-    "created_at": "2026-03-29 00:12:30",
-    "updated_at": "2026-03-29 00:13:27",
-    "title": "hi",
-    "messages": [
-      {
-        "role": "user",
-        "content": "hi"
+        "content": "what you can do ?"
       },
       {
         "role": "assistant",
@@ -84,218 +36,65 @@
       },
       {
         "role": "assistant",
-        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
-        "sources": [],
-        "suggestions": []
-      }
-    ]
-  },
-  "b6ab72df-fbae-4679-bd9d-27aa8f033e20": {
-    "created_at": "2026-03-29 01:05:00",
-    "updated_at": "2026-03-29 01:06:18",
-    "title": "hi",
-    "messages": [
-      {
-        "role": "user",
-        "content": "hi"
-      },
-      {
-        "role": "assistant",
         "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
         "sources": [],
         "suggestions": []
       },
       {
         "role": "user",
-        "content": "What is the price of Paracetomal"
+        "content": "what are The basic cold chain equipment includes"
       },
       {
         "role": "assistant",
-        "content": "The price of Paracetamol Tablet 500 mg (PARAMOL 500) is 3.20/Tablet, as per the NMRA gazette (item 182).",
+        "content": "The basic cold chain equipment includes: \n• For vaccine storage: Refrigerators and Cold-rooms.\n• For vaccine transport: Cold boxes, Vaccine carriers, Day-carriers, and Thermos flasks.\n• For cold chain monitoring: Thermometers, Cold Chain Monitors, Vaccine Vial Monitors, Freeze Watch Monitors, and data loggers.\n• For transport: Vehicles. \n(Source: Guidelines for Handling and Storage of vaccines.pdf, Page 2)",
         "sources": [
           {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 11,
-            "excerpt": "175 Carboxymethylcellulose \n+ Glycerin Eye drops 0.5% + 0.9% OPTIVE Allergen LLC, USA  Hemas \nPharmaceuticals  1,476.00/15 mL Vial  \n176 Loratadine Suspension 5 mg/ 5mL Oradin Eskayef Bangladesh \nLimi..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 20,
-            "excerpt": "303 \nBrimonidine Tartrate 2 \nmg/mL+ Timolol 5 \nmg/mL \nEye Drops - COMBIGAN Allergan Pharmaceuticals, \nIreland \nHemas \nPharmaceuticals  3,003.35/5mL \n304 \nBrimonidine \nTartrate Ophthalmic \nSolution 0.1..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 4,
-            "excerpt": "66 Dexmedetomidine Injection 200 mcg/2 mL Dexmedetomidine Kelun Lifesciences , Sri \nLanka \nKelun \nLifesciences, Sri \nLanka \n3,853.98/ Ampoule  \n67 Metformin Tablet 850 mg DIAMET 850 Sands active, Sri..."
+            "document": "Guidelines for Handling and Storage of vaccines.pdf",
+            "file_path": "data\\raw\\Guidelines for Handling and Storage of vaccines.pdf",
+            "page": "2",
+            "excerpt": "The basic cold chain equipment includes: • For  vaccine  storage  :  Refrigerators  and   Cold-rooms. • For vaccine transport: Cold boxes, Vaccine  carriers, Day-carriers and Thermos flasks. • For cold chain monitoring: Thermometers,   Cold  Chain  Monitors,  Vaccine  Vial   Monitors, Freeze Watch Monitors and data   lodgers  • For transport : Vehicles   RECEIPT OF VACCINES 1. On receiving a consi..."
           }
         ],
         "suggestions": [
-          "What is the NMRA gazette and how often is it updated?",
-          "Is the price of PARAMOL 500 subject to change over time?",
-          "Are there any other strengths or forms of Paracetamol available under the PARAMOL brand?"
-        ]
-      },
-      {
-        "role": "user",
-        "content": "Is the price of PARAMOL 500 subject to change over time?"
-      },
-      {
-        "role": "assistant",
-        "content": "The provided NMRA gazette context lists the price of Paracetamol Tablet 500 mg as 3.20/Tablet (entry 182). However, it does not explicitly state whether the price is subject to change over time. The context only provides a snapshot of the current prices, but it does not include information about price fluctuations or updates. Therefore, I cannot find information about the price change of Paracetamol Tablet 500 mg in the loaded NMRA gazettes. Please check if the relevant gazette has been uploaded.",
-        "sources": [],
-        "suggestions": []
-      }
-    ]
-  },
-  "ccf7b945-d4a3-49ef-8882-af221bb9c699": {
-    "created_at": "2026-03-29 01:33:49",
-    "updated_at": "2026-03-29 01:34:56",
-    "title": "what is the definition of medi...",
-    "messages": [
-      {
-        "role": "user",
-        "content": "what is the definition of medicine"
-      },
-      {
-        "role": "assistant",
-        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
-        "sources": [],
-        "suggestions": []
-      }
-    ]
-  },
-  "93088434-d225-435d-90b2-fc40c55cd6fe": {
-    "created_at": "2026-03-29 01:35:32",
-    "updated_at": "2026-03-29 01:36:15",
-    "title": "what is the definition of Medi...",
-    "messages": [
-      {
-        "role": "user",
-        "content": "what is the definition of Medicine"
-      },
-      {
-        "role": "assistant",
-        "content": "According to the NMRA gazette, a Medicine is defined as \"Any Substance Or Mixture Of Substances Manufactured, Sold, Offered For Sale Or Represented For Use In The Diagnosis, Treatment, Mitigation Or Prevention Of Disease, Abnormal Physical States Or The Symptoms Thereof In Man Or Animal. Restoring, Correcting Or Modifying Functions Of Organs In Man Or Animal. A Medicine Or Combination Of Medicine Ready For Use And Placed On The Market Under A Special Name Or In A Characteristic Form, Both Patent And Non-Proprietary Preparations. A Product Made Out Of Medicinal Herbal Extract. Nutraceutical With Therapeutic Claims And Vaccines And Sera, but Does Not Include An Ayurvedic Medicine Or A Homoeopathic Medicine.\"",
-        "sources": [
-          {
-            "document": "Regulatory Overview.txt",
-            "page": "N/A",
-            "excerpt": "Definition of a Medicine\nAny Substance Or Mixture Of Substances Manufactured, Sold, Offered For Sale Or Represented For Use In\nThe Diagnosis, Treatment, Mitigation Or Prevention Of Disease, Abnormal P..."
-          },
-          {
-            "document": "Regulatory Overview.txt",
-            "page": "N/A",
-            "excerpt": "This Section Explains What Is Termed As A Medicine And Their Different Categories.\nInformation Is Also Given To Provide Guidance On The Type Of Applications And How To Apply For The Approval Of Medici..."
-          },
-          {
-            "document": "Regulatory Overview.txt",
-            "page": "N/A",
-            "excerpt": "National Medicines Regulatory Authority (NMRA) Will Thereby Regulate And Control Manufacture, Importation, Storage, Distribution, Transportation, Pricing, Wholesale And Retail Sale, Advertising, And D..."
-          },
-          {
-            "document": "Regulatory Overview.txt",
-            "page": "N/A",
-            "excerpt": "The National Medicines Regulatory Authority Act Specifies That No Person Shall Manufacture Or Import Any Medicine Without Registering Such Medicines With The NMRA.\n\nThe Medicines Evaluation Committee..."
-          },
-          {
-            "document": "New-Maximum-Prices-of-Essential-Medicines-2025-November-NMRA.pdf",
-            "page": 0,
-            "excerpt": "Lanka \nKelun \nLifesciences, Sri \nLanka \n425.00/ 2 mL \n14 Aminophylline Injection 25 mg/mL Aminophylline Kelun Lifesciences, Sri \nLanka \nKelun \nLifesciences, Sri \nLanka \n620.00/ 10 mL..."
-          }
-        ],
-        "suggestions": [
-          "What are the key differences between a medicine and an ayurvedic or homoeopathic medicine as per the NMRA gazette definition?",
-          "Are all substances that claim to have health benefits considered medicines under this definition, or are there specific exemptions or exclusions?",
-          "How do regulatory bodies like the NMRA ensure that products labeled as medicines adhere to the defined criteria and are safe for human or animal use?"
+          "What are the ideal temperature ranges for vaccine storage in refrigerators and cold-rooms?",
+          "How often should cold chain equipment be monitored and maintained to ensure proper function?",
+          "What are the key differences between cold boxes, vaccine carriers, and day-carriers in terms of their usage and capacity?"
         ]
       }
     ]
   },
-  "1e283013-0dff-4869-a285-0385b3ad9a4e": {
-    "created_at": "2026-03-29 01:50:37",
-    "updated_at": "2026-03-29 01:55:50",
-    "title": "how to register Cosmetios",
+  "b5a624d1-c7bd-4cb2-973c-91a52b977498": {
+    "created_at": "2026-03-29 14:53:02",
+    "updated_at": "2026-03-29 14:53:08",
+    "title": "The basic cold chain equipment...",
     "messages": [
       {
         "role": "user",
-        "content": "how to register Cosmetios"
+        "content": "The basic cold chain equipment includes"
       },
       {
         "role": "assistant",
-        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
-        "sources": [],
-        "suggestions": []
-      },
-      {
-        "role": "user",
-        "content": "what are the condions for sales of Cosmetics?"
-      },
-      {
-        "role": "assistant",
-        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
-        "sources": [],
-        "suggestions": []
-      },
-      {
-        "role": "user",
-        "content": "which deadline is coming"
-      },
-      {
-        "role": "assistant",
-        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
-        "sources": [],
-        "suggestions": []
-      },
-      {
-        "role": "user",
-        "content": "what is the Pricing Mechanism for the Maximum Retail Price (MRP) ?"
-      },
-      {
-        "role": "assistant",
-        "content": "The Pricing Mechanism for the Maximum Retail Price (MRP) is calculated according to the following formula: \nMRP = CIF + DT + SCTM, \nwhere MRP denotes the Maximum Retail Price, CIF denotes Cost, Insurance and Freight, DT denotes Duties and Taxes paid, and SCTM denotes Supply Chain Total Markup (Regulation 4).",
+        "content": "The basic cold chain equipment includes: \n• For vaccine storage: Refrigerators and Cold-rooms.\n• For vaccine transport: Cold boxes, Vaccine carriers, Day-carriers and Thermos flasks.\n• For cold chain monitoring: Thermometers, Cold Chain Monitors, Vaccine Vial Monitors, Freeze Watch Monitors and data loggers \n• For transport: Vehicles (Source: Guidelines for Handling and Storage of vaccines.pdf, Page 2)",
         "sources": [
           {
-            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
-            "page": 1,
-            "excerpt": "accepted tolerance level which the Authority will consider necessary in the public interest.\n 10. It shall be lawful for the Authority to recall MRPs issued based on market conditions as well as to im..."
-          },
-          {
-            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
-            "page": 0,
-            "excerpt": "“Authority”), Consumer Affairs Authority established under the provisions of the Consumer Affairs Authority Act, No. 9 of \n2003 and all stakeholders and taking into consideration all other relevant fa..."
-          },
-          {
-            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
-            "page": 1,
-            "excerpt": "I fldgi ( ^I& fPoh - YS% ,xld m%cd;dka;s%l iudcjd§ ckrcfha w;s úfYI .eiÜ m;%h - 2025'07'21\nPart  I : Sec . (I) - GAZETTE EXTRAORDINARY OF THE DEMOCRATIC SOCIALIST REPUBLIC OF SRI LANKA - 21.07.2025\n2A..."
-          },
-          {
-            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
-            "page": 3,
-            "excerpt": "same strength and dosage form; and \n  “retail price” means the ceiling price or the retail price including taxes and duties as applicable, at which the drug \nshall be sold to the ultimate consumer and..."
-          },
-          {
-            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
-            "page": 2,
-            "excerpt": "generic) (n), the median retail price of such medicines shall be considered as the value at position  \n(n+1)/ 2; \n   (ii)  if the medicine has an even number of all available versions of individual pr..."
-          },
-          {
-            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
-            "page": 1,
-            "excerpt": "using external and internal reference pricing approaches.\n 6.  The average United States Dollar exchange (Selling) rate of the past three months, published by the Authority based \non the exchange rate..."
-          },
-          {
-            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
-            "page": 2,
-            "excerpt": "14.  The MRPs of all branded or generic versions including the originator of an individual product determined by the \nAuthority which are lower than the MCP shall not be increased.\n 15.  Any new regis..."
+            "document": "Guidelines for Handling and Storage of vaccines.pdf",
+            "file_path": "data\\raw\\Guidelines for Handling and Storage of vaccines.pdf",
+            "page": "2",
+            "excerpt": "The basic cold chain equipment includes: • For  vaccine  storage  :  Refrigerators  and   Cold-rooms. • For vaccine transport: Cold boxes, Vaccine  carriers, Day-carriers and Thermos flasks. • For cold chain monitoring: Thermometers,   Cold  Chain  Monitors,  Vaccine  Vial   Monitors, Freeze Watch Monitors and data   lodgers  • For transport : Vehicles   RECEIPT OF VACCINES 1. On receiving a consi..."
           }
         ],
         "suggestions": [
-          "What is the typical range of values for the Supply Chain Total Markup (SCTM) in the given formula?",
-          "How are the Duties and Taxes (DT) calculated and what factors influence their amount?",
-          "Can the formula for calculating the Maximum Retail Price (MRP) vary depending on the type of product or industry?"
+          "What are the ideal temperature ranges for vaccine storage in refrigerators and cold-rooms?",
+          "How often should cold chain equipment be maintained or calibrated to ensure proper function?",
+          "What are the key differences between cold chain monitors and vaccine vial monitors in terms of their applications?"
         ]
       }
     ]
+  },
+  "3b7e5597-23cf-40ff-8386-764ef65ae800": {
+    "created_at": "2026-03-29 14:54:31",
+    "updated_at": "2026-03-29 14:54:31",
+    "title": "New Chat - 2026-03-29 14:54:31",
+    "messages": []
   }
 }

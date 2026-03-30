@@ -19,6 +19,10 @@ tqdm>=4.66.0
 numpy>=1.26.0
 pyyaml>=6.0.0
 extra-streamlit-components>=0.1.71
+# OCR and Image Processing
+pytesseract>=0.3.10
+pypdfium2>=4.20.0
+Pillow>=10.0.0
 # Fix for meta tensor error
 # accelerate>=0.26.0  <-- Removed to fix meta tensor error
 transformers>=4.36.0
