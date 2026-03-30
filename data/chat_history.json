@@ -96,5 +96,49 @@
     "updated_at": "2026-03-29 14:54:31",
     "title": "New Chat - 2026-03-29 14:54:31",
     "messages": []
+  },
+  "1f77e8f0-d8a2-430f-b8ff-c50e8ab7d300": {
+    "created_at": "2026-03-31 01:08:18",
+    "updated_at": "2026-03-31 01:15:43",
+    "title": "is there any deadlines coming ...",
+    "messages": [
+      {
+        "role": "user",
+        "content": "is there any deadlines coming up ?"
+      },
+      {
+        "role": "assistant",
+        "content": "According to the documents, there are a few deadlines mentioned:\n\n1. The extended grace period for the implementation of product-specific QR codes or barcodes on commercial packaging will end on 30th June 2026 (Source: Updated Labelling Requirement Amendment 04.pdf, PAGE: 1).\n2. The requirement to affix printed or non-peelable stickers to each commercial pack, displaying the phrase “NMRA approved”, the details of the market authorization holder, and the retail price of the product, has been effective from 31 December 2024 (Source: Updated Labelling Requirement Amendment 04.pdf, PAGE: 1).\n3. The Minister shall lay copies of the report and documents submitted by the Authority before Parliament within six months from the date of receipt of such report (Source: 66cdNational medicines regulatory authority act, no. 5 of 2015 - Eng.pdf, PAGE: 19).\n4. Every regulation made by the Minister shall not later than three months after its publication in the Gazette, be brought before Parliament for approval (Source: 66cdNational medicines regulatory authority act, no. 5 of 2015 - Eng.pdf, PAGE: 87).\n5. A prosecution for an offence under this Act or any regulation made thereunder shall not be instituted after the expiration of a period of three months from the date of detection of that offence (Source: 66cdNational medicines regulatory authority act, no. 5 of 2015 - Eng.pdf, PAGE: 87).",
+        "sources": [
+          {
+            "document": "66cdNational medicines regulatory authority act, no. 5 of 2015 - Eng.pdf",
+            "file_path": "data\\raw\\66cdNational medicines regulatory authority act, no. 5 of 2015 - Eng.pdf",
+            "page": "87",
+            "excerpt": "86 National Medicines Regulatory Authority Act, No. 5 of 2015 (3) Every regulation made by the Minister shall be published in the Gazette and shall come into operation on the date of such publication or on such later date as may be specified in such regulation. (4) Every regulation made by the Minster, shall not later than three months after its publication in the Gazette, be brought before Parlia..."
+          },
+          {
+            "document": "Updated Labelling Requirement Amendment 04.pdf",
+            "file_path": "data\\raw\\Updated Labelling Requirement Amendment 04.pdf",
+            "page": "1",
+            "excerpt": "Regulatory Authority (NMRA) has decided to further extend the grace period for the implementation of product-specific QR codes or barcodes on commercial packaging. The extended grace period will commence on Ist of January 2026 and continue until 30\" June 2026. Alternatively, the NMRA will accept a 2D Matrix containing essential product information such as the product code, lot number, manufacturin..."
+          }
+        ],
+        "suggestions": [
+          "What are the consequences for not meeting the June 30th, 2026 deadline for implementing product-specific QR codes or barcodes?",
+          "Are there any exceptions or exemptions to the requirement for affixing \"NMRA approved\" stickers on commercial packs, effective from December 31, 2024?",
+          "How does the three-month time frame for instituting a prosecution for an offence under the Act affect the enforcement of regulations?"
+        ]
+      },
+      {
+        "role": "user",
+        "content": "What are the consequences for not meeting the June 30th, 2026 deadline for implementing product-specific QR codes or barcodes?"
+      },
+      {
+        "role": "assistant",
+        "content": "I cannot find information about the consequences for not meeting the June 30th, 2026 deadline in the uploaded NMRA gazettes. Please check if the relevant gazette has been uploaded. (Source: Updated Labelling Requirement Amendment 04.pdf, Page 1) only mentions the extension of the grace period until June 30th, 2026, but does not specify the consequences for non-compliance.",
+        "sources": [],
+        "suggestions": []
+      }
+    ]
   }
 }
