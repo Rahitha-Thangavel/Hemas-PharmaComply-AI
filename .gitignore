@@ -21,3 +21,10 @@ vector_store/
 # OS specific
 .DS_Store
 Thumbs.db
+
+# Database Logs
+data/compliance_audit.db
+
+# Streamlit
+.streamlit/
+! .streamlit/config.toml
