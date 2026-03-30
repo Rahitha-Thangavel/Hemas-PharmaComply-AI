@@ -1,0 +1,16 @@
+[
+    {
+        "id": "dummy_test.pdf_0",
+        "source": "dummy_test.pdf",
+        "date": "2026-04-04",
+        "context": "Drug prices must be implemented by 2026-04-04. Import licenses must be renewed before 2026-03-31 immediately.",
+        "action": "Price implementation / effective date reached."
+    },
+    {
+        "id": "dummy_test.pdf_1",
+        "source": "dummy_test.pdf",
+        "date": "2026-03-31",
+        "context": "Import licenses must be renewed before 2026-03-31 immediately. ",
+        "action": "License renewal / submission required."
+    }
+]
