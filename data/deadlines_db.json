@@ -1,17 +1,11 @@
 [
     {
-        "id": "dummy_test.pdf_0",
-        "source": "dummy_test.pdf",
-        "date": "2026-04-04",
-        "context": "Drug prices must be implemented by 2026-04-04. Import licenses must be renewed before 2026-03-31 immediately.",
-        "action": "Price implementation / effective date reached."
-    },
-    {
-        "id": "dummy_test.pdf_1",
-        "source": "dummy_test.pdf",
-        "date": "2026-03-31",
-        "context": "Import licenses must be renewed before 2026-03-31 immediately. ",
-        "action": "License renewal / submission required."
+        "id": "Submission of manual applications for foreign manufacturing site registrations (Previous online approvals).pdf_0_20260905",
+        "source": "Submission of manual applications for foreign manufacturing site registrations (Previous online approvals).pdf",
+        "date": "2026-09-05",
+        "context": "\u2022 Previous payment receipt \u2022 Copy of the previously issued approval letter for the manufacturing site (if available) Deadline for the submission-05/09/2026 CEO/NMRA ",
+        "action": "NMRA regulatory requirement deadline.",
+        "confidence": "High"
     },
     {
         "id": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf_0_20250325",

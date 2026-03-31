@@ -68,7 +68,13 @@ def parse_deadlines_from_text(text, source_file):
         "implement": "Implementation required by this date.",
         "gazette": "Gazette notification compliance date.",
         "maximum": "Maximum retail price implementation.",
-        "nmra": "NMRA regulatory requirement deadline."
+        "nmra": "NMRA regulatory requirement deadline.",
+        "before": "Submission/Action required before this date.",
+        "by": "Compliance deadline (action by date).",
+        "due": "Due date for regulatory action.",
+        "prior to": "Pre-compliance requirement deadline.",
+        "deadline": "Explicit regulatory deadline identified.",
+        "revision": "Price/Policy revision implementation date."
     }
     
     lines = text.split("\n")
@@ -153,11 +159,37 @@ def parse_deadlines_from_text(text, source_file):
             
     return unique_deadlines
 
+def validate_db(data_dir):
+    """
+    Removes entries from the database if the corresponding source file does not exist in data_dir.
+    """
+    existing_deadlines = load_deadlines()
+    if not existing_deadlines:
+        return 0
+    
+    # Get all PDF filenames in data_dir
+    valid_filenames = {f.name for f in Path(data_dir).rglob("*.pdf")}
+    
+    # Filter out deadlines whose source is not in valid_filenames
+    filtered_deadlines = [d for d in existing_deadlines if d["source"] in valid_filenames]
+    
+    removed_count = len(existing_deadlines) - len(filtered_deadlines)
+    if removed_count > 0:
+        logger.info(f"Removed {removed_count} obsolete deadline entries (source files missing).")
+        save_deadlines(filtered_deadlines)
+        
+    return removed_count
+
 def sync_deadlines(data_dir):
     """
     Scans data_dir for PDFs and extracts deadlines.
+    Also performs a validation pass to remove missing files.
     """
     initialize_db()
+    
+    # First, cleanup missing files
+    validate_db(data_dir)
+    
     existing = load_deadlines()
     existing_sources = {d["source"] for d in existing}
     
@@ -167,9 +199,6 @@ def sync_deadlines(data_dir):
     pdf_files = list(Path(data_dir).rglob("*.pdf"))
     for pdf_file in pdf_files:
         filename = pdf_file.name
-        # Even if source exists, we might want to check if new deadlines can be extracted
-        # But for efficiency, we usually skip processed files.
-        # However, user wants to scan ALL PDFs in data/raw.
         if filename not in existing_sources:
             text = extract_text_from_pdf(str(pdf_file))
             extracted = parse_deadlines_from_text(text, filename)
@@ -186,7 +215,7 @@ def get_status(deadline_date_str):
         days_remaining = (deadline - datetime.now()).days
         
         if days_remaining < 0:
-            return "Overdue", days_remaining
+            return "Grey", days_remaining
         elif days_remaining <= 2:
             return "Red", days_remaining
         elif 2 < days_remaining <= 10:
