@@ -52,14 +52,10 @@ class HemasPharmaComplyAI:
             str(self.data_dir / "**/*.pdf"),
             str(self.data_dir / "**/*.txt"),
             str(self.data_dir / "**/*.docx"),
-<<<<<<< HEAD
-            str(self.data_dir / "**/*.doc")
-=======
             str(self.data_dir / "**/*.doc"),
             str(self.data_dir / "**/*.png"),
             str(self.data_dir / "**/*.jpg"),
             str(self.data_dir / "**/*.jpeg")
->>>>>>> feature/contextual-categorization
         ]
         
         all_files = []
@@ -140,7 +136,6 @@ class HemasPharmaComplyAI:
             template=get_qa_prompt(),
             input_variables=["context", "question"]
         )
-<<<<<<< HEAD
         
         # EXPLICIT CONTEXT LABELLING: This ensures the LLM sees the source/page for every chunk!
         document_prompt = PromptTemplate(
@@ -152,23 +147,14 @@ class HemasPharmaComplyAI:
             search_kwargs={"k": self.config["retrieval"]["top_k"]}
         )
         
-=======
-        retriever = self.vector_store.as_retriever(
-            search_kwargs={"k": self.config["retrieval"]["top_k"]}
-        )
->>>>>>> feature/contextual-categorization
         self.qa_chain = ConversationalRetrievalChain.from_llm(
             llm=self.llm,
             retriever=retriever,
             memory=self.memory,
-<<<<<<< HEAD
             combine_docs_chain_kwargs={
                 "prompt": prompt,
                 "document_prompt": document_prompt
             },
-=======
-            combine_docs_chain_kwargs={"prompt": prompt},
->>>>>>> feature/contextual-categorization
             return_source_documents=True,
             verbose=False
         )
@@ -284,7 +270,6 @@ class HemasPharmaComplyAI:
             return []
 
     def _extract_sources(self, result):
-<<<<<<< HEAD
         answer = result.get('answer', '')
         source_docs = result.get('source_documents', [])
         sources = []
@@ -367,25 +352,6 @@ class HemasPharmaComplyAI:
                 "file_path": doc.metadata.get('file_path', ''),
                 "page": doc.metadata.get('page', 'N/A'),
                 "excerpt": doc.page_content[:400].replace('\n', ' ').strip() + "..."
-=======
-        sources = []
-        seen = set()
-
-        for doc in result.get('source_documents', []):
-            document = doc.metadata.get('source', 'Unknown')
-            page = doc.metadata.get('page', 'N/A')
-            excerpt = doc.page_content[:200].strip()
-            key = (document, page, excerpt)
-
-            if key in seen:
-                continue
-
-            seen.add(key)
-            sources.append({
-                "document": document,
-                "page": page,
-                "excerpt": f"{excerpt}..." if excerpt else "No excerpt available."
->>>>>>> feature/contextual-categorization
             })
 
         return sources

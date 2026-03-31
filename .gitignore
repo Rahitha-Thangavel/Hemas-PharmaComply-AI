@@ -11,10 +11,7 @@ __pycache__/
 
 # Chroma Vector Store
 vector_store/
-<<<<<<< HEAD
 vector_store_v2/
-=======
->>>>>>> feature/contextual-categorization
 
 # Data
 # Uncomment the below if you don't want to push your gazette documents
@@ -22,20 +19,18 @@ vector_store_v2/
 # data/*.txt
 # data/*.docx
 
-# OS specific
-.DS_Store
-Thumbs.db
-<<<<<<< HEAD
-
-# Database Logs
-data/compliance_audit.db
-
-# Streamlit
-.streamlit/
-! .streamlit/config.toml
-=======
 # Ignore raw PDFs and temp uploads
 data/raw/
 data/temp_uploads/
 tmp/
->>>>>>> feature/contextual-categorization
+
+# Database Logs
+data/compliance_audit.db
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
+! .streamlit/config.toml
