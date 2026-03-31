@@ -205,5 +205,173 @@
         ]
       }
     ]
+  },
+  "85009227-59e6-4948-871c-0c4560a67625": {
+    "created_at": "2026-03-30 21:42:33",
+    "updated_at": "2026-03-30 21:49:24",
+    "title": "what are the infromations do y...",
+    "messages": [
+      {
+        "role": "user",
+        "content": "what are the infromations do you have?"
+      },
+      {
+        "role": "user",
+        "content": "hello"
+      },
+      {
+        "role": "assistant",
+        "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
+        "sources": [],
+        "suggestions": []
+      },
+      {
+        "role": "user",
+        "content": "give me the recent deadlines"
+      },
+      {
+        "role": "assistant",
+        "content": "I cannot find information about recent compliance deadlines for NMRA price regulations in the loaded NMRA gazettes. Please check if the relevant gazette has been uploaded.",
+        "sources": [],
+        "suggestions": []
+      },
+      {
+        "role": "user",
+        "content": "what are the info do you have"
+      },
+      {
+        "role": "assistant",
+        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
+        "sources": [],
+        "suggestions": []
+      },
+      {
+        "role": "user",
+        "content": "give me the pricing details"
+      },
+      {
+        "role": "assistant",
+        "content": "The pricing mechanism for NMRA pharmaceutical price regulations includes the Maximum Retail Price (MRP) and the Maximum Ceiling Price (MCP). According to the Medicines (Pricing Mechanism for Medicines) Regulations, No. 02 of 2025, the Authority shall decide whether MRP or MCP is to be applied to regulate the price of a particular medicine (Regulation 3). \n\nThe MCP shall be determined by using an internationally recognized information portal, verifying retail prices from retail pharmacies, and using Internal Reference Prices, External Reference Prices, and Supply Chain Total Markup (Regulation 11). \n\nAdditionally, the regulations mention that the Authority shall consider the prevailing market prices of similar products within the same therapeutic class, International Reference Prices, and other factors as may be prescribed when determining the introductory price of medicines (Section 66, Act No. 5 of 2015). \n\nIt is also stated that the Minister shall prescribe a pricing mechanism in consultation with the Pricing Committee, the Consumer Affairs Authority, and all stakeholders, taking into consideration all other relevant factors (Section 66, Act No. 5 of 2015). \n\nPlease note that the specific pricing details, such as the actual prices or formulas for calculation, are not provided in the given context.",
+        "sources": [
+          {
+            "document": "66cdNational medicines regulatory authority act, no. 5 of 2015 - Eng.pdf",
+            "page": 66,
+            "excerpt": "66 National Medicines Regulatory Authority\nAct, No. 5 of 2015\n(2) (a) The Authority shall in consultation with the Pricing\nCommittee, determine the introductory price of medicines,\nmedical devices and..."
+          },
+          {
+            "document": "Registration and Licensing of Medicines (Fees) Regulations 2025.pdf",
+            "page": 4,
+            "excerpt": "in Small quantities (List of products in this category is published in the NMRA Official \nWebsite). \nFree of \ncharge\n3 Additional data for Manufacturing Plant (MP) Evaluation – Foreign  $ 500 \n4 Varia..."
+          },
+          {
+            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
+            "page": 0,
+            "excerpt": "“Authority”), Consumer Affairs Authority established under the provisions of the Consumer Affairs Authority Act, No. 9 of \n2003 and all stakeholders and taking into consideration all other relevant fa..."
+          },
+          {
+            "document": "Local Manufacturer's Data Submission Form_Instruction Sheet.pdf",
+            "page": 1,
+            "excerpt": "o This must reflect the actual end-use quantity, not only the number of packs. \nExamples: \n(10 × 10 tablets) × 500 packs = 50,000  \n100 bottles of 200 ml = 100  \n Market \no Whether consignment supply..."
+          },
+          {
+            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
+            "page": 1,
+            "excerpt": "accepted tolerance level which the Authority will consider necessary in the public interest.\n 10. It shall be lawful for the Authority to recall MRPs issued based on market conditions as well as to im..."
+          },
+          {
+            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
+            "page": 3,
+            "excerpt": "same strength and dosage form; and \n  “retail price” means the ceiling price or the retail price including taxes and duties as applicable, at which the drug \nshall be sold to the ultimate consumer and..."
+          },
+          {
+            "document": "Regulatory Overview.txt",
+            "page": "N/A",
+            "excerpt": "National Medicines Regulatory Authority (NMRA) Will Thereby Regulate And Control Manufacture, Importation, Storage, Distribution, Transportation, Pricing, Wholesale And Retail Sale, Advertising, And D..."
+          }
+        ],
+        "suggestions": [
+          "What is the main purpose of the Maximum Retail Price and the Maximum Ceiling Price in the NMRA pharmaceutical price regulations?",
+          "How does the Authority determine the introductory price of medicines, and what factors are considered in this process?",
+          "What role does the Pricing Committee and other stakeholders play in prescribing the pricing mechanism for medicines?"
+        ]
+      },
+      {
+        "role": "user",
+        "content": "can you give me the table for the comsimoble medicine with the price list"
+      },
+      {
+        "role": "assistant",
+        "content": "According to the NMRA gazette, the pricing mechanism for the maximum ceiling price (MCP) is determined by using an internationally recognized information portal for identifying the market share by value of different brands or generic versions of a particular medicine (Section 11, Part II). \n\nThe gazette also mentions that the Authority shall consider the prevailing market prices of similar products within the same therapeutic class, International Reference Prices, and other factors as may be prescribed (Section 66, Act No. 5 of 2015).\n\nRegarding the pricing list, the gazette provides a table outlining the fees for different types of products, including new molecule entities, new dosage forms, and new combination products (Column I, Column II, and Column III). However, it does not provide a specific table for comparable medicines within the same therapeutic class.\n\nThe tables provided in the gazette are for fees related to product registration and evaluation, such as:\n\n- New Molecule Entity: $500 (Part 1) and $1,500 (Part 2)\n- New Dosage Form: $1,000\n- New Combination Product: $1,500\n- New Product: $750 (Foreign) and (Local) Category A- (i) Medicines to be administered internally: $200, Category B- Dosage forms applicable on skin other than anti-infective or steroidal product: $100\n\nAdditionally, the gazette mentions fees for additional data evaluation, including:\n\n- Additional data Evaluation for medicine registration: $500 (Foreign) and Category A- (i) Medicines to be administered internally: $200, Category B- Dosage forms applicable on skin other than anti-infective or steroidal product: $100\n- Additional data evaluation for Medicines required for rare diseases and medicines required in Small quantities: Free of charge\n\nPlease note that these tables and fees are related to product registration and evaluation, not directly to the pricing of comparable medicines.",
+        "sources": [
+          {
+            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
+            "page": 3,
+            "excerpt": "same strength and dosage form; and \n  “retail price” means the ceiling price or the retail price including taxes and duties as applicable, at which the drug \nshall be sold to the ultimate consumer and..."
+          },
+          {
+            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
+            "page": 1,
+            "excerpt": "accepted tolerance level which the Authority will consider necessary in the public interest.\n 10. It shall be lawful for the Authority to recall MRPs issued based on market conditions as well as to im..."
+          },
+          {
+            "document": "66cdNational medicines regulatory authority act, no. 5 of 2015 - Eng.pdf",
+            "page": 66,
+            "excerpt": "66 National Medicines Regulatory Authority\nAct, No. 5 of 2015\n(2) (a) The Authority shall in consultation with the Pricing\nCommittee, determine the introductory price of medicines,\nmedical devices and..."
+          },
+          {
+            "document": "Registration and Licensing of Medicines (Fees) Regulations 2025.pdf",
+            "page": 5,
+            "excerpt": "products to be applied locally. \n \n$ 200\nCategory  B- \nDosage forms applicable on skin other \nthan anti-infective or steroidal product. $ 100\nMedicines required for rare diseases and \nmedicines requir..."
+          },
+          {
+            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
+            "page": 2,
+            "excerpt": "I fldgi ( ^I& fPoh - YS% ,xld m%cd;dka;s%l iudcjd§ ckrcfha w;s úfYI .eiÜ m;%h - 2025'07'21\nPart I : Sec. (I) - GAZETTE EXTRAORDINARY OF THE DEMOCRATIC SOCIALIST REPUBLIC OF SRI LANKA - 21.07.2025\n3A..."
+          },
+          {
+            "document": "Registration and Licensing of Medicines (Fees) Regulations 2025.pdf",
+            "page": 1,
+            "excerpt": "Column I Column II \nType \nColumn III \nFee (USD)\n \n1 New Molecule Entity  (A chemical \nmoiety which has not been \npreviously registered in Sri Lanka, \nincluding a new salt, an ester or \ncomplex of a pr..."
+          },
+          {
+            "document": "Registration and Licensing of Medicines (Fees) Regulations 2025.pdf",
+            "page": 4,
+            "excerpt": "I fldgi ( ^I& fPoh - YS% ,xld m%cd;dka;s%l iudcjd§ ckrcfha w;s úfYI .eiÜ m;%h - 2025'09'04\nPart I : Sec. (I) - GAZETTE EXTRAORDINARY OF THE DEMOCRATIC SOCIALIST REPUBLIC OF SRI LANKA - 04.09.2025\n5A\n(..."
+          }
+        ],
+        "suggestions": [
+          "What is the specific internationally recognized information portal used for determining the market share of different brands or generic versions of a medicine?",
+          "How often are the International Reference Prices and prevailing market prices of similar products within the same therapeutic class reviewed and updated for the purpose of determining the MCP?",
+          "Are the fees outlined in the gazette for product registration and evaluation subject to change, and if so, what is the process for revising these fees?"
+        ]
+      },
+      {
+        "role": "user",
+        "content": "What is the specific internationally recognized information portal used for determining the market share of different brands or generic versions of a medicine?"
+      },
+      {
+        "role": "assistant",
+        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
+        "sources": [],
+        "suggestions": []
+      }
+    ]
+  },
+  "327b5516-f2c9-46df-9337-263f512ca91d": {
+    "created_at": "2026-03-31 11:30:14",
+    "updated_at": "2026-03-31 11:33:09",
+    "title": "hi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "role": "assistant",
+        "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
+        "sources": [],
+        "suggestions": []
+      }
+    ]
   }
 }
