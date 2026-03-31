@@ -30,8 +30,18 @@ def main():
     # Render synchronized sidebar
     render_sidebar()
     
-    st.title("⏰ Deadline Tracking & Alerts")
-    st.markdown("---")
+    # Premium Header (Logo, Title, Subtitle)
+    col1, col2 = st.columns([0.1, 0.9])
+    with col1:
+        if os.path.exists("assets/logo.png"):
+            st.image("assets/logo.png", width=70)
+        elif os.path.exists("../assets/logo.png"):
+            st.image("../assets/logo.png", width=70)
+    with col2:
+        st.title("Deadline Tracking & Alerts")
+    
+    st.markdown("⚡ **Powered by Hemas Compliance Engine**")
+    st.divider()
     
     # Tabs for UI
     tab1, tab2 = st.tabs(["Dashboard Overview", "Check for New Deadlines"])

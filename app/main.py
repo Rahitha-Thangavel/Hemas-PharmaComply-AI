@@ -22,7 +22,6 @@ from services.history_manager import HistoryManager
 
 
 def run_chat_interface(chatbot):
-    st.markdown("## 💬 Compliance Assistant (QA)")
     
     if 'messages' not in st.session_state:
         st.session_state.messages = []
@@ -207,31 +206,34 @@ def main():
     # Sidebar Navigation
     render_sidebar() 
 
-    # Initialize Chatbot
+    # 1. Header (Logo, Title, Subtitle)
+    col1, col2 = st.columns([0.1, 0.9])
+    with col1:
+        if os.path.exists("assets/logo.png"):
+            st.image("assets/logo.png", width=70)
+        elif os.path.exists("../assets/logo.png"):
+            st.image("../assets/logo.png", width=70)
+    with col2:
+        st.title("Hemas PharmaComply AI")
+    
+    st.markdown("⚡ **Powered by Groq** - Super fast responses")
+    st.divider()
+
+    # 2. Initialize Chatbot (Rendered after Header)
     if 'chatbot' not in st.session_state:
-        with st.spinner("Initializing system..."):
+        st.info("Initializing Hemas PharmaComply AI...")
+        with st.spinner("Loading..."):
             try:
                 config = load_config()
                 st.session_state.chatbot = HemasPharmaComplyAI(config)
+                st.rerun()
             except Exception as e:
                 st.error(f"Initialization failed: {str(e)}")
                 return
 
     chatbot = st.session_state.chatbot
 
-    # Header
-    col1, col2 = st.columns([0.1, 0.9])
-    with col1:
-        if os.path.exists("assets/logo.png"):
-            st.image("assets/logo.png", width=60)
-        elif os.path.exists("../assets/logo.png"):
-            st.image("../assets/logo.png", width=60)
-    with col2:
-        st.title("Hemas PharmaComply AI")
-    
-    st.divider()
-
-    # Routing
+    # 3. Routing
     run_chat_interface(chatbot)
 
 if __name__ == "__main__":
