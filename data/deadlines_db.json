@@ -1,0 +1,24 @@
+[
+    {
+        "id": "dummy_test.pdf_0",
+        "source": "dummy_test.pdf",
+        "date": "2026-04-04",
+        "context": "Drug prices must be implemented by 2026-04-04. Import licenses must be renewed before 2026-03-31 immediately.",
+        "action": "Price implementation / effective date reached."
+    },
+    {
+        "id": "dummy_test.pdf_1",
+        "source": "dummy_test.pdf",
+        "date": "2026-03-31",
+        "context": "Import licenses must be renewed before 2026-03-31 immediately. ",
+        "action": "License renewal / submission required."
+    },
+    {
+        "id": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf_0_20250325",
+        "source": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
+        "date": "2025-03-25",
+        "context": "of a particular medicine) Regulations, No. 01 of 2024 published in Gazette Extraordinary No. 2390/18 of June 28, 2024 and the Medicines (Pricing Mechanism for Medicines) Regulations No. 01 of 2025 Published in Gazette Extraordinary No. 2429/12 of Mar...",
+        "action": "Gazette notification compliance date.",
+        "confidence": "High"
+    }
+]

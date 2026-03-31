@@ -11,6 +11,7 @@ __pycache__/
 
 # Chroma Vector Store
 vector_store/
+vector_store_v2/
 
 # Data
 # Uncomment the below if you don't want to push your gazette documents
