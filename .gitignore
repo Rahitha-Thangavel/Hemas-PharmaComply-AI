@@ -21,3 +21,7 @@ vector_store/
 # OS specific
 .DS_Store
 Thumbs.db
+# Ignore raw PDFs and temp uploads
+data/raw/
+data/temp_uploads/
+tmp/
