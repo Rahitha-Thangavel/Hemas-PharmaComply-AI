@@ -6,7 +6,8 @@ from datetime import datetime
 
 # Add root to path
 current_dir = os.path.dirname(os.path.abspath(__file__))
-project_root = os.path.dirname(current_dir)
+# app/pages/dashboard.py -> app/pages -> app -> project_root
+project_root = os.path.dirname(os.path.dirname(current_dir))
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
@@ -15,7 +16,8 @@ from app.features.deadline.deadline_service import (
     sync_deadlines, 
     load_deadlines, 
     get_status, 
-    send_email_reminders
+    send_email_reminders,
+    validate_db
 )
 
 def main():
@@ -35,16 +37,26 @@ def main():
     tab1, tab2 = st.tabs(["Dashboard Overview", "Check for New Deadlines"])
     
     with tab1:
-        st.subheader("Upcoming Regulatory Deadlines")
-        
+        # Automatic cleanup and load
+        data_raw = os.path.join(project_root, "data", "raw")
+        validate_db(data_raw)
         deadlines = load_deadlines()
+        
+        # Filtering UI
+        col_f1, col_f2 = st.columns([0.3, 0.7])
+        with col_f1:
+            filter_option = st.selectbox(
+                "🔍 Filter Deadlines",
+                ["All Deadlines", "Upcoming", "Urgent", "Finished"],
+                key="filter_deadlines"
+            )
         
         if not deadlines:
             st.info("No deadlines found. Please upload PDFs or click 'Sync Deadlines'.")
         else:
             # Process data for display
             display_data = []
-            metrics = {"Green": 0, "Yellow": 0, "Red": 0}
+            metrics = {"Green": 0, "Yellow": 0, "Red": 0, "Grey": 0}
             
             for index, d in enumerate(deadlines):
                 # We need to make sure 'action' key exists since json might be old, but we just created it.
@@ -55,11 +67,28 @@ def main():
                 
                 # Assign visual indicators
                 if color == "Red":
-                    status_badge = "🚨 URGENT (≤1 day)"
+                    status_badge = "🚨 URGENT (≤2 days)"
+                    category = "Urgent"
                 elif color == "Yellow":
-                    status_badge = "⚠️ UPCOMING (1-7 days)"
+                    status_badge = "⚠️ UPCOMING (3-10 days)"
+                    category = "Upcoming"
+                elif color == "Green":
+                    status_badge = "✅ SAFE (>10 days)"
+                    category = "Upcoming"
+                elif color == "Grey":
+                    status_badge = "⌛ COMPLETED / PAST"
+                    category = "Finished"
                 else:
-                    status_badge = "✅ SAFE (>7 days)"
+                    status_badge = "❓ Unknown"
+                    category = "Other"
+                
+                # Apply Filter
+                if filter_option == "Upcoming" and category != "Upcoming":
+                    continue
+                if filter_option == "Urgent" and category != "Urgent":
+                    continue
+                if filter_option == "Finished" and category != "Finished":
+                    continue
                 
                 display_data.append({
                     "Document": d["source"],
@@ -69,24 +98,29 @@ def main():
                     "Action Required": action_text
                 })
                 
-            # Quick Stats
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                st.metric("Urgent Deadlines", metrics.get("Red", 0))
-            with col2:
-                st.metric("Upcoming Deadlines", metrics.get("Yellow", 0))
-            with col3:
-                st.metric("Safe Deadlines", metrics.get("Green", 0))
+            if not display_data:
+                st.info(f"No deadlines found matching the filter: **{filter_option}**")
+            else:
+                # Quick Stats
+                col1, col2, col3, col4 = st.columns(4)
+                with col1:
+                    st.metric("Urgent", metrics.get("Red", 0))
+                with col2:
+                    st.metric("Upcoming", metrics.get("Yellow", 0) + metrics.get("Green", 0))
+                with col3:
+                    st.metric("Safe", metrics.get("Green", 0))
+                with col4:
+                    st.metric("Finished", metrics.get("Grey", 0))
+                    
+                # Render Table
+                df = pd.DataFrame(display_data)
+                df = df.sort_values(by="Days Remaining", ascending=True)
                 
-            # Render Table
-            df = pd.DataFrame(display_data)
-            df = df.sort_values(by="Days Remaining", ascending=True)
-            
-            st.dataframe(
-                df,
-                use_container_width=True,
-                hide_index=True
-            )
+                st.dataframe(
+                    df,
+                    use_container_width=True,
+                    hide_index=True
+                )
             
             # Action Buttons
             st.markdown("---")
@@ -118,6 +152,7 @@ def main():
                 with st.spinner("Extracting deadlines... (using regex/logic)"):
                     new_count = sync_deadlines(data_dir)
                     st.success(f"Extraction complete! Found {new_count} new deadline(s).")
+                    st.rerun() # Lively update overview
                     
         st.markdown("---")
         st.write("Or scan the existing data folder for new files:")
@@ -127,6 +162,7 @@ def main():
                 with st.spinner("Scanning and extracting from 'data/raw'..."):
                     new_count = sync_deadlines(data_dir)
                     st.success(f"Sync complete! Found {new_count} new deadline(s).")
+                    st.rerun() # Lively update overview
             else:
                 st.error("The 'data/raw' directory not found. Please upload files.")
 
