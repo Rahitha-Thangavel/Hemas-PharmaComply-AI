@@ -159,4 +159,4 @@ def load_documents(file_paths):
         except Exception as e:
             st.warning(f"⚠️ Unexpected error loading {file_path}: {e}")
             
-    return all_docs
+    return all_docs

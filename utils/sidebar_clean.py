@@ -4,9 +4,6 @@ from pathlib import Path
 from services.history_manager import HistoryManager
 
 
-from services.history_manager import HistoryManager
-
-
 @st.dialog("🗑️ Clear All History")
 def confirm_clear_all_history():
     st.markdown("### Are you sure?")
@@ -44,8 +41,6 @@ def confirm_delete_session(session_id, title):
     with col2:
         if st.button("Cancel", use_container_width=True):
             st.rerun()
-
-
 def render_sidebar():
     # Inject Custom CSS for Premium Design
     st.markdown(
@@ -154,15 +149,6 @@ def render_sidebar():
             margin-bottom: 1rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
-        
-        /* Delete Button Specifics */
-        .clear-btn [data-testid="stBaseButton-secondary"] {
-            background-color: rgba(239, 68, 68, 0.05) !important;
-            border: 1px solid #3b82f6 !important;
-            color: #3b82f6 !important;
-            margin-bottom: 10px !important;
-            width: 100% !important;
-        }
         .clear-btn [data-testid="stBaseButton-secondary"]:hover {
             background-color: #3b82f6 !important;
             color: white !important;
@@ -241,7 +227,7 @@ def render_sidebar():
         st.page_link("pages/dashboard.py", label="Deadline Tracker", icon=":material/schedule:", help="Track implementation deadlines")
         st.page_link("pages/compliance_checker.py", label="Risk Evaluator", icon=":material/warning:", help="Check compliance of proposed actions")
         st.page_link("pages/impact_analysis.py", label="Impact Predictor", icon=":material/monitoring:", help="Analyze regulation impact on Hemas products")
-        st.page_link("pages/reports.py", label="Change Detector", icon=":material/autorenew:", help="Monitor new gazette publications")
+        st.page_link("pages/reports.py", label="Change Detector", icon=":material/autorenew:", help="Detect changes between new and previous price gazettes")
 
         st.markdown("---")
 
@@ -272,8 +258,6 @@ def render_sidebar():
                     confirm_clear_all_history()
                 st.markdown('</div>', unsafe_allow_html=True)
 
-
-
                 show_full = st.session_state.get('show_full_history', False)
                 visible_sessions = sessions if show_full else sessions[:3]
                 
@@ -298,9 +282,6 @@ def render_sidebar():
                         if st.button("🗑️", key=f"del_v7_{session['id']}", help="Delete this chat"):
                             confirm_delete_session(session["id"], session["title"])
                         st.markdown('</div>', unsafe_allow_html=True)
-
-
-
 
                 # More / Less toggle
                 if len(sessions) > 3:

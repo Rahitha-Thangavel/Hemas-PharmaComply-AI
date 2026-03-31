@@ -156,7 +156,7 @@ def main():
                     path = os.path.join(data_dir, uf.name)
                     with open(path, "wb") as f:
                         f.write(uf.getbuffer())
-                st.success(f"Saved {len(uploaded_files)} file(s) to 'data/raw'.")
+                st.success(f"Saved {uploaded_files.name} file(s) to 'data/raw'.")
                 
                 # Check for new
                 with st.spinner("Extracting deadlines... (using regex/logic)"):

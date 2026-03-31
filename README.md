@@ -14,6 +14,7 @@ Hemas PharmaComply AI is a state-of-the-art compliance management system designe
 | **⏰ Deadline Tracker** | Automated monitoring of regulatory implementation dates. | Regex-based date extraction, Email reminders, Urgency metrics. |
 | **🛡️ Risk Evaluator** | Assessment of proposed actions against current rules. | Automated risk scoring (Low/Med/High), Audit trailing, Corrective actions. |
 | **📊 Impact Predictor** | Analysis of price changes on product catalogs. | Automated mapping to Hemas products, Financial impact projection. |
+| **🔄 Change Detector** | Comparison between new and previous gazette versions. | Automated categorization, smart version comparison, categorization. |
 
 ---
 
@@ -90,13 +91,14 @@ Every answer provided by the AI includes a **Verified Source Card**. You can:
 Hemas-PharmaComply-AI/
 ├── app/
 │   ├── core/               # Chatbot logic and config loaders
-│   ├── features/           # Service-layer logic (Deadline, Risk, Impact)
+│   ├── features/           # Service-layer logic (Deadline, Risk, Impact, Change Detection)
 │   ├── pages/              # Streamlit page modules
 │   └── main.py             # Main Entry Point
 ├── data/
 │   ├── raw/                # Input PDFs (Gazettes)
+│   ├── temp_uploads/       # Temporary storage for comparison
 │   └── deadlines_db.json   # Processed deadline records
-├── services/               # Shared services (Audit, Notifications, History)
+├── services/               # Shared services (Audit, Notifications, History, Change Detector)
 ├── utils/                  # UI Utilities (Clean Sidebar, PDF rendering)
 ├── config/                 # YAML Configuration
 └── requirements.txt        # Project Dependencies

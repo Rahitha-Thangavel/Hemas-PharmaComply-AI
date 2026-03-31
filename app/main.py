@@ -108,7 +108,7 @@ def run_chat_interface(chatbot):
             st.markdown(message["content"])
             
             if "sources" in message and message["sources"]:
-                st.markdown("### 📚 Verified Sources")
+                st.markdown("### Verified Sources")
                 
                 for idx, source in enumerate(message["sources"]):
                     doc_name = source['document']
