@@ -1,48 +1,83 @@
 import streamlit as st
 import os
 import glob
+import re
 from app.core.llm_factory import get_llm
 from app.core.config_loader import load_config
 from services.file_loader import load_documents
 from langchain_core.messages import HumanMessage, SystemMessage
+from services.categorizer import load_metadata
 
-from services.metadata_manager import find_files_by_category
+def list_all_documents_in_category(category):
+    """
+    Returns a list of all documents in data/raw that match the specified category.
+    Returns: List of dicts [{"path": "...", "name": "...", "year": ...}]
+    Sorted by year (descending)
+    """
+    raw_dir = os.path.join("data", "raw")
+    if not os.path.exists(raw_dir):
+        return []
+
+    metadata = load_metadata()
+    files = glob.glob(os.path.join(raw_dir, "*.*"))
+    
+    matches = []
+    seen_paths = set()
+    
+    # 1. Check metadata
+    for f in files:
+        fname = os.path.basename(f)
+        if fname in metadata:
+            file_meta = metadata[fname]
+            if file_meta.get("category") == category:
+                year = file_meta.get("year") or 0
+                matches.append({
+                    "path": f, 
+                    "name": fname, 
+                    "year": year, 
+                    "mtime": os.path.getmtime(f),
+                    "original_name": file_meta.get("original_name", fname)
+                })
+                seen_paths.add(f)
+
+    # 2. Fallback to keyword matching for untracked files
+    keyword_map = {
+        "Price Control": ["price", "maximum", "nmra", "essential"],
+        "Registration & Fees": ["fees", "registration", "licensing"],
+        "Labelling & Requirements": ["labelling", "label", "amendment"],
+        "Other Regulations": ["regulation", "act", "nmra"]
+    }
+    keywords = keyword_map.get(category, [])
+    
+    if keywords:
+        for f in files:
+            if f in seen_paths:
+                continue
+            fname = os.path.basename(f)
+            fname_lower = fname.lower()
+            if any(kw in fname_lower for kw in keywords):
+                year_match = re.search(r'(20\d{2})', fname)
+                year = int(year_match.group(1)) if year_match else 0
+                matches.append({
+                    "path": f, 
+                    "name": fname, 
+                    "year": year, 
+                    "mtime": os.path.getmtime(f),
+                    "original_name": fname
+                })
+
+    # Sort: Year (desc), Mtime (desc)
+    matches.sort(key=lambda x: (x["year"] if x["year"] else 0, x["mtime"]), reverse=True)
+    return matches
 
 def find_previous_document(category):
     """
-    Uses the metadata manager to find the most relevant previous gazette 
-    based on contextual category and actual year extracted.
+    Finds the single latest document for a category.
     """
-    raw_dir = os.path.join("data", "raw")
-    
-    # Get files in category sorted by year (descending)
-    matches = find_files_by_category(category, raw_dir)
-    
-    if not matches:
-        # Fallback to simple keyword search if metadata is missing/incomplete
-        # This handles cases where files haven't been indexed/analyzed yet
-        keyword_map = {
-            "Price Control": ["price", "maximum", "nmra", "essential"],
-            "Registration & Fees": ["fees", "registration", "licensing"],
-            "Labelling & Requirements": ["labelling", "label", "amendment"],
-            "Other Regulations": ["regulation", "act", "nmra"]
-        }
-        keywords = keyword_map.get(category, [])
-        if not keywords: return None
-        
-        files = glob.glob(os.path.join(raw_dir, "*.*"))
-        fallback_matches = []
-        for f in files:
-            if any(kw in os.path.basename(f).lower() for kw in keywords):
-                fallback_matches.append((f, os.path.getmtime(f)))
-        
-        if not fallback_matches: return None
-        fallback_matches.sort(key=lambda x: x[1], reverse=True)
-        return fallback_matches[0][0]
-
-    # Return the latest year's file
-    # (Matches are already sorted by year descending by find_files_by_category)
-    return matches[0][0]
+    docs = list_all_documents_in_category(category)
+    if docs:
+        return docs[0]["path"]
+    return None
 
 def compare_gazettes(file_path1, file_path2):
     """

@@ -15,12 +15,7 @@ try:
 except ImportError:
     OCR_AVAILABLE = False
 
-import re
-import json
 from langchain_core.documents import Document
-from services.metadata_manager import get_file_metadata, update_file_metadata
-from app.core.llm_factory import get_llm
-from app.core.config_loader import load_config
 
 # Configure Tesseract Path (for Windows)
 TESSERACT_CMD = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -81,61 +76,6 @@ def perform_ocr(file_path):
         st.info("💡 Tip: Ensure Tesseract and Poppler are installed and in your System PATH.")
         return []
 
-def classify_document_by_context(file_path, text):
-    """
-    Uses LLM to categorize an NMRA gazette based on its actual content.
-    Returns (category, year) and updates persistent metadata.
-    """
-    existing_meta = get_file_metadata(file_path)
-    if existing_meta:
-        return existing_meta.get("category"), existing_meta.get("year")
-
-    # If no metadata, analyze context
-    st.info(f"🧠 AI is analyzing context of {os.path.basename(file_path)}...")
-    
-    try:
-        config = load_config()
-        llm = get_llm(config)
-        
-        # Take first 3000 chars for analysis
-        snippet = text[:3000]
-        
-        prompt = (
-            "You are a pharmaceutical regulatory classifier for NMRA (Sri Lanka). "
-            "Analyze the following text from an NMRA gazette or regulation. "
-            "Identify:\n"
-            "1. CATEGORY: Must be one of: 'Price Control', 'Registration & Fees', 'Labelling & Requirements', or 'Other Regulations'.\n"
-            "2. YEAR: The publication or effective year (e.g., 2025).\n"
-            "\nSnippet:\n" + snippet + "\n\n"
-            "Respond ONLY with a JSON object like: "
-            '{"category": "Price Control", "year": 2024}'
-        )
-        
-        response = llm.invoke(prompt)
-        content = response.content if hasattr(response, 'content') else str(response)
-        
-        # Parse JSON from response
-        # Sometimes LLMs add markdown blocks, so we strip them
-        clean_json = re.search(r'\{.*\}', content.replace('\n', ' '))
-        if clean_json:
-            data = json.loads(clean_json.group(0))
-            category = data.get("category", "Other Regulations")
-            year = data.get("year", 0)
-            
-            # Simple validation for category
-            valid_categories = ["Price Control", "Registration & Fees", "Labelling & Requirements", "Other Regulations"]
-            if category not in valid_categories:
-                category = "Other Regulations"
-                
-            update_file_metadata(file_path, category, year)
-            return category, year
-        
-    except Exception as e:
-        st.warning(f"⚠️ Could not categorize {os.path.basename(file_path)} via AI: {e}")
-    
-    # Fallback to defaults or filename keywords if AI fails
-    return "Other Regulations", 0
-
 def load_documents(file_paths):
     all_docs = []
     for file_path in file_paths:
@@ -192,17 +132,11 @@ def load_documents(file_paths):
                 st.warning(f"⚠️ Unsupported file type: {ext}")
                 docs = []
             
-            # After loading text for ALL pages/fragments of this file, classify once
-            full_text = " ".join([doc.page_content for doc in docs]) if docs else ""
-            category, year = classify_document_by_context(file_path, full_text)
-
             for doc in docs:
                 doc.metadata.update({
                     "source": file_name,
                     "file_path": file_path,
                     "file_type": ext[1:].upper(),
-                    "category": category,
-                    "year": year,
                     "loaded_at": time.strftime("%Y-%m-%d %H:%M:%S")
                 })
             

@@ -264,8 +264,6 @@ class HemasPharmaComplyAI:
 
         for doc in result.get('source_documents', []):
             document = doc.metadata.get('source', 'Unknown')
-            category = doc.metadata.get('category', 'Regulatory')
-            year = doc.metadata.get('year', '')
             page = doc.metadata.get('page', 'N/A')
             excerpt = doc.page_content[:200].strip()
             key = (document, page, excerpt)
@@ -274,14 +272,8 @@ class HemasPharmaComplyAI:
                 continue
 
             seen.add(key)
-            
-            # Format source name to include category and year
-            source_label = f"{document} [{category}]"
-            if year and year != 0:
-                source_label = f"{document} [{category} - {year}]"
-
             sources.append({
-                "document": source_label,
+                "document": document,
                 "page": page,
                 "excerpt": f"{excerpt}..." if excerpt else "No excerpt available."
             })
