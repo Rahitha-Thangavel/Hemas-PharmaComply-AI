@@ -1,117 +1,115 @@
-# Hemas PharmaComply AI
+# 🛡️ Hemas PharmaComply AI
 
-A powerful RAG (Retrieval-Augmented Generation) chatbot designed to answer questions based on Gazette documents. Built with **Streamlit**, **LangChain**, and **Groq**, this application provides fast, accurate answers with citations and persistent chat history.
+**The Intelligent Compliance Hub for Regulatory Excellence.**
 
-## 🚀 Features
+Hemas PharmaComply AI is a state-of-the-art compliance management system designed specifically for the pharmaceutical industry. It automates the processing of **NMRA (National Medicines Regulatory Authority) gazettes**, transforming complex regulatory documents into actionable insights, risk scores, and impact reports.
 
-*   **Multi-LLM Support**: Seamlessly switch between **Groq** (Llama 3), **OpenAI**, and **Ollama**.
-*   **Document QA**: Upload PDF, TXT, and DOCX files to query your own knowledge base.
-*   **Smart Citations**: Answers include exact source references, page numbers, and excerpts.
-*   **Streaming Responses**: Real-time token streaming for a responsive user experience.
-*   **Chat History**: Auto-saves your chat sessions so you can revisit them later.
-*   **Follow-up Suggestions**: intelligently suggests 3 relevant follow-up questions after every answer.
-*   **Local Vector Store**: Uses ChromaDB for efficient and private document embedding storage.
-*   **Memory**: Context-aware conversations that remember previous interactions.
+---
+
+## 🎯 Core Modules
+
+| Module | Description | Key Capabilities |
+| :--- | :--- | :--- |
+| **💬 Q&A Assistant** | The primary AI interface for querying regulations. | Verified citations, **Integrated PDF Viewer**, Citation Copying. |
+| **⏰ Deadline Tracker** | Automated monitoring of regulatory implementation dates. | Regex-based date extraction, Email reminders, Urgency metrics. |
+| **🛡️ Risk Evaluator** | Assessment of proposed actions against current rules. | Automated risk scoring (Low/Med/High), Audit trailing, Corrective actions. |
+| **📊 Impact Predictor** | Analysis of price changes on product catalogs. | Automated mapping to Hemas products, Financial impact projection. |
+
+---
+
+## ✨ Advanced Capabilities
+
+### 📄 Smart OCR Reader
+The system now supports **Scanned PDF Documents**. Using advanced OCR (Optical Character Recognition), the system can extract text and data from high-quality and low-quality scans alike, ensuring no regulatory change is missed.
+
+### 🔍 Precision Citations
+Every answer provided by the AI includes a **Verified Source Card**. You can:
+- **Preview the Page**: View the exact page cited directly in the sidebar without leaving the app.
+- **Copy Citation**: Instantly copy a professionally formatted reference for audit reports.
+
+---
 
 ## 🛠️ Prerequisites
 
-*   Python 3.9 or higher
-*   Git
+- **Python**: 3.10 or higher.
+- **Tesseract OCR**: Required for processing scanned documents.
+    - **Windows**: Download and install from [UB-Mannheim](https://github.com/UB-Mannheim/tesseract/wiki). Add `Tesseract-OCR` to your System PATH.
+    - **Linux**: `sudo apt install tesseract-ocr`
+    - **macOS**: `brew install tesseract`
 
-## 📥 Installation
+---
+
+## 📥 Installation & Setup
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/Rahitha-Thangavel/hemas-pharmacomply-ai.git
-    cd hemas-pharmacomply-ai
+    git clone https://github.com/Rahitha-Thangavel/Hemas-PharmaComply-AI.git
+    cd Hemas-PharmaComply-AI
     ```
 
-2.  **Create a virtual environment (Recommended):**
+2.  **Initialize Virtual Environment:**
     ```bash
-    # Windows
     python -m venv venv
-    .\venv\Scripts\activate
-
-    # macOS/Linux
-    python3 -m venv venv
-    source venv/bin/activate
+    .\venv\Scripts\activate  # Windows
+    source venv/bin/activate # Linux/macOS
     ```
 
-3.  **Install dependencies:**
+3.  **Install Dependencies:**
     ```bash
-    pip install -r requirements_fixed.txt
+    pip install -r requirements.txt
     ```
 
-## ⚙️ Configuration
+4.  **Configure Environment:**
+    Create a `.env` file in the root directory:
+    ```ini
+    GROQ_API_KEY=your_groq_key_here
+    OPENAI_API_KEY=your_openai_key_here  # Optional
+    ```
 
-### 1. Environment Variables
-Create a `.env` file in the root directory and add your API keys:
-
-```ini
-# .env
-GROQ_API_KEY=gsk_...
-OPENAI_API_KEY=sk-...  # Optional, if using OpenAI
-```
-
-> **Note:** You can get a free Groq API key from [Groq Console](https://console.groq.com/keys).
-
-### 2. Application Config
-You can modify `config.yaml` to change models, chunking settings, or retrieval parameters:
-
-```yaml
-llm_provider: groq  # options: groq, openai, ollama
-
-groq:
-  model: llama-3.3-70b-versatile
-  temperature: 0.1
-
-retrieval:
-  top_k: 7
-```
+---
 
 ## 🏃‍♂️ How to Run
 
-1.  **Add your documents:**
-    Place your PDF, TXT, or DOCX files into the `data/` folder.
-    *   *If the folder doesn't exist, create it:* `mkdir data`
+1.  **Prepare Data**:
+    Place your NMRA Gazette PDFs into the `data/raw/` directory.
 
-2.  **Start the application:**
+2.  **Launch the System**:
     ```bash
-    streamlit run main.py
+    streamlit run app/main.py
     ```
 
-3.  **Access the Chatbot:**
-    Open your browser and navigate to `http://localhost:8501`.
+3.  **Operate**:
+    - Use the **Unified Sidebar** to switch between the Chatbot, Tracker, and Evaluator.
+    - Use the **Dashboard** tab in the Deadline Tracker to sync and extract dates from newly added files.
 
-The app will automatically process new files in the `data/` folder and build the vector database on the first run.
+---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
+```text
+Hemas-PharmaComply-AI/
+├── app/
+│   ├── core/               # Chatbot logic and config loaders
+│   ├── features/           # Service-layer logic (Deadline, Risk, Impact)
+│   ├── pages/              # Streamlit page modules
+│   └── main.py             # Main Entry Point
+├── data/
+│   ├── raw/                # Input PDFs (Gazettes)
+│   └── deadlines_db.json   # Processed deadline records
+├── services/               # Shared services (Audit, Notifications, History)
+├── utils/                  # UI Utilities (Clean Sidebar, PDF rendering)
+├── config/                 # YAML Configuration
+└── requirements.txt        # Project Dependencies
 ```
-hemas-pharmacomply-ai/
-├── assets/                 # Images and static assets
-├── data/                   # Place your source documents here
-├── vector_store/           # ChromaDB persistence directory (auto-generated)
-├── config.yaml             # Configuration settings
-├── main.py                 # Main Streamlit application
-├── history_manager.py      # Handles chat session persistence
-├── requirements_fixed.txt  # Project dependencies
-└── README.md               # This file
-```
-## Project Demo
 
-https://github.com/user-attachments/assets/2d644518-00a3-482f-baaa-d79572ee16cf
+---
 
-## 🧩 Troubleshooting
-
-*   **"Meta Tensor Error"**: This is usually due to conflicting versions of `transformers` or `accelerate`. Ensure you installed strictly from `requirements_fixed.txt`.
-*   **"No gazette files found"**: Make sure you have added supported files (.pdf, .txt, .docx) to the `data/` directory.
-
-
-## 👥 Team Members
+## 👥 Team PharmaComply
 
 *   **T. Rahitha**  ([@Rahitha-Thangavel](https://github.com/Rahitha-Thangavel))
 *   **T. Archchika** ([@archchika02](https://github.com/archchika02))
 *   **L.J. Thilukshika** ([@ThilukshikaLJ](https://github.com/ThilukshikaLJ))
 *   **S. Thushanthi** ([@Thushanthi124](https://github.com/Thushanthi124))
 
+---
+*© 2025 Hemas Holdings. Developed for AI-THON 2026.*
