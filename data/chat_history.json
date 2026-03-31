@@ -140,5 +140,70 @@
         "suggestions": []
       }
     ]
+  },
+  "aa59cdc7-d7aa-44ae-8a79-331c10f7cb4e": {
+    "created_at": "2026-03-31 11:07:11",
+    "updated_at": "2026-03-31 11:12:14",
+    "title": "hi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "role": "assistant",
+        "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
+        "sources": [],
+        "suggestions": []
+      },
+      {
+        "role": "user",
+        "content": "The basic cold chain equipment includes"
+      },
+      {
+        "role": "assistant",
+        "content": "The basic cold chain equipment includes: \n• For vaccine storage: Refrigerators and Cold-rooms.\n• For vaccine transport: Cold boxes, Vaccine carriers, Day-carriers and Thermos flasks.\n• For cold chain monitoring: Thermometers, Cold Chain Monitors, Vaccine Vial Monitors, Freeze Watch Monitors and data loggers \n• For transport: Vehicles (Source: Guidelines for Handling and Storage of vaccines.pdf, Page 2)",
+        "sources": [
+          {
+            "document": "Guidelines for Handling and Storage of vaccines.pdf",
+            "file_path": "data\\raw\\Guidelines for Handling and Storage of vaccines.pdf",
+            "page": "2",
+            "excerpt": "The basic cold chain equipment includes: • For  vaccine  storage  :  Refrigerators  and   Cold-rooms. • For vaccine transport: Cold boxes, Vaccine  carriers, Day-carriers and Thermos flasks. • For cold chain monitoring: Thermometers,   Cold  Chain  Monitors,  Vaccine  Vial   Monitors, Freeze Watch Monitors and data   lodgers  • For transport : Vehicles   RECEIPT OF VACCINES 1. On receiving a consi..."
+          }
+        ],
+        "suggestions": [
+          "What are the ideal temperature ranges for vaccine storage in refrigerators and cold-rooms?",
+          "How often should cold chain equipment be monitored and maintained to ensure proper function?",
+          "What are the consequences of vaccine exposure to temperatures outside the recommended range during transport or storage?"
+        ]
+      },
+      {
+        "role": "user",
+        "content": "What are the ideal temperature ranges for vaccine storage in refrigerators and cold-rooms?"
+      },
+      {
+        "role": "assistant",
+        "content": "The ideal temperature range for vaccine storage in refrigerators and cold-rooms is between +2 °C to +8 °C (Source: Guidelines for Handling and Storage of vaccines.pdf, Page 3). This temperature range should be consistently maintained to ensure the potency of the vaccines. Additionally, it is mentioned that the temperature of the refrigerators/cold storage facility must be monitored twice a day (Source: Guidelines for Handling and Storage of vaccines.pdf, Page 6).",
+        "sources": [
+          {
+            "document": "Guidelines for Handling and Storage of vaccines.pdf",
+            "file_path": "data\\raw\\Guidelines for Handling and Storage of vaccines.pdf",
+            "page": "3",
+            "excerpt": "5. After checking, the entire consignment must   be stored at +2 0 C to +8 0C in the cold storage   facility and/or vaccine refrigerator/s 6. Vaccine type, brand, quantity, batch numbers   and expiry dates should be recorded, with  the   date and time at which they were received, to   facilitate first-in/first-out monitoring 7. Should  not  stock  vaccines  for  more  than  3  month  requirement..."
+          },
+          {
+            "document": "Guidelines for Handling and Storage of vaccines.pdf",
+            "file_path": "data\\raw\\Guidelines for Handling and Storage of vaccines.pdf",
+            "page": "6",
+            "excerpt": "Freeze sensitivity Range Vaccine  HepB Hib (liquid) DTP, DTP-HepB, DTP-Hib, DTP-HepB+Hib, DT Td TT, Hib lyophilised 14. No  other  item(eg.  Other  drugs,  food,  drink)  should be stored in vaccine refrigerators 15. Temperature of the refrigerators/cold storage   facility must be monitored twice a day, by a   designated  member  of  staff,  using   thermometer  and  records  of  same  must  be  m..."
+          }
+        ],
+        "suggestions": [
+          "What happens if the temperature exceeds the recommended range for an extended period?",
+          "How often should the temperature monitoring records be reviewed or audited?",
+          "Are there any specific guidelines for temperature control during vaccine transportation?"
+        ]
+      }
+    ]
   }
 }
