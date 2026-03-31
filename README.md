@@ -120,9 +120,9 @@ pip install -r requirements.txt
 ## 👥 Team PharmaComply
 
 *   **T. Rahitha**  ([@Rahitha-Thangavel](https://github.com/Rahitha-Thangavel)) - *Architecture & Core AI*
-*   **T. Archchika** ([@archchika02](https://github.com/archchika02)) - *Deadline Tracking & Sync*
-*   **L.J. Thilukshika** ([@ThilukshikaLJ](https://github.com/ThilukshikaLJ)) - *Impact Analysis & Categorization*
-*   **S. Thushanthi** ([@Thushanthi124](https://github.com/Thushanthi124)) - *Risk Evaluation & Audit*
+*   **T. Archchika** ([@archchika02](https://github.com/archchika02)) - *Risk Evaluation & Audit*
+*   **L.J. Thilukshika** ([@ThilukshikaLJ](https://github.com/ThilukshikaLJ)) - *Change Detection & Categorization*
+*   **S. Thushanthi** ([@Thushanthi124](https://github.com/Thushanthi124)) - *Deadline Tracking & Sync*
 
 ---
-*© 2025 Hemas Holdings. Developed for AI-THON 2026.*
+*© Hemas Holdings. Developed for AI-THON 2026.*
