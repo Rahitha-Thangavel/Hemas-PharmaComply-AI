@@ -65,32 +65,36 @@ def main():
             st.info("No deadlines found. Please upload PDFs or click 'Sync Deadlines'.")
         else:
             # Process data for display
-            display_data = []
-            metrics = {"Green": 0, "Yellow": 0, "Red": 0, "Grey": 0}
+            display_list = []
+            metrics = {"Green": 0, "Yellow": 0, "Red": 0, "Grey": 0, "Completed": 0}
             
             for index, d in enumerate(deadlines):
-                # We need to make sure 'action' key exists since json might be old, but we just created it.
+                status = d.get("status", "Pending")
                 action_text = d.get("action", "Review compliance requirements.")
                 color, days_rem = get_status(d["date"])
                 
-                metrics[color] = metrics.get(color, 0) + 1
-                
                 # Assign visual indicators
-                if color == "Red":
-                    status_badge = "🚨 URGENT (≤2 days)"
-                    category = "Urgent"
-                elif color == "Yellow":
-                    status_badge = "⚠️ UPCOMING (3-10 days)"
-                    category = "Upcoming"
-                elif color == "Green":
-                    status_badge = "✅ SAFE (>10 days)"
-                    category = "Upcoming"
-                elif color == "Grey":
-                    status_badge = "⌛ COMPLETED / PAST"
+                if status != "Pending":
+                    status_badge = f"🛡️ {status.upper()}"
                     category = "Finished"
+                    metrics["Completed"] += 1
                 else:
-                    status_badge = "❓ Unknown"
-                    category = "Other"
+                    metrics[color] = metrics.get(color, 0) + 1
+                    if color == "Red":
+                        status_badge = "🚨 URGENT (≤2 days)"
+                        category = "Urgent"
+                    elif color == "Yellow":
+                        status_badge = "⚠️ UPCOMING (3-10 days)"
+                        category = "Upcoming"
+                    elif color == "Green":
+                        status_badge = "✅ SAFE (>10 days)"
+                        category = "Upcoming"
+                    elif color == "Grey":
+                        status_badge = "⌛ OVERDUE"
+                        category = "Urgent"
+                    else:
+                        status_badge = "❓ Unknown"
+                        category = "Other"
                 
                 # Apply Filter
                 if filter_option == "Upcoming" and category != "Upcoming":
@@ -100,48 +104,72 @@ def main():
                 if filter_option == "Finished" and category != "Finished":
                     continue
                 
-                display_data.append({
+                display_list.append({
+                    "ID": d["id"],
                     "Document": d["source"],
                     "Deadline": d["date"],
                     "Days Remaining": days_rem,
                     "Status": status_badge,
-                    "Action Required": action_text
+                    "Action Required": action_text,
+                    "RawStatus": status
                 })
-                
-            if not display_data:
+            if not display_list:
                 st.info(f"No deadlines found matching the filter: **{filter_option}**")
             else:
                 # Quick Stats
                 col1, col2, col3, col4 = st.columns(4)
                 with col1:
-                    st.metric("Urgent", metrics.get("Red", 0))
+                    st.metric("Urgent", metrics.get("Red", 0) + (1 if metrics.get("Grey", 0) > 0 and filter_option != "Finished" else 0))
                 with col2:
                     st.metric("Upcoming", metrics.get("Yellow", 0) + metrics.get("Green", 0))
                 with col3:
-                    st.metric("Safe", metrics.get("Green", 0))
+                    st.metric("Completed", metrics["Completed"])
                 with col4:
-                    st.metric("Finished", metrics.get("Grey", 0))
+                    st.metric("Total Tracked", len(deadlines))
                     
-                # Render Table
-                df = pd.DataFrame(display_data)
-                df = df.sort_values(by="Days Remaining", ascending=True)
+                # Render Table with Actions
+                st.markdown("### Compliance Deadlines")
                 
-                st.dataframe(
-                    df,
-                    use_container_width=True,
-                    hide_index=True
-                )
+                for item in display_list:
+                    with st.expander(f"{item['Status']} | {item['Document']} ({item['Deadline']})", expanded=(item['RawStatus'] == "Pending")):
+                        c1, c2, c3 = st.columns([0.6, 0.2, 0.2])
+                        with c1:
+                            st.write(f"**Action:** {item['Action Required']}")
+                            if item['RawStatus'] == 'Pending':
+                                st.write(f"⏳ **Time Remaining:** {item['Days Remaining']} days")
+                            else:
+                                st.write(f"✅ **Completion Status:** {item['RawStatus']}")
+                        
+                        if item['RawStatus'] == "Pending":
+                            with c2:
+                                if st.button("Mark Submitted", key=f"sub_{item['ID']}"):
+                                    from app.features.deadline.deadline_service import update_deadline_status
+                                    update_deadline_status(item['ID'], "Submitted")
+                                    st.success("Marked as Submitted!")
+                                    st.rerun()
+                            with c3:
+                                if st.button("Mark Renewed", key=f"ren_{item['ID']}"):
+                                    from app.features.deadline.deadline_service import update_deadline_status
+                                    update_deadline_status(item['ID'], "Renewed")
+                                    st.success("Marked as Renewed!")
+                                    st.rerun()
+                        else:
+                            with c2:
+                                if st.button("Revert to Pending", key=f"rev_{item['ID']}"):
+                                    from app.features.deadline.deadline_service import update_deadline_status
+                                    update_deadline_status(item['ID'], "Pending")
+                                    st.rerun()
             
             # Action Buttons
             st.markdown("---")
-            st.subheader("Actions")
-            if st.button("📧 Send Email Reminders", type="primary"):
+            st.subheader("Global Actions")
+            if st.button("📧 Trigger Manual Alert Check", type="primary", help="Checks all pending deadlines for 7-day and 1-day milestones."):
                 sent = send_email_reminders()
                 if sent:
                     for s in sent:
                         st.success(s)
                 else:
-                    st.info("No emails needed to be sent today (no deadlines exactly 7 or 1 day away).")
+                    st.info("No new alerts to send. Either no deadlines are at milestones, or alerts were already sent.")
     
     with tab2:
         st.subheader("PDF Ingestion & Sync")

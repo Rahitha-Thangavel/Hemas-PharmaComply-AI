@@ -252,6 +252,18 @@ def main():
                     file_name=f"regulatory_changes_{selected_category.lower().replace(' ', '_')}.txt",
                     mime="text/plain"
                 )
+
+                # --- NEW: Impact Predictor Integration ---
+                st.markdown("---")
+                st.subheader("💡 What's next?")
+                st.write("Now that you see the changes, click below to see how they specifically affect **Hemas's product catalog**.")
+                if st.button("📊 Run Hemas Impact Analysis on this File", type="primary", use_container_width=True):
+                    # Store data for the Impact Predictor tab
+                    st.session_state.redirect_to_impact = True
+                    st.session_state.impact_target_path = new_path
+                    st.session_state.impact_prev_path = prev_path
+                    st.session_state.impact_category = selected_category
+                    st.switch_page("pages/impact_analysis.py")
                 
             except Exception as e:
                 st.error(f"Failed to process files: {str(e)}")

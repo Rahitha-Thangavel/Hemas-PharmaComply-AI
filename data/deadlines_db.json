@@ -5,7 +5,9 @@
         "date": "2026-09-05",
         "context": "\u2022 Previous payment receipt \u2022 Copy of the previously issued approval letter for the manufacturing site (if available) Deadline for the submission-05/09/2026 CEO/NMRA ",
         "action": "NMRA regulatory requirement deadline.",
-        "confidence": "High"
+        "confidence": "High",
+        "status": "Pending",
+        "alerts_sent": []
     },
     {
         "id": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf_0_20250325",
@@ -13,6 +15,8 @@
         "date": "2025-03-25",
         "context": "of a particular medicine) Regulations, No. 01 of 2024 published in Gazette Extraordinary No. 2390/18 of June 28, 2024 and the Medicines (Pricing Mechanism for Medicines) Regulations No. 01 of 2025 Published in Gazette Extraordinary No. 2429/12 of Mar...",
         "action": "Gazette notification compliance date.",
-        "confidence": "High"
+        "confidence": "High",
+        "status": "Submitted",
+        "alerts_sent": []
     }
 ]
