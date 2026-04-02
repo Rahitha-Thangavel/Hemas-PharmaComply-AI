@@ -400,5 +400,22 @@
         "suggestions": []
       }
     ]
+  },
+  "20922b31-6039-427c-8fd6-e20b5203b7dc": {
+    "created_at": "2026-04-02 23:23:11",
+    "updated_at": "2026-04-02 23:24:10",
+    "title": "hi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "role": "assistant",
+        "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
+        "sources": [],
+        "suggestions": []
+      }
+    ]
   }
 }

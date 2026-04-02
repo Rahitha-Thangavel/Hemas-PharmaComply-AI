@@ -113,12 +113,16 @@ class HemasPharmaComplyAI:
             chunks = split_documents(documents, self.config)
             progress_bar.progress(0.7)
             
-            status_text.text("💾 Creating vector database...")
-            self.vector_store = Chroma.from_documents(
-                documents=chunks,
-                embedding=self.embeddings,
-                persist_directory=str(self.vector_store_path)
-            )
+            status_text.text("💾 Updating vector database...")
+            if self.vector_store is not None:
+                self.vector_store.add_documents(chunks)
+            else:
+                self.vector_store = Chroma.from_documents(
+                    documents=chunks,
+                    embedding=self.embeddings,
+                    persist_directory=str(self.vector_store_path)
+                )
+            
             self.create_chain()
             progress_bar.progress(1.0)
             

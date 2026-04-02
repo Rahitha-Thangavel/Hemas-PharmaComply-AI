@@ -22,7 +22,19 @@ def load_deadlines():
     initialize_db()
     try:
         with open(DB_PATH, "r", encoding="utf-8") as f:
-            return json.load(f)
+            data = json.load(f)
+            # Migration/Ensure fields exist
+            modified = False
+            for d in data:
+                if "status" not in d:
+                    d["status"] = "Pending"
+                    modified = True
+                if "alerts_sent" not in d:
+                    d["alerts_sent"] = []
+                    modified = True
+            if modified:
+                save_deadlines(data)
+            return data
     except (json.JSONDecodeError, FileNotFoundError):
         return []
 
@@ -145,7 +157,9 @@ def parse_deadlines_from_text(text, source_file):
                         "date": parsed_date.strftime("%Y-%m-%d"),
                         "context": context_chunk[:250] + "..." if len(context_chunk) > 250 else context_chunk,
                         "action": action_note,
-                        "confidence": "High" if found_keyword else "Medium"
+                        "confidence": "High" if found_keyword else "Medium",
+                        "status": "Pending",
+                        "alerts_sent": []
                     })
                     
     # Deduplicate within the same file (same date, same note)
@@ -225,19 +239,48 @@ def get_status(deadline_date_str):
     except:
         return "Unknown", 0
 
+def update_deadline_status(deadline_id, new_status):
+    deadlines = load_deadlines()
+    for d in deadlines:
+        if d["id"] == deadline_id:
+            d["status"] = new_status
+            break
+    save_deadlines(deadlines)
+    return True
+
 def send_email_reminders():
     """
     Simulates sending emails for deadlines.
+    Only sends for 'Pending' deadlines and tracks alerts to avoid spam.
     """
     deadlines = load_deadlines()
     emails_sent = []
+    
     for d in deadlines:
+        if d.get("status") != "Pending":
+            continue
+            
         color, days = get_status(d["date"])
-        if days == 7:
+        alerts_sent = d.get("alerts_sent", [])
+        
+        # 1 Week Alert
+        if days == 7 and "7_days" not in alerts_sent:
             emails_sent.append(f"Email sent (1 week remaining) for {d['source']} ({d['date']})")
-        elif days == 1:
+            alerts_sent.append("7_days")
+            
+        # 1 Day Alert
+        elif days == 1 and "1_day" not in alerts_sent:
             emails_sent.append(f"Email sent (1 day remaining) for {d['source']} ({d['date']}) - URGENT!")
-        elif days == 0:
+            alerts_sent.append("1_day")
+            
+        # Today Alert
+        elif days == 0 and "today" not in alerts_sent:
             emails_sent.append(f"Email sent (DEADLINE TODAY!) for {d['source']} ({d['date']}) - FINAL NOTICE")
+            alerts_sent.append("today")
+        
+        d["alerts_sent"] = alerts_sent
+            
+    if emails_sent:
+        save_deadlines(deadlines)
             
     return emails_sent
