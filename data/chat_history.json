@@ -325,5 +325,22 @@
         "suggestions": []
       }
     ]
+  },
+  "e7a8f9a5-5d12-4ae4-9d10-58f1c999fc9d": {
+    "created_at": "2026-04-04 03:28:13",
+    "updated_at": "2026-04-04 03:28:18",
+    "title": "hi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "role": "assistant",
+        "content": "Hello. I am Hemas PharmaComply AI, officially synchronized with the live NMRA database. I can help you with all types of NMRA regulations (Price Controls, Registration, Labelling, and more), compliance deadlines, and impact analysis. What would you like to know?",
+        "sources": [],
+        "suggestions": []
+      }
+    ]
   }
 }

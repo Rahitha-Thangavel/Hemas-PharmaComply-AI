@@ -98,21 +98,34 @@ class HemasPharmaComplyAI:
             return current_files
             
         try:
+            # Load the store once to check metadata
             temp_store = Chroma(
                 persist_directory=str(self.vector_store_path),
                 embedding_function=self.embeddings
             )
             existing_data = temp_store._collection.get()
-            if not existing_data['metadatas']:
+            
+            if not existing_data or not existing_data['metadatas']:
                 return current_files
                 
-            existing_sources = set([m.get('source', '') for m in existing_data['metadatas']])
+            # Create a set of already indexed sources (check both base names and full names)
+            indexed_sources = set()
+            for m in existing_data['metadatas']:
+                source = m.get('source', '')
+                if source:
+                    indexed_sources.add(source)
+                    indexed_sources.add(Path(source).name)
+            
             missing = []
             for f in current_files:
-                if Path(f).name not in existing_sources:
-                    missing.append(f)
+                f_path = Path(f)
+                # Check if the filename OR the full path is already indexed
+                if f_path.name not in indexed_sources and str(f_path) not in indexed_sources:
+                    missing.append(str(f))
+            
             return missing
-        except:
+        except Exception as e:
+            print(f"Metadata check failed: {e}")
             return current_files
 
     def process_files(self, file_paths):
