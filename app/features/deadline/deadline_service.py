@@ -108,7 +108,7 @@ def parse_deadlines_from_text(text, source_file):
                     elif "-" in date_str:
                         parsed_date = datetime.strptime(date_str, "%Y-%m-%d")
                     else:
-                        # Handle "March 21, 2025" or "21 March 2025"
+                        # Handle "March 21, 2026" or "21 March 2026"
                         clean_date = date_str.replace(",", "")
                         try:
                             parsed_date = datetime.strptime(clean_date, "%B %d %Y")

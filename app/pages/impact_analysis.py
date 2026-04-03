@@ -179,38 +179,39 @@ def main():
             st.divider()
 
         # --- MANUAL UPLOAD SECTION ---
-        col1, col2 = st.columns([0.6, 0.4])
-        active_path = None
-        
-        with col1:
-            st.subheader("📁 Manual Gazette Analysis")
-            uploaded_file = st.file_uploader("Select NEW Gazette PDF to Analyze:", type=['pdf'], key="impact_up_final_v2")
+        with st.expander("🛠️ Manual Selection / Backup Mode", expanded=False):
+            col1, col2 = st.columns([0.6, 0.4])
+            active_path = None
             
-            if uploaded_file:
-                path = save_uploaded_file(uploaded_file)
-                if path:
-                    st.session_state.current_target_path = path
-                    st.success(f"📄 **Current Document:** {uploaded_file.name}")
-                    m_c1, m_c2 = st.columns(2)
-                    with m_c1: open_file_in_new_tab(path)
-                    with m_c2:
-                        if st.button("📥 Add to Permanent Library", key="btn_save_perm_impact_v2"):
-                            saved = save_to_data_folder(path); 
-                            if saved: st.session_state.current_target_path = saved; st.balloons()
-            elif st.session_state.current_target_path:
-                st.info(f"📄 **Active Document:** {os.path.basename(st.session_state.current_target_path)}")
-                open_file_in_new_tab(st.session_state.current_target_path)
+            with col1:
+                st.subheader("📁 Manual Gazette Analysis")
+                uploaded_file = st.file_uploader("Select NEW Gazette PDF to Analyze:", type=['pdf'], key="impact_up_final_v2")
                 
-            active_path = st.session_state.current_target_path
+                if uploaded_file:
+                    path = save_uploaded_file(uploaded_file)
+                    if path:
+                        st.session_state.current_target_path = path
+                        st.success(f"📄 **Current Document:** {uploaded_file.name}")
+                        m_c1, m_c2 = st.columns(2)
+                        with m_c1: open_file_in_new_tab(path)
+                        with m_c2:
+                            if st.button("📥 Add to Permanent Library", key="btn_save_perm_impact_v2"):
+                                saved = save_to_data_folder(path); 
+                                if saved: st.session_state.current_target_path = saved; st.balloons()
+                elif st.session_state.current_target_path:
+                    st.info(f"📄 **Active Document:** {os.path.basename(st.session_state.current_target_path)}")
+                    open_file_in_new_tab(st.session_state.current_target_path)
+                    
+                active_path = st.session_state.current_target_path
 
-        with col2:
-            st.subheader("📚 Hemas Catalog Status")
-            if os.path.exists(products_csv):
-                df_cat = pd.read_csv(products_csv)
-                st.success(f"Connected: `{len(df_cat)}` Products")
-                with st.expander("Preview Internal Prices"):
-                    st.dataframe(df_cat[['product_brand', 'active_ingredient', 'current_mrp']].head(10), use_container_width=True)
-            else: st.error("products.csv not found!")
+            with col2:
+                st.subheader("📚 Hemas Catalog Status")
+                if os.path.exists(products_csv):
+                    df_cat = pd.read_csv(products_csv)
+                    st.success(f"Connected: `{len(df_cat)}` Products")
+                    with st.expander("Preview Internal Prices"):
+                        st.dataframe(df_cat[['product_brand', 'active_ingredient', 'current_mrp']].head(10), use_container_width=True)
+                else: st.error("products.csv not found!")
 
         # --- RUN ANALYSIS ---
         st.divider()
@@ -282,7 +283,7 @@ def main():
         else:
             # logs = (id, timestamp, doc_name, affected_count, critical, high, json)
             df = pd.DataFrame(logs, columns=["ID", "Timestamp", "Document", "Affected", "Critical", "High", "Details"])
-            st.dataframe(df[["Timestamp", "Document", "Affected", "Critical", "High"]], use_container_width=True)
+            st.dataframe(df[["ID", "Timestamp", "Document", "Affected", "Critical", "High"]], use_container_width=True)
             
             selected_id = st.selectbox("View Detailed Report (ID):", [log[0] for log in logs])
             selected_log = next(log for log in logs if log[0] == selected_id)
@@ -298,7 +299,7 @@ def main():
                     st.caption(f"Priority: {r['priority']} | New Price: {r['new_price']} | Deadline: {r['deadline']}")
                     st.markdown("---")
 
-    st.caption("Developed by Hemas PharmaComply AI Core Team | 2025")
+    st.caption("Developed by Hemas PharmaComply AI Core Team | 2026")
 
 if __name__ == "__main__":
     main()

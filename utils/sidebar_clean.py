@@ -99,9 +99,10 @@ def run_nmra_sync():
     elif results["errors"]:
         st.error(f"❌ Sync failed: {results['errors'][0]}")
     else:
-        st.toast("ℹ️ System is up to date. No new gazettes found.")
+        st.session_state.sync_message = "✅ NMRA documents are up to date. (Live Scan Verified)"
+        st.toast("ℹ️ System is up to date.")
         
-    st.session_state.last_sync = datetime.datetime.now().strftime("%I:%M %p")
+    st.session_state.last_sync = datetime.datetime.now().strftime("%I:%M:%S %p")
     st.rerun()
 
 
@@ -294,7 +295,8 @@ def render_sidebar():
 
         # 4. MENUS (MAIN NAVIGATION)
         st.markdown("##### 🎯 MENUS")
-        st.page_link("main.py", label="Q&A Assistant", icon=":material/chat:", help="Ask questions about NMRA regulations")
+        st.page_link("main.py", label="Home Dashboard", icon=":material/home:", help="Back to main dashboard")
+        st.page_link("pages/1_qa_assistant.py", label="Q&A Assistant", icon=":material/chat:", help="Ask questions about NMRA regulations")
         st.page_link("pages/dashboard.py", label="Deadline Tracker", icon=":material/schedule:", help="Track implementation deadlines")
         st.page_link("pages/compliance_checker.py", label="Risk Evaluator", icon=":material/warning:", help="Check compliance of proposed actions")
         
@@ -384,4 +386,4 @@ def render_sidebar():
         
         st.markdown("---")
         st.markdown("##### ℹ️ VERSION")
-        st.caption("v1.0.0 | Hemas Holdings | 2025")
+        st.caption("v1.0.0 | Hemas Holdings | 2026")

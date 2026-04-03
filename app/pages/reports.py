@@ -257,7 +257,7 @@ def main():
         else:
             # logs = (id, timestamp, category, prev_file, new_file, summary)
             df = pd.DataFrame(logs, columns=["ID", "Timestamp", "Category", "Previous File", "New File", "Summary"])
-            st.dataframe(df[["Timestamp", "Category", "Previous File", "New File"]], use_container_width=True)
+            st.dataframe(df[["ID", "Timestamp", "Category", "Previous File", "New File"]], use_container_width=True)
             
             selected_id = st.selectbox("Select Audit to View Detail (ID):", [log[0] for log in logs])
             selected_log = next(log for log in logs if log[0] == selected_id)
@@ -272,7 +272,7 @@ def main():
                 if st.button(f"📥 Download Summary #{selected_id}", key=f"dl_{selected_id}"):
                     st.download_button(label="Click to confirm download", data=selected_log[5], file_name=f"audit_{selected_id}.txt")
 
-    st.caption("Developed by Hemas PharmaComply AI Core Team | 2025")
+    st.caption("Developed by Hemas PharmaComply AI Core Team | 2026")
 
 if __name__ == "__main__":
     main()

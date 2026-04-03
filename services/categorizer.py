@@ -53,10 +53,10 @@ def analyze_document(file_path):
             "\n- Labelling & Requirements: Label instructions, clinical trials, GMP, or specific technical requirements."
             "\n- Other Regulations: General acts, public notices, or regulations not fitting above."
             "\n\n**YEAR:**"
-            "\nExtract the year of publication or effective date (e.g., 2019, 2023, 2025). "
+            "\nExtract the year of publication or effective date (e.g., 2019, 2023, 2026). "
             "Use both the document text and the filename as hints."
             "\n\n**FORMAT:**"
-            "\nReturn ONLY a JSON object like this: {\"category\": \"Price Control\", \"year\": 2025}"
+            "\nReturn ONLY a JSON object like this: {\"category\": \"Price Control\", \"year\": 2026}"
         )
         
         user_content = f"FILENAME: {file_name}\n\nDOCUMENT TEXT SNIPPET:\n{context}\n\nPlease analyze this document."
