@@ -110,7 +110,11 @@ def main():
                     try:
                         config = load_config()
                         st.session_state.chatbot = HemasPharmaComplyAI(config)
-                        status.update(label="✅ System Ready!", state="complete")
+                        if not st.session_state.chatbot.is_ready and st.session_state.chatbot.last_load_error:
+                            status.update(label="Knowledge base not loaded completely", state="error")
+                            st.warning(st.session_state.chatbot.last_load_error)
+                        else:
+                            status.update(label="System Ready!", state="complete")
                         st.rerun()
                     except Exception as e:
                         st.error(f"Initialization failed: {str(e)}")

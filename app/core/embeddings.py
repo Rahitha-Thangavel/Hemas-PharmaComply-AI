@@ -5,6 +5,10 @@ def get_embeddings(config):
         model_name=config["embeddings"]["model"],
         model_kwargs={
             "device": "cpu",
-            "trust_remote_code": True
+            "trust_remote_code": True,
+            "local_files_only": True
+        },
+        encode_kwargs={
+            "normalize_embeddings": True
         }
     )

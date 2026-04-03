@@ -22,8 +22,8 @@ class HemasPharmaComplyAI:
     def __init__(self, config):
         self.config = config
 
-        self.data_dir = Path(config["paths"]["data_dir"])
-        self.vector_store_path = Path(config["paths"]["vector_store"])
+        self.data_dir = Path(config["paths"]["data_dir"]).resolve()
+        self.vector_store_path = Path(config["paths"]["vector_store"]).resolve()
 
         self.query_count = 0
         self.total_tokens = 0
@@ -41,11 +41,14 @@ class HemasPharmaComplyAI:
         self.vector_store = None
         self.qa_chain = None
         self.processed_files = set()
+        self.is_ready = False
+        self.last_load_error = None
 
         if config.get("auto_load", True):
-            self.auto_load_gazettes()
+            self.is_ready = self.auto_load_gazettes()
 
     def auto_load_gazettes(self):
+        self.last_load_error = None
         st.info(f"🔍 Scanning {self.data_dir} for NMRA gazettes...")
         
         file_patterns = [
@@ -61,8 +64,12 @@ class HemasPharmaComplyAI:
         all_files = []
         for pattern in file_patterns:
             all_files.extend(glob.glob(pattern, recursive=True))
+
+        all_files = sorted({str(Path(file_path).resolve()) for file_path in all_files})
             
         if not all_files:
+            self.is_ready = False
+            self.last_load_error = f"No gazette files found in {self.data_dir}"
             st.warning(f"📭 No gazette files found in {self.data_dir}")
             return False
             
@@ -70,15 +77,19 @@ class HemasPharmaComplyAI:
         
         missing_files = self._get_missing_files(all_files)
         
-        if not missing_files:
+        if not missing_files and self._load_existing_vector_store():
             st.info("✅ Loading existing vector store (Up to date)...")
             self.vector_store = Chroma(
                 persist_directory=str(self.vector_store_path),
                 embedding_function=self.embeddings
             )
             self.create_chain()
+            self.is_ready = True
             return True
         else:
+            if not missing_files:
+                st.warning("âš ï¸ Existing vector store is empty or unreadable. Rebuilding from gazette files...")
+                missing_files = all_files
             if self.vector_store_path.exists() and any(self.vector_store_path.iterdir()):
                 st.info(f"🔄 Found {len(missing_files)} new file(s). Updating database...")
                 self.vector_store = Chroma(
@@ -102,21 +113,31 @@ class HemasPharmaComplyAI:
                 persist_directory=str(self.vector_store_path),
                 embedding_function=self.embeddings
             )
-            existing_data = temp_store._collection.get()
-            if not existing_data['metadatas']:
+            if not self._has_indexed_documents(temp_store):
                 return current_files
-                
-            existing_sources = set([m.get('source', '') for m in existing_data['metadatas']])
+
+            existing_data = temp_store._collection.get(include=["metadatas"])
+            existing_sources = set()
+            for metadata in existing_data.get("metadatas") or []:
+                if not metadata:
+                    continue
+                existing_sources.update(self._build_file_keys(metadata.get("source", "")))
+                existing_sources.update(self._build_file_keys(metadata.get("file_path", "")))
             missing = []
             for f in current_files:
-                if Path(f).name not in existing_sources:
+                if not (self._build_file_keys(f) & existing_sources):
                     missing.append(f)
             return missing
-        except:
+        except Exception:
             return current_files
 
     def process_files(self, file_paths):
         try:
+            if not file_paths and self._has_indexed_documents():
+                self.create_chain()
+                self.is_ready = True
+                return True
+
             progress_bar = st.progress(0)
             status_text = st.empty()
             
@@ -125,6 +146,8 @@ class HemasPharmaComplyAI:
             progress_bar.progress(0.4)
             
             if not documents:
+                self.is_ready = False
+                self.last_load_error = "No readable content could be extracted from the gazette files."
                 return False
                 
             status_text.text("✂️ Splitting into chunks...")
@@ -140,16 +163,23 @@ class HemasPharmaComplyAI:
                     embedding=self.embeddings,
                     persist_directory=str(self.vector_store_path)
                 )
+
+            self._persist_vector_store()
+            if not self._has_indexed_documents():
+                raise RuntimeError("Vector store did not persist any indexed chunks.")
             
             self.create_chain()
             progress_bar.progress(1.0)
             
             status_text.text("✅ Processing complete!")
             self.processed_files.update(file_paths)
+            self.is_ready = True
             
             st.success(f"✅ Successfully processed {len(documents)} document chunks")
             return True
         except Exception as e:
+            self.is_ready = False
+            self.last_load_error = str(e)
             st.error(f"❌ Error processing files: {e}")
             return False
 
@@ -377,6 +407,49 @@ class HemasPharmaComplyAI:
             })
 
         return sources
+
+    def _load_existing_vector_store(self):
+        self.vector_store = Chroma(
+            persist_directory=str(self.vector_store_path),
+            embedding_function=self.embeddings
+        )
+        return self._has_indexed_documents(self.vector_store)
+
+    def _has_indexed_documents(self, store=None):
+        active_store = store or self.vector_store
+        if active_store is None:
+            return False
+
+        try:
+            return active_store._collection.count() > 0
+        except Exception:
+            try:
+                existing_data = active_store._collection.get(include=[])
+                return bool(existing_data.get("ids"))
+            except Exception:
+                return False
+
+    def _persist_vector_store(self):
+        if self.vector_store is None:
+            return
+
+        persist = getattr(self.vector_store, "persist", None)
+        if callable(persist):
+            persist()
+
+    def _build_file_keys(self, value):
+        if not value:
+            return set()
+
+        raw_path = Path(str(value))
+        keys = {raw_path.name.lower(), str(raw_path).lower()}
+
+        try:
+            keys.add(str(raw_path.resolve()).lower())
+        except Exception:
+            pass
+
+        return keys
 
     def _should_show_sources(self, question, answer):
         normalized_question = (question or "").strip().lower()
