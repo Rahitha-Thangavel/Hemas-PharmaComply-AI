@@ -1,11 +1,11 @@
-# 🛡️ Hemas PharmaComply AI
+# Hemas PharmaComply AI
 **The Intelligent Compliance Hub for Regulatory Excellence.**
 
 Hemas PharmaComply AI is a state-of-the-art compliance management ecosystem designed specifically for the pharmaceutical industry. It automates the ingestion and analysis of **NMRA (National Medicines Regulatory Authority) gazettes**, transforming dense legal text into actionable intelligence, priority deadlines, and risk-mitigated strategies.
 
 ---
 
-## 🚀 The 5 Core Pillars
+## The 5 Core Pillars
 
 ### 1. 💬 Q&A Assistant
 *The system's primary interface for regulatory intelligence.*
