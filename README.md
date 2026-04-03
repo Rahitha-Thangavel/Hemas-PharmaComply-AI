@@ -98,9 +98,7 @@ hemas-pharmacomply-ai/
 ├── requirements_fixed.txt  # Project dependencies
 └── README.md               # This file
 ```
-## Project Demo
 
-https://github.com/user-attachments/assets/2d644518-00a3-482f-baaa-d79572ee16cf
 
 ## 🧩 Troubleshooting
 
@@ -110,7 +108,7 @@ https://github.com/user-attachments/assets/2d644518-00a3-482f-baaa-d79572ee16cf
 
 ## 👥 Team Members
 
-*   **T. Rahitha**  ([@Rahitha-Thangavel](https://github.com/Rahitha-Thangavel))
+*   **T Rahitha**  ([@Rahitha-Thangavel](https://github.com/Rahitha-Thangavel))
 *   **T. Archchika** ([@archchika02](https://github.com/archchika02))
 *   **L.J. Thilukshika** ([@ThilukshikaLJ](https://github.com/ThilukshikaLJ))
 *   **S. Thushanthi** ([@Thushanthi124](https://github.com/Thushanthi124))
