@@ -15,13 +15,13 @@ Hemas PharmaComply AI is a state-of-the-art compliance management ecosystem desi
 - **Smart Context Retrieval**: Uses advanced vector embeddings to find the most relevant clauses.
 
 ### 2. ⏰ Deadline Tracker
-*Automated monitoring of pharmaceutical implementation timelines.*
+*Automated monitoring of pharmaceutical implementation timelines with live sync.*
 - **Automated Extraction**: Scans new gazettes for dates and implementation deadlines.
 - **Sync Dashboard**: A dedicated interface to ingest new documents and update your compliance calendar.
 - **Urgency Metrics**: Visual indicators for upcoming deadlines.
 - **Regex-Optimized Scanning**: Captures diverse regulatory date formats (e.g., "1st June 2026", "by 31st Dec").
 
-### 3. 🛡️ Compliance Checker
+### 3. 🛡️ Risk Evaluator
 *Assess proposed actions against current NMRA rules.*
 - **Automated Risk Scoring**: Classifies actions as Low, Medium, or High Risk with logic-based audit trails.
 - **Audit Trailing**: Maintains a log of all compliance checks performed.
@@ -48,8 +48,14 @@ The system supports **Scanned PDF Documents**.
 - Using **pytesseract** and **pypdfium2**, it renders scanned pages into high-res images for text extraction.
 - **Page-Level Accuracy**: Even in OCR mode, the system preserves page numbering for precise citations.
 
+### 🔍 Live NMRA Scraper
+Stay ahead of regulations with the integrated **Live Sync** engine.
+- **Automated Monitoring**: Scans the official NMRA website for new Gazettes and Price Control documents.
+- **One-Click Ingestion**: Downloads and automatically categorizes (Legislation vs. Price Control) new files.
+- **Instant AI Update**: Newly found documents are immediately vectorized and available for the Q&A Assistant.
+
 ### 🔍 Verified Source Ingestion
-- **Document Ingestion**: Automatically scans `./data/raw/` on startup.
+- **Document Ingestion**: Automatically scans `./data/raw/` on startup and after live syncs.
 - **Vector Storage**: Uses **ChromaDB** for lightning-fast retrieval of document chunks.
 - **Persistent Memory**: Remembers your chat session for a cohesive research experience.
 
@@ -104,7 +110,7 @@ You MUST have **Python 3.10 or higher** and **Tesseract OCR** installed.
 3.  **The First Run**:
     -   The system will scan `data/raw/` and initialize the vector database (`vector_store_v2/`).
     -   Use the **Sidebar** to navigate between the 5 pillars.
-    -   If you add a new file while the app is running, use the **Sync Documents** button in the **Deadline Tracker** module.
+    -   **Live Update**: Use the **🔄 Sync with NMRA** button in the global sidebar to fetch the latest documents directly from the official authority.
 
 ---
 
@@ -112,8 +118,12 @@ You MUST have **Python 3.10 or higher** and **Tesseract OCR** installed.
 
 | File/Path | Purpose |
 | :--- | :--- |
-| `app/main.py` | Main Entry Point (Launch with `streamlit run`). |
-| `app/pages/` | Housing for the 5 Feature Modules. |
+| `app/main.py` | **Home Dashboard** - Entry point with system status. |
+| `app/pages/1_qa_assistant.py` | **Q&A Assistant** - Regulatory intelligence. |
+| `app/pages/dashboard.py` | **Deadline Tracker** - Implementation milestones. |
+| `app/pages/compliance_checker.py`| **Risk Evaluator** - Compliance verification. |
+| `app/pages/impact_analysis.py` | **Impact Predictor** - Business intelligence. |
+| `app/pages/reports.py` | **Change Detector** - Gazette version comparison. |
 | `config/config.yaml`| AI model and path configurations. |
 | `data/raw/` | The "library" where your regulatory PDFs are stored. |
 | `services/` | Logic for processing, chunking, and database management. |
