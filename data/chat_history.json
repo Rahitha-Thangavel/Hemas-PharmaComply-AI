@@ -417,5 +417,64 @@
         "suggestions": []
       }
     ]
+  },
+  "6f18f409-270c-4a2f-8851-502ed99a542a": {
+    "created_at": "2026-04-03 00:44:55",
+    "updated_at": "2026-04-03 01:03:08",
+    "title": "hi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi"
+      },
+      {
+        "role": "assistant",
+        "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
+        "sources": [],
+        "suggestions": []
+      },
+      {
+        "role": "user",
+        "content": "what are the price controls"
+      },
+      {
+        "role": "assistant",
+        "content": "The NMRA regulations control prices through the calculation of the Maximum Ceiling Price (MCP) and the Maximum Retail Price (MRP). According to the guidelines, the MCP shall be determined as prescribed in the Gazette Extraordinary No. 2446/34 (Source: NMRA_Version 1_Guideline on Pricing Mechanism for Medicines in SL_ Final_V1.1 2025 07 24.pdf, Page 5) and No. 2429/12 (Source: NMRA_Guideline on Pricing Mechanism for Medicines in SL_250515_000421.pdf, Page 5). The MRP will be calculated using the same formula used for new applications, and if the requested MRP is less than or equal to the NMRA calculated MRP, it will be approved (Source: NMRA_Version 1_Guideline on Pricing Mechanism for Medicines in SL_ Final_V1.1 2025 07 24.pdf, Page 5).",
+        "sources": [
+          {
+            "document": "NMRA_Guideline on Pricing Mechanism for Medicines in SL_250515_000421.pdf",
+            "file_path": "data\\raw\\NMRA_Guideline on Pricing Mechanism for Medicines in SL_250515_000421.pdf",
+            "page": "5",
+            "excerpt": "evidence such as CusDec documents   4.3. NMRA will verify the declared CIF price using both External Reference Prices (ERP) and  Internal Reference Prices (IRP) (see section 5 for details).    4.4. The MRP will be calculated using the same formula  used for the New Applications as  mentioned in 3.3   4.5. If the requested MRP is less than or equal to the NMRA calculated MRP, the requeste d MRP  wi..."
+          }
+        ],
+        "suggestions": [
+          "What is the purpose of calculating the Maximum Ceiling Price and the Maximum Retail Price in the NMRA regulations?",
+          "How often are the MCP and MRP guidelines updated, and where can the latest versions be found?",
+          "What happens if the requested MRP is higher than the NMRA calculated MRP, according to the pricing mechanism guidelines?"
+        ]
+      },
+      {
+        "role": "user",
+        "content": "The basic cold chain equipment includes what ?"
+      },
+      {
+        "role": "assistant",
+        "content": "The basic cold chain equipment includes:\n• For vaccine storage: Refrigerators and Cold-rooms.\n• For vaccine transport: Cold boxes, Vaccine carriers, Day-carriers, and Thermos flasks.\n• For cold chain monitoring: Thermometers, Cold Chain Monitors, Vaccine Vial Monitors, Freeze Watch Monitors, and data loggers.\n• For transport: Vehicles (Source: Guidelines for Handling and Storage of vaccines.pdf, Page 2)",
+        "sources": [
+          {
+            "document": "Guidelines for Handling and Storage of vaccines.pdf",
+            "file_path": "data\\raw\\Guidelines for Handling and Storage of vaccines.pdf",
+            "page": "2",
+            "excerpt": "The basic cold chain equipment includes: • For  vaccine  storage  :  Refrigerators  and   Cold-rooms. • For vaccine transport: Cold boxes, Vaccine  carriers, Day-carriers and Thermos flasks. • For cold chain monitoring: Thermometers,   Cold  Chain  Monitors,  Vaccine  Vial   Monitors, Freeze Watch Monitors and data   lodgers  • For transport : Vehicles   RECEIPT OF VACCINES 1. On receiving a consi..."
+          }
+        ],
+        "suggestions": [
+          "What are the ideal temperature ranges for vaccine storage in refrigerators and cold-rooms?",
+          "How often should cold chain equipment be monitored and maintained to ensure proper function?",
+          "What are the consequences of vaccine exposure to temperatures outside the recommended range during transport or storage?"
+        ]
+      }
+    ]
   }
 }

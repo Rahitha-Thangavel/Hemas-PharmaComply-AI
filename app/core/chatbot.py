@@ -68,8 +68,10 @@ class HemasPharmaComplyAI:
             
         st.success(f"📁 Found {len(all_files)} gazette file(s)")
         
-        if self._check_existing_vector_store(all_files):
-            st.info("✅ Loading existing vector store...")
+        missing_files = self._get_missing_files(all_files)
+        
+        if not missing_files:
+            st.info("✅ Loading existing vector store (Up to date)...")
             self.vector_store = Chroma(
                 persist_directory=str(self.vector_store_path),
                 embedding_function=self.embeddings
@@ -77,12 +79,24 @@ class HemasPharmaComplyAI:
             self.create_chain()
             return True
         else:
-            st.info("🔄 Processing gazette files...")
-            return self.process_files(all_files)
+            if self.vector_store_path.exists() and any(self.vector_store_path.iterdir()):
+                st.info(f"🔄 Found {len(missing_files)} new file(s). Updating database...")
+                self.vector_store = Chroma(
+                    persist_directory=str(self.vector_store_path),
+                    embedding_function=self.embeddings
+                )
+            else:
+                st.info("🔄 Initializing document database...")
+                
+            return self.process_files(missing_files)
 
-    def _check_existing_vector_store(self, current_files):
+    def _get_missing_files(self, current_files):
+        """
+        Identifies which files from the current list are not yet in the vector store.
+        """
         if not self.vector_store_path.exists() or not any(self.vector_store_path.iterdir()):
-            return False
+            return current_files
+            
         try:
             temp_store = Chroma(
                 persist_directory=str(self.vector_store_path),
@@ -90,12 +104,16 @@ class HemasPharmaComplyAI:
             )
             existing_data = temp_store._collection.get()
             if not existing_data['metadatas']:
-                return False
+                return current_files
+                
             existing_sources = set([m.get('source', '') for m in existing_data['metadatas']])
-            current_sources = set([Path(f).name for f in current_files])
-            return current_sources.issubset(existing_sources)
+            missing = []
+            for f in current_files:
+                if Path(f).name not in existing_sources:
+                    missing.append(f)
+            return missing
         except:
-            return False
+            return current_files
 
     def process_files(self, file_paths):
         try:

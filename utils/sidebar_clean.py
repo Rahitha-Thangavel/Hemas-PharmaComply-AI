@@ -1,7 +1,13 @@
 import streamlit as st
 import yaml
+import os
+import datetime
+import json
 from pathlib import Path
 from services.history_manager import HistoryManager
+from services.nmra_watcher import NMRAWatcher
+from app.core.config_loader import load_config
+from services.categorizer import analyze_document, rename_and_update_metadata
 
 
 @st.dialog("🗑️ Clear All History")
@@ -41,6 +47,64 @@ def confirm_delete_session(session_id, title):
     with col2:
         if st.button("Cancel", use_container_width=True):
             st.rerun()
+
+
+def run_nmra_sync():
+    """
+    Triggers the NMRA Watcher sync and handles notifications.
+    """
+    import os  # Fail-safe local import
+    config = load_config()
+    watcher = NMRAWatcher(config)
+    
+    with st.spinner("🔄 Syncing with NMRA website..."):
+        results = watcher.sync()
+        
+    if results["new_files"]:
+        st.toast(f"✅ Successfully downloaded {results['downloaded']} new gazette(s)!")
+        
+        sync_results = []
+        for file in results["new_files"]:
+            file_path = os.path.join(config["paths"]["data_dir"], file)
+            with st.status(f"🔍 Analyzing {file}...") as status:
+                category, year = analyze_document(file_path)
+                final_path = rename_and_update_metadata(file_path, category, year)
+                
+                sync_results.append({
+                    "original_name": file,
+                    "final_path": final_path,
+                    "category": category,
+                    "year": year
+                })
+                status.update(label=f"✅ Categorized as {category} ({year})", state="complete")
+        
+        # --- NEW: Independent Results for CD and Impact ---
+        if "sync_new_files_cd" not in st.session_state:
+            st.session_state.sync_new_files_cd = []
+        if "sync_new_files_impact" not in st.session_state:
+            st.session_state.sync_new_files_impact = []
+        
+        st.session_state.sync_new_files_cd.extend(sync_results)
+        st.session_state.sync_new_files_impact.extend(sync_results)
+        
+        # Set unread flags
+        st.session_state.unread_sync_cd = True
+        st.session_state.unread_sync_impact = True
+        
+        # Trigger chatbot (auto-loading documents)
+        if 'chatbot' in st.session_state:
+            st.info("🔄 Ingesting new documents into AI database...")
+            st.session_state.chatbot.auto_load_gazettes()
+            st.toast("✅ Documents ingested! AI is now updated.")
+    elif results["errors"]:
+        st.error(f"❌ Sync failed: {results['errors'][0]}")
+    else:
+        st.toast("ℹ️ System is up to date. No new gazettes found.")
+        
+    st.session_state.last_sync = datetime.datetime.now().strftime("%I:%M %p")
+    st.rerun()
+
+
 def render_sidebar():
     # Inject Custom CSS for Premium Design
     st.markdown(
@@ -210,6 +274,13 @@ def render_sidebar():
         st.markdown("##### 📊 SYSTEM STATUS")
         st.markdown(f"**System:** Online\n\n📁 **Gazettes:** {file_count} documents\n\n🧠 **LLM:** {provider}")
         
+        # 2.1 SYNC BUTTON
+        if st.button("🔄 Sync with NMRA", key="btn_nmra_sync_v6", use_container_width=True, help="Scan the NMRA website for new gazettes"):
+            run_nmra_sync()
+        
+        last_sync = st.session_state.get("last_sync", "Never")
+        st.caption(f"Last Live Sync: {last_sync}")
+        
         st.markdown("---")
 
         # 3. CONFIGURATIONS
@@ -226,8 +297,18 @@ def render_sidebar():
         st.page_link("main.py", label="Q&A Assistant", icon=":material/chat:", help="Ask questions about NMRA regulations")
         st.page_link("pages/dashboard.py", label="Deadline Tracker", icon=":material/schedule:", help="Track implementation deadlines")
         st.page_link("pages/compliance_checker.py", label="Risk Evaluator", icon=":material/warning:", help="Check compliance of proposed actions")
-        st.page_link("pages/impact_analysis.py", label="Impact Predictor", icon=":material/monitoring:", help="Analyze regulation impact on Hemas products")
-        st.page_link("pages/reports.py", label="Change Detector", icon=":material/autorenew:", help="Detect changes between new and previous price gazettes")
+        
+        # --- FIXED: Only depends on unread_sync_impact ---
+        impact_label = "Impact Predictor"
+        if st.session_state.get("unread_sync_impact"):
+            impact_label += " 🔴"
+        st.page_link("pages/impact_analysis.py", label=impact_label, icon=":material/monitoring:", help="Analyze regulation impact on Hemas products")
+        
+        # --- FIXED: Only depends on unread_sync_cd ---
+        cd_label = "Change Detector"
+        if st.session_state.get("unread_sync_cd"):
+            cd_label += " 🔴"
+        st.page_link("pages/reports.py", label=cd_label, icon=":material/autorenew:", help="Detect changes between new and previous price gazettes")
 
         st.markdown("---")
 
