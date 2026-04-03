@@ -1,7 +1,109 @@
 import streamlit as st
 import yaml
+import os
+import datetime
+import json
 from pathlib import Path
 from services.history_manager import HistoryManager
+from services.nmra_watcher import NMRAWatcher
+from app.core.config_loader import load_config
+from services.categorizer import analyze_document, rename_and_update_metadata
+
+
+@st.dialog("🗑️ Clear All History")
+def confirm_clear_all_history():
+    st.markdown("### Are you sure?")
+    st.write("This will permanently delete ALL your previous conversations. This action cannot be undone.")
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("Yes, Clear All", type="primary", use_container_width=True):
+            st.session_state.history_manager.clear_all_history()
+            st.session_state.current_session_id = st.session_state.history_manager.create_new_session()
+            st.session_state.messages = []
+            st.toast("History cleared!")
+            st.rerun()
+    with col2:
+        if st.button("Cancel", use_container_width=True):
+            st.rerun()
+
+
+@st.dialog("🗑️ Delete Chat")
+def confirm_delete_session(session_id, title):
+    st.markdown(f"### Delete this chat?")
+    st.write(f"Are you sure you want to delete: **'{title}'**?")
+    
+    is_curr = session_id == st.session_state.get("current_session_id")
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("Yes, Delete", type="primary", use_container_width=True):
+            st.session_state.history_manager.delete_session(session_id)
+            if is_curr:
+                st.session_state.current_session_id = st.session_state.history_manager.create_new_session()
+                st.session_state.messages = []
+            st.toast("Chat deleted!")
+            st.rerun()
+    with col2:
+        if st.button("Cancel", use_container_width=True):
+            st.rerun()
+
+
+def run_nmra_sync():
+    """
+    Triggers the NMRA Watcher sync and handles notifications.
+    """
+    import os  # Fail-safe local import
+    config = load_config()
+    watcher = NMRAWatcher(config)
+    
+    with st.spinner("🔄 Syncing with NMRA website..."):
+        results = watcher.sync()
+        
+    if results["new_files"]:
+        st.toast(f"✅ Successfully downloaded {results['downloaded']} new gazette(s)!")
+        
+        sync_results = []
+        for file in results["new_files"]:
+            file_path = os.path.join(config["paths"]["data_dir"], file)
+            with st.status(f"🔍 Analyzing {file}...") as status:
+                category, year = analyze_document(file_path)
+                final_path = rename_and_update_metadata(file_path, category, year)
+                
+                sync_results.append({
+                    "original_name": file,
+                    "final_path": final_path,
+                    "category": category,
+                    "year": year
+                })
+                status.update(label=f"✅ Categorized as {category} ({year})", state="complete")
+        
+        # --- NEW: Independent Results for CD and Impact ---
+        if "sync_new_files_cd" not in st.session_state:
+            st.session_state.sync_new_files_cd = []
+        if "sync_new_files_impact" not in st.session_state:
+            st.session_state.sync_new_files_impact = []
+        
+        st.session_state.sync_new_files_cd.extend(sync_results)
+        st.session_state.sync_new_files_impact.extend(sync_results)
+        
+        # Set unread flags
+        st.session_state.unread_sync_cd = True
+        st.session_state.unread_sync_impact = True
+        
+        # Trigger chatbot (auto-loading documents)
+        if 'chatbot' in st.session_state:
+            st.info("🔄 Ingesting new documents into AI database...")
+            st.session_state.chatbot.auto_load_gazettes()
+            st.toast("✅ Documents ingested! AI is now updated.")
+    elif results["errors"]:
+        st.error(f"❌ Sync failed: {results['errors'][0]}")
+    else:
+        st.session_state.sync_message = "✅ NMRA documents are up to date. (Live Scan Verified)"
+        st.toast("ℹ️ System is up to date.")
+        
+    st.session_state.last_sync = datetime.datetime.now().strftime("%I:%M:%S %p")
+    st.rerun()
 
 
 def render_sidebar():
@@ -112,6 +214,32 @@ def render_sidebar():
             margin-bottom: 1rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.02);
         }
+        .clear-btn [data-testid="stBaseButton-secondary"]:hover {
+            background-color: #3b82f6 !important;
+            color: white !important;
+            border: none !important;
+        }
+
+        
+        /* Individual Delete Button */
+        .del-btn [data-testid="stBaseButton-secondary"] {
+            background-color: transparent !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            padding: 0 !important;
+            min-width: 35px !important;
+        }
+        .del-btn [data-testid="stBaseButton-secondary"]:hover {
+            background-color: rgba(239, 68, 68, 0.2) !important;
+            border-color: #ef4444 !important;
+        }
+
+        
+        .chat-row {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            width: 100%;
+        }
         </style>
         """,
         unsafe_allow_html=True,
@@ -123,7 +251,7 @@ def render_sidebar():
             st.image("assets/logo.png", use_container_width=True)
         except Exception:
             try:
-                st.image("assets/logo.png", use_column_width=True)
+                st.image("assets/logo.png", use_container_width=True)
             except:
                 st.subheader("💊 Hemas PharmaComply")
         
@@ -147,6 +275,13 @@ def render_sidebar():
         st.markdown("##### 📊 SYSTEM STATUS")
         st.markdown(f"**System:** Online\n\n📁 **Gazettes:** {file_count} documents\n\n🧠 **LLM:** {provider}")
         
+        # 2.1 SYNC BUTTON
+        if st.button("🔄 Sync with NMRA", key="btn_nmra_sync_v6", use_container_width=True, help="Scan the NMRA website for new gazettes"):
+            run_nmra_sync()
+        
+        last_sync = st.session_state.get("last_sync", "Never")
+        st.caption(f"Last Live Sync: {last_sync}")
+        
         st.markdown("---")
 
         # 3. CONFIGURATIONS
@@ -160,11 +295,22 @@ def render_sidebar():
 
         # 4. MENUS (MAIN NAVIGATION)
         st.markdown("##### 🎯 MENUS")
-        st.page_link("main.py", label="Q&A Assistant", icon=":material/chat:", help="Ask questions about NMRA regulations")
+        st.page_link("main.py", label="Home Dashboard", icon=":material/home:", help="Back to main dashboard")
+        st.page_link("pages/1_qa_assistant.py", label="Q&A Assistant", icon=":material/chat:", help="Ask questions about NMRA regulations")
         st.page_link("pages/dashboard.py", label="Deadline Tracker", icon=":material/schedule:", help="Track implementation deadlines")
         st.page_link("pages/compliance_checker.py", label="Risk Evaluator", icon=":material/warning:", help="Check compliance of proposed actions")
-        st.page_link("pages/impact_analysis.py", label="Impact Predictor", icon=":material/monitoring:", help="Analyze regulation impact on Hemas products")
-        st.page_link("pages/reports.py", label="Change Detector", icon=":material/autorenew:", help="Detect changes between new and previous price gazettes")
+        
+        # --- FIXED: Only depends on unread_sync_impact ---
+        impact_label = "Impact Predictor"
+        if st.session_state.get("unread_sync_impact"):
+            impact_label += " 🔴"
+        st.page_link("pages/impact_analysis.py", label=impact_label, icon=":material/monitoring:", help="Analyze regulation impact on Hemas products")
+        
+        # --- FIXED: Only depends on unread_sync_cd ---
+        cd_label = "Change Detector"
+        if st.session_state.get("unread_sync_cd"):
+            cd_label += " 🔴"
+        st.page_link("pages/reports.py", label=cd_label, icon=":material/autorenew:", help="Detect changes between new and previous price gazettes")
 
         st.markdown("---")
 
@@ -189,6 +335,12 @@ def render_sidebar():
             if not sessions:
                 st.caption("No previous conversations.")
             else:
+                # 5.2 Clear All Button
+                st.markdown('<div class="clear-btn">', unsafe_allow_html=True)
+                if st.button("🗑️ Clear All History", key="btn_clear_history_v7", use_container_width=True, help="Permanently delete all conversations"):
+                    confirm_clear_all_history()
+                st.markdown('</div>', unsafe_allow_html=True)
+
                 show_full = st.session_state.get('show_full_history', False)
                 visible_sessions = sessions if show_full else sessions[:3]
                 
@@ -199,11 +351,20 @@ def render_sidebar():
                     if is_curr:
                         label = f"👉 {title} (Active)"
                     
-                    if st.button(label, key=f"hbtn_v6_{session['id']}", disabled=is_curr, use_container_width=True):
-                        st.session_state.current_session_id = session["id"]
-                        st.session_state.messages = st.session_state.history_manager.get_session(session["id"]).get("messages", [])
-                        st.session_state.show_full_history = False
-                        st.rerun()
+                    col_link, col_del = st.columns([0.8, 0.2])
+                    
+                    with col_link:
+                        if st.button(label, key=f"hbtn_v7_{session['id']}", disabled=is_curr, use_container_width=True):
+                            st.session_state.current_session_id = session["id"]
+                            st.session_state.messages = st.session_state.history_manager.get_session(session["id"]).get("messages", [])
+                            st.session_state.show_full_history = False
+                            st.rerun()
+                    
+                    with col_del:
+                        st.markdown('<div class="del-btn">', unsafe_allow_html=True)
+                        if st.button("🗑️", key=f"del_v7_{session['id']}", help="Delete this chat"):
+                            confirm_delete_session(session["id"], session["title"])
+                        st.markdown('</div>', unsafe_allow_html=True)
 
                 # More / Less toggle
                 if len(sessions) > 3:
@@ -225,4 +386,4 @@ def render_sidebar():
         
         st.markdown("---")
         st.markdown("##### ℹ️ VERSION")
-        st.caption("v1.0.0 | Hemas Holdings | 2025")
+        st.caption("v1.0.0 | Hemas Holdings | 2026")

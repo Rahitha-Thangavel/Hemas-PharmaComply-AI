@@ -1,7 +1,13 @@
 {
-  "fffc5a59-af88-44cf-b0ef-156f5e7837fa": {
-    "created_at": "2026-03-28 23:40:23",
-    "updated_at": "2026-03-28 23:41:42",
+  "278ff0bb-9d2c-4f73-9d72-21e9b0e3abbb": {
+    "created_at": "2026-03-29 14:51:10",
+    "updated_at": "2026-03-29 14:51:10",
+    "title": "New Chat - 2026-03-29 14:51:10",
+    "messages": []
+  },
+  "fd9a396b-64b4-4413-947d-593381f3faed": {
+    "created_at": "2026-03-29 14:52:22",
+    "updated_at": "2026-03-29 14:52:58",
     "title": "hi",
     "messages": [
       {
@@ -154,13 +160,44 @@
     "messages": [
       {
         "role": "user",
-        "content": "what is the definition of medicine"
+        "content": "what you can do ?"
       },
       {
         "role": "assistant",
-        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
+        "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
         "sources": [],
         "suggestions": []
+      },
+      {
+        "role": "user",
+        "content": "nothing"
+      },
+      {
+        "role": "assistant",
+        "content": "Hello. I am Hemas PharmaComply AI. I can help you with NMRA price regulations, compliance deadlines, and impact analysis. What would you like to know?",
+        "sources": [],
+        "suggestions": []
+      },
+      {
+        "role": "user",
+        "content": "what are The basic cold chain equipment includes"
+      },
+      {
+        "role": "assistant",
+        "content": "The basic cold chain equipment includes: \n• For vaccine storage: Refrigerators and Cold-rooms.\n• For vaccine transport: Cold boxes, Vaccine carriers, Day-carriers, and Thermos flasks.\n• For cold chain monitoring: Thermometers, Cold Chain Monitors, Vaccine Vial Monitors, Freeze Watch Monitors, and data loggers.\n• For transport: Vehicles. \n(Source: Guidelines for Handling and Storage of vaccines.pdf, Page 2)",
+        "sources": [
+          {
+            "document": "Guidelines for Handling and Storage of vaccines.pdf",
+            "file_path": "data\\raw\\Guidelines for Handling and Storage of vaccines.pdf",
+            "page": "2",
+            "excerpt": "The basic cold chain equipment includes: • For  vaccine  storage  :  Refrigerators  and   Cold-rooms. • For vaccine transport: Cold boxes, Vaccine  carriers, Day-carriers and Thermos flasks. • For cold chain monitoring: Thermometers,   Cold  Chain  Monitors,  Vaccine  Vial   Monitors, Freeze Watch Monitors and data   lodgers  • For transport : Vehicles   RECEIPT OF VACCINES 1. On receiving a consi..."
+          }
+        ],
+        "suggestions": [
+          "What are the ideal temperature ranges for vaccine storage in refrigerators and cold-rooms?",
+          "How often should cold chain equipment be monitored and maintained to ensure proper function?",
+          "What are the key differences between cold boxes, vaccine carriers, and day-carriers in terms of their usage and capacity?"
+        ]
       }
     ]
   },
@@ -211,90 +248,81 @@
       }
     ]
   },
-  "1e283013-0dff-4869-a285-0385b3ad9a4e": {
-    "created_at": "2026-03-29 01:50:37",
-    "updated_at": "2026-03-29 01:55:50",
-    "title": "how to register Cosmetios",
+  "b5a624d1-c7bd-4cb2-973c-91a52b977498": {
+    "created_at": "2026-03-29 14:53:02",
+    "updated_at": "2026-03-29 14:53:08",
+    "title": "The basic cold chain equipment...",
     "messages": [
       {
         "role": "user",
-        "content": "how to register Cosmetios"
+        "content": "The basic cold chain equipment includes"
       },
       {
         "role": "assistant",
-        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
-        "sources": [],
-        "suggestions": []
-      },
-      {
-        "role": "user",
-        "content": "what are the condions for sales of Cosmetics?"
-      },
-      {
-        "role": "assistant",
-        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
-        "sources": [],
-        "suggestions": []
-      },
-      {
-        "role": "user",
-        "content": "which deadline is coming"
-      },
-      {
-        "role": "assistant",
-        "content": "I can only answer questions about NMRA pharmaceutical price regulations. Please ask about medicine pricing, regulatory deadlines, or compliance requirements.",
-        "sources": [],
-        "suggestions": []
-      },
-      {
-        "role": "user",
-        "content": "what is the Pricing Mechanism for the Maximum Retail Price (MRP) ?"
-      },
-      {
-        "role": "assistant",
-        "content": "The Pricing Mechanism for the Maximum Retail Price (MRP) is calculated according to the following formula: \nMRP = CIF + DT + SCTM, \nwhere MRP denotes the Maximum Retail Price, CIF denotes Cost, Insurance and Freight, DT denotes Duties and Taxes paid, and SCTM denotes Supply Chain Total Markup (Regulation 4).",
+        "content": "The basic cold chain equipment includes: \n• For vaccine storage: Refrigerators and Cold-rooms.\n• For vaccine transport: Cold boxes, Vaccine carriers, Day-carriers and Thermos flasks.\n• For cold chain monitoring: Thermometers, Cold Chain Monitors, Vaccine Vial Monitors, Freeze Watch Monitors and data loggers \n• For transport: Vehicles (Source: Guidelines for Handling and Storage of vaccines.pdf, Page 2)",
         "sources": [
           {
-            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
-            "page": 1,
-            "excerpt": "accepted tolerance level which the Authority will consider necessary in the public interest.\n 10. It shall be lawful for the Authority to recall MRPs issued based on market conditions as well as to im..."
-          },
-          {
-            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
-            "page": 0,
-            "excerpt": "“Authority”), Consumer Affairs Authority established under the provisions of the Consumer Affairs Authority Act, No. 9 of \n2003 and all stakeholders and taking into consideration all other relevant fa..."
-          },
-          {
-            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
-            "page": 1,
-            "excerpt": "I fldgi ( ^I& fPoh - YS% ,xld m%cd;dka;s%l iudcjd§ ckrcfha w;s úfYI .eiÜ m;%h - 2025'07'21\nPart  I : Sec . (I) - GAZETTE EXTRAORDINARY OF THE DEMOCRATIC SOCIALIST REPUBLIC OF SRI LANKA - 21.07.2025\n2A..."
-          },
-          {
-            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
-            "page": 3,
-            "excerpt": "same strength and dosage form; and \n  “retail price” means the ceiling price or the retail price including taxes and duties as applicable, at which the drug \nshall be sold to the ultimate consumer and..."
-          },
-          {
-            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
-            "page": 2,
-            "excerpt": "generic) (n), the median retail price of such medicines shall be considered as the value at position  \n(n+1)/ 2; \n   (ii)  if the medicine has an even number of all available versions of individual pr..."
-          },
-          {
-            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
-            "page": 1,
-            "excerpt": "using external and internal reference pricing approaches.\n 6.  The average United States Dollar exchange (Selling) rate of the past three months, published by the Authority based \non the exchange rate..."
-          },
-          {
-            "document": "Pricing Mechanism for Medicines in Sri Lanka - Gazette No 2446_34.pdf",
-            "page": 2,
-            "excerpt": "14.  The MRPs of all branded or generic versions including the originator of an individual product determined by the \nAuthority which are lower than the MCP shall not be increased.\n 15.  Any new regis..."
+            "document": "Guidelines for Handling and Storage of vaccines.pdf",
+            "file_path": "data\\raw\\Guidelines for Handling and Storage of vaccines.pdf",
+            "page": "2",
+            "excerpt": "The basic cold chain equipment includes: • For  vaccine  storage  :  Refrigerators  and   Cold-rooms. • For vaccine transport: Cold boxes, Vaccine  carriers, Day-carriers and Thermos flasks. • For cold chain monitoring: Thermometers,   Cold  Chain  Monitors,  Vaccine  Vial   Monitors, Freeze Watch Monitors and data   lodgers  • For transport : Vehicles   RECEIPT OF VACCINES 1. On receiving a consi..."
           }
         ],
         "suggestions": [
-          "What is the typical range of values for the Supply Chain Total Markup (SCTM) in the given formula?",
-          "How are the Duties and Taxes (DT) calculated and what factors influence their amount?",
-          "Can the formula for calculating the Maximum Retail Price (MRP) vary depending on the type of product or industry?"
+          "What are the ideal temperature ranges for vaccine storage in refrigerators and cold-rooms?",
+          "How often should cold chain equipment be maintained or calibrated to ensure proper function?",
+          "What are the key differences between cold chain monitors and vaccine vial monitors in terms of their applications?"
         ]
+      }
+    ]
+  },
+  "3b7e5597-23cf-40ff-8386-764ef65ae800": {
+    "created_at": "2026-03-29 14:54:31",
+    "updated_at": "2026-03-29 14:54:31",
+    "title": "New Chat - 2026-03-29 14:54:31",
+    "messages": []
+  },
+  "1f77e8f0-d8a2-430f-b8ff-c50e8ab7d300": {
+    "created_at": "2026-03-31 01:08:18",
+    "updated_at": "2026-03-31 01:15:43",
+    "title": "is there any deadlines coming ...",
+    "messages": [
+      {
+        "role": "user",
+        "content": "is there any deadlines coming up ?"
+      },
+      {
+        "role": "assistant",
+        "content": "According to the documents, there are a few deadlines mentioned:\n\n1. The extended grace period for the implementation of product-specific QR codes or barcodes on commercial packaging will end on 30th June 2026 (Source: Updated Labelling Requirement Amendment 04.pdf, PAGE: 1).\n2. The requirement to affix printed or non-peelable stickers to each commercial pack, displaying the phrase “NMRA approved”, the details of the market authorization holder, and the retail price of the product, has been effective from 31 December 2024 (Source: Updated Labelling Requirement Amendment 04.pdf, PAGE: 1).\n3. The Minister shall lay copies of the report and documents submitted by the Authority before Parliament within six months from the date of receipt of such report (Source: 66cdNational medicines regulatory authority act, no. 5 of 2015 - Eng.pdf, PAGE: 19).\n4. Every regulation made by the Minister shall not later than three months after its publication in the Gazette, be brought before Parliament for approval (Source: 66cdNational medicines regulatory authority act, no. 5 of 2015 - Eng.pdf, PAGE: 87).\n5. A prosecution for an offence under this Act or any regulation made thereunder shall not be instituted after the expiration of a period of three months from the date of detection of that offence (Source: 66cdNational medicines regulatory authority act, no. 5 of 2015 - Eng.pdf, PAGE: 87).",
+        "sources": [
+          {
+            "document": "66cdNational medicines regulatory authority act, no. 5 of 2015 - Eng.pdf",
+            "file_path": "data\\raw\\66cdNational medicines regulatory authority act, no. 5 of 2015 - Eng.pdf",
+            "page": "87",
+            "excerpt": "86 National Medicines Regulatory Authority Act, No. 5 of 2015 (3) Every regulation made by the Minister shall be published in the Gazette and shall come into operation on the date of such publication or on such later date as may be specified in such regulation. (4) Every regulation made by the Minster, shall not later than three months after its publication in the Gazette, be brought before Parlia..."
+          },
+          {
+            "document": "Updated Labelling Requirement Amendment 04.pdf",
+            "file_path": "data\\raw\\Updated Labelling Requirement Amendment 04.pdf",
+            "page": "1",
+            "excerpt": "Regulatory Authority (NMRA) has decided to further extend the grace period for the implementation of product-specific QR codes or barcodes on commercial packaging. The extended grace period will commence on Ist of January 2026 and continue until 30\" June 2026. Alternatively, the NMRA will accept a 2D Matrix containing essential product information such as the product code, lot number, manufacturin..."
+          }
+        ],
+        "suggestions": [
+          "What are the consequences for not meeting the June 30th, 2026 deadline for implementing product-specific QR codes or barcodes?",
+          "Are there any exceptions or exemptions to the requirement for affixing \"NMRA approved\" stickers on commercial packs, effective from December 31, 2024?",
+          "How does the three-month time frame for instituting a prosecution for an offence under the Act affect the enforcement of regulations?"
+        ]
+      },
+      {
+        "role": "user",
+        "content": "What are the consequences for not meeting the June 30th, 2026 deadline for implementing product-specific QR codes or barcodes?"
+      },
+      {
+        "role": "assistant",
+        "content": "I cannot find information about the consequences for not meeting the June 30th, 2026 deadline in the uploaded NMRA gazettes. Please check if the relevant gazette has been uploaded. (Source: Updated Labelling Requirement Amendment 04.pdf, Page 1) only mentions the extension of the grace period until June 30th, 2026, but does not specify the consequences for non-compliance.",
+        "sources": [],
+        "suggestions": []
       }
     ]
   }

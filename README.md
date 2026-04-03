@@ -1,115 +1,150 @@
-# Hemas PharmaComply AI
+# 🛡️ Hemas PharmaComply AI
+**The Intelligent Compliance Hub for Regulatory Excellence.**
 
-A powerful RAG (Retrieval-Augmented Generation) chatbot designed to answer questions based on Gazette documents. Built with **Streamlit**, **LangChain**, and **Groq**, this application provides fast, accurate answers with citations and persistent chat history.
+Hemas PharmaComply AI is a state-of-the-art compliance management ecosystem designed specifically for the pharmaceutical industry. It automates the ingestion and analysis of **NMRA (National Medicines Regulatory Authority) gazettes**, transforming dense legal text into actionable intelligence, priority deadlines, and risk-mitigated strategies.
 
-## 🚀 Features
+---
 
-*   **Multi-LLM Support**: Seamlessly switch between **Groq** (Llama 3), **OpenAI**, and **Ollama**.
-*   **Document QA**: Upload PDF, TXT, and DOCX files to query your own knowledge base.
-*   **Smart Citations**: Answers include exact source references, page numbers, and excerpts.
-*   **Streaming Responses**: Real-time token streaming for a responsive user experience.
-*   **Chat History**: Auto-saves your chat sessions so you can revisit them later.
-*   **Follow-up Suggestions**: intelligently suggests 3 relevant follow-up questions after every answer.
-*   **Local Vector Store**: Uses ChromaDB for efficient and private document embedding storage.
-*   **Memory**: Context-aware conversations that remember previous interactions.
+## 🚀 The 5 Core Pillars
 
-## 🛠️ Prerequisites
+### 1. 💬 Q&A Assistant
+*The system's primary interface for regulatory intelligence.*
+- **Verified Source Cards**: Every AI response is backed by document citations.
+- **Integrated PDF Viewer**: Click to view the exact page in the gazette immediately within the app.
+- **Citation Copying**: One-click professional citation copying (e.g., "Source: Gazette 2341, Page 4") for reporting.
+- **Smart Context Retrieval**: Uses advanced vector embeddings to find the most relevant clauses.
 
-*   Python 3.9 or higher
-*   Git
+### 2. ⏰ Deadline Tracker
+*Automated monitoring of pharmaceutical implementation timelines with live sync.*
+- **Automated Extraction**: Scans new gazettes for dates and implementation deadlines.
+- **Sync Dashboard**: A dedicated interface to ingest new documents and update your compliance calendar.
+- **Urgency Metrics**: Visual indicators for upcoming deadlines.
+- **Regex-Optimized Scanning**: Captures diverse regulatory date formats (e.g., "1st June 2026", "by 31st Dec").
 
-## 📥 Installation
+### 3. 🛡️ Risk Evaluator
+*Assess proposed actions against current NMRA rules.*
+- **Automated Risk Scoring**: Classifies actions as Low, Medium, or High Risk with logic-based audit trails.
+- **Audit Trailing**: Maintains a log of all compliance checks performed.
+- **Action Recommendations**: Suggests corrective measures for high-risk proposals.
 
-1.  **Clone the repository:**
+### 4. 📊 Impact Predictor
+*Predicting the financial and operational impact of new gazettes.*
+- **Catalog Mapping**: Matches gazette price changes to Hemas product lists.
+- **Price Delta Analysis**: Calculates the percentage change between current and new pricing.
+- **Strategic Briefing**: Provides a summary of which products are most affected by new regulations.
+
+### 5. 🔄 Change Detector
+*Automated version comparison between new and previous price lists.*
+- **Version Comparison**: Compares two uploaded documents to find additions, deletions, or modifications.
+- **Contextual Categorization**: Automatically categorizes products based on their dosage forms or therapeutic classes.
+- **Differential Reports**: Generates a clear summary of what has changed since the last gazette.
+
+---
+
+## ✨ Advanced Capabilities
+
+### 📄 Smart OCR Reader (Tesseract Powered)
+The system supports **Scanned PDF Documents**. 
+- Using **pytesseract** and **pypdfium2**, it renders scanned pages into high-res images for text extraction.
+- **Page-Level Accuracy**: Even in OCR mode, the system preserves page numbering for precise citations.
+
+### 🔍 Live NMRA Scraper
+Stay ahead of regulations with the integrated **Live Sync** engine.
+- **Automated Monitoring**: Scans the official NMRA website for new Gazettes and Price Control documents.
+- **One-Click Ingestion**: Downloads and automatically categorizes (Legislation vs. Price Control) new files.
+- **Instant AI Update**: Newly found documents are immediately vectorized and available for the Q&A Assistant.
+
+### 🔍 Verified Source Ingestion
+- **Document Ingestion**: Automatically scans `./data/raw/` on startup and after live syncs.
+- **Vector Storage**: Uses **ChromaDB** for lightning-fast retrieval of document chunks.
+- **Persistent Memory**: Remembers your chat session for a cohesive research experience.
+
+---
+
+## 🛠️ Setup Guide (For ZIP Recipients)
+
+If you have received this project as a ZIP file, follow these steps to get it running on your local machine:
+
+### 1. Prerequisites (Mandatory)
+You MUST have **Python 3.10 or higher** and **Tesseract OCR** installed.
+
+> [!IMPORTANT]
+> **Tesseract OCR Setup (Windows):**
+> 1. Download the installer from: [UB-Mannheim Tesseract Wiki](https://github.com/UB-Mannheim/tesseract/wiki).
+> 2. Run the `.exe` and install to `C:\Program Files\Tesseract-OCR`.
+> 3. **Add to PATH**: 
+>    - Search for "Edit the system environment variables" in Windows Search.
+>    - Click **Environment Variables** → Under 'System variables', select **Path** → **Edit** → **New**.
+>    - Paste `C:\Program Files\Tesseract-OCR`.
+> 4. **Restart**: Close and reopen your terminal or VS Code.
+
+### 2. Installation Steps
+1.  **Extract the ZIP**: Right-click the `.zip` file and select "Extract All...". Open the extracted folder in VS Code or Terminal.
+2.  **Create Virtual Environment**:
     ```bash
-    git clone https://github.com/archchika02/hemas-pharmacomply-ai.git
-    cd hemas-pharmacomply-ai
-    ```
-
-2.  **Create a virtual environment (Recommended):**
-    ```bash
-    # Windows
     python -m venv venv
     .\venv\Scripts\activate
-
-    # macOS/Linux
-    python3 -m venv venv
-    source venv/bin/activate
     ```
-
-3.  **Install dependencies:**
+3.  **Install Dependencies**:
     ```bash
-    pip install -r requirements_fixed.txt
+    pip install -r requirements.txt
     ```
 
-## ⚙️ Configuration
+### 3. Configuration
+1.  **GROQ API Key**: You need a GROQ API key to power the AI logic.
+    -   Get one for free at: [console.groq.com](https://console.groq.com/).
+2.  **Setup .env**: 
+    -   Locate `.env.example` in the root folder.
+    -   Copy it and rename it to `.env`.
+    -   Open `.env` and paste your key: `GROQ_API_KEY=gsk_your_key_here`.
 
-### 1. Environment Variables
-Create a `.env` file in the root directory and add your API keys:
+---
 
-```ini
-# .env
-GROQ_API_KEY=REMOVED...
-OPENAI_API_KEY=sk-...  # Optional, if using OpenAI
-```
+## 🏃‍♂️ Initial Operation Guide
 
-> **Note:** You can get a free Groq API key from [Groq Console](https://console.groq.com/keys).
-
-### 2. Application Config
-You can modify `config.yaml` to change models, chunking settings, or retrieval parameters:
-
-```yaml
-llm_provider: groq  # options: groq, openai, ollama
-
-groq:
-  model: llama-3.3-70b-versatile
-  temperature: 0.1
-
-retrieval:
-  top_k: 7
-```
-
-## 🏃‍♂️ How to Run
-
-1.  **Add your documents:**
-    Place your PDF, TXT, or DOCX files into the `data/` folder.
-    *   *If the folder doesn't exist, create it:* `mkdir data`
-
-2.  **Start the application:**
+1.  **Launch the App**:
     ```bash
-    streamlit run main.py
+    streamlit run app/main.py
     ```
+2.  **Upload Gazettes**: Place any NMRA PDFs into the `data/raw/` directory.
+3.  **The First Run**:
+    -   The system will scan `data/raw/` and initialize the vector database (`vector_store_v2/`).
+    -   Use the **Sidebar** to navigate between the 5 pillars.
+    -   **Live Update**: Use the **🔄 Sync with NMRA** button in the global sidebar to fetch the latest documents directly from the official authority.
 
-3.  **Access the Chatbot:**
-    Open your browser and navigate to `http://localhost:8501`.
+---
 
-The app will automatically process new files in the `data/` folder and build the vector database on the first run.
+## 📁 Repository Blueprint
 
-## 📂 Project Structure
+| File/Path | Purpose |
+| :--- | :--- |
+| `app/main.py` | **Home Dashboard** - Entry point with system status. |
+| `app/pages/1_qa_assistant.py` | **Q&A Assistant** - Regulatory intelligence. |
+| `app/pages/dashboard.py` | **Deadline Tracker** - Implementation milestones. |
+| `app/pages/compliance_checker.py`| **Risk Evaluator** - Compliance verification. |
+| `app/pages/impact_analysis.py` | **Impact Predictor** - Business intelligence. |
+| `app/pages/reports.py` | **Change Detector** - Gazette version comparison. |
+| `config/config.yaml`| AI model and path configurations. |
+| `data/raw/` | The "library" where your regulatory PDFs are stored. |
+| `services/` | Logic for processing, chunking, and database management. |
+| `utils/` | UI components and sidebar rendering. |
 
-```
-hemas-pharmacomply-ai/
-├── assets/                 # Images and static assets
-├── data/                   # Place your source documents here
-├── vector_store/           # ChromaDB persistence directory (auto-generated)
-├── config.yaml             # Configuration settings
-├── main.py                 # Main Streamlit application
-├── history_manager.py      # Handles chat session persistence
-├── requirements_fixed.txt  # Project dependencies
-└── README.md               # This file
-```
+---
 
+## ⚠️ Troubleshooting
 
-## 🧩 Troubleshooting
+- **"TesseractNotInstalled" error**: Ensure you followed the PATH setup in the Prerequisites section and restarted your terminal.
+- **"GROQ_API_KEY" error**: Check that your `.env` file is named correctly (no `.txt` extension) and contains a valid key.
+- **Slow Embedding**: The first time you ingest documents, it might take a moment to download the embedding model (`all-MiniLM-L6-v2`).
 
-*   **"Meta Tensor Error"**: This is usually due to conflicting versions of `transformers` or `accelerate`. Ensure you installed strictly from `requirements_fixed.txt`.
-*   **"No gazette files found"**: Make sure you have added supported files (.pdf, .txt, .docx) to the `data/` directory.
+---
 
+## 👥 Team PharmaComply
 
-## 👥 Team Members
+*   **T. Rahitha**  ([@Rahitha-Thangavel](https://github.com/Rahitha-Thangavel)) - *Architecture & Core AI*
+*   **T. Archchika** ([@archchika02](https://github.com/archchika02)) - *Risk Evaluation & Audit*
+*   **L.J. Thilukshika** ([@ThilukshikaLJ](https://github.com/ThilukshikaLJ)) - *Change Detection & Categorization*
+*   **S. Thushanthi** ([@Thushanthi124](https://github.com/Thushanthi124)) - *Deadline Tracking & Sync*
 
-*   **T Rahitha**  ([@Rahitha-Thangavel](https://github.com/Rahitha-Thangavel))
-*   **T. Archchika** ([@archchika02](https://github.com/archchika02))
-*   **L.J. Thilukshika** ([@ThilukshikaLJ](https://github.com/ThilukshikaLJ))
-*   **S. Thushanthi** ([@Thushanthi124](https://github.com/Thushanthi124))
-
+---
+*© Hemas Holdings. Developed for AI-THON 2026.*

@@ -79,6 +79,49 @@ def find_previous_document(category):
         return docs[0]["path"]
     return None
 
+def find_comparison_pair(new_file_path):
+    """
+    Given a new file, identifies its category and year, 
+    then finds the most appropriate previous version for comparison.
+    Returns: (prev_path, new_path) or (None, new_path)
+    """
+    metadata = load_metadata()
+    fname = os.path.basename(new_file_path)
+    
+    # 1. Get info about the new file
+    category = "Other Regulations"
+    year = 0
+    if fname in metadata:
+        category = metadata[fname].get("category", "Other Regulations")
+        year = metadata[fname].get("year") or 0
+    else:
+        # Fallback to name parsing
+        year_match = re.search(r'(20\d{2})', fname)
+        year = int(year_match.group(1)) if year_match else 0
+        
+        # Simple category guess if not in metadata
+        if "price" in fname.lower() or "mrp" in fname.lower():
+            category = "Price Control"
+    
+    # 2. List all in category
+    all_in_cat = list_all_documents_in_category(category)
+    
+    # 3. Filter out the new file itself
+    previous_candidates = [d for d in all_in_cat if d["path"] != new_file_path]
+    
+    # 4. Find the best match (next oldest year or most recently modified that isn't the new one)
+    if previous_candidates:
+        # Since list_all_documents_in_category is already sorted by Year desc, Mtime desc
+        # the first one in the list that is older than the current year (or the first one in list if years match) is best.
+        for cand in previous_candidates:
+            if cand["year"] <= year:
+                return cand["path"], new_file_path
+        
+        # If all are somehow newer, take the most recent one anyway
+        return previous_candidates[0]["path"], new_file_path
+        
+    return None, new_file_path
+
 def compare_gazettes(file_path1, file_path2):
     """
     Compares two pharmaceutical gazette files and returns a summary of changes.

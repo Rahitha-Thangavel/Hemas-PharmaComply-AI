@@ -88,5 +88,29 @@
         "category": "Price Control",
         "year": 2025,
         "analyzed_at": "2026-03-30 22:06:58"
+    },
+    "Price-Control_2021_Maximum Retail Prices of Medicines 2021_1774953162.pdf": {
+        "original_name": "Maximum Retail Prices of Medicines 2021.pdf",
+        "category": "Price Control",
+        "year": 2021,
+        "analyzed_at": "2026-03-31 16:02:42"
+    },
+    "Price-Control_2019_NMRA_2019 - main_Price Controls.pdf": {
+        "original_name": "NMRA_2019 - main_Price Controls.pdf",
+        "category": "Price Control",
+        "year": 2019,
+        "analyzed_at": "2026-04-03 16:30:51"
+    },
+    "Price-Control_2021_NMRA_2021_Price Controls.pdf": {
+        "original_name": "NMRA_2021_Price Controls.pdf",
+        "category": "Price Control",
+        "year": 2021,
+        "analyzed_at": "2026-04-03 16:39:19"
+    },
+    "Price-Control_2024_NMRA_Price Controls.pdf": {
+        "original_name": "NMRA_Price Controls.pdf",
+        "category": "Price Control",
+        "year": 2024,
+        "analyzed_at": "2026-04-03 16:53:02"
     }
 }

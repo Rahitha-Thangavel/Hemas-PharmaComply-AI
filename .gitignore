@@ -11,6 +11,7 @@ __pycache__/
 
 # Chroma Vector Store
 vector_store/
+vector_store_v2/
 
 # Data
 # Uncomment the below if you don't want to push your gazette documents
@@ -18,10 +19,18 @@ vector_store/
 # data/*.txt
 # data/*.docx
 
-# OS specific
-.DS_Store
-Thumbs.db
 # Ignore raw PDFs and temp uploads
 data/raw/
 data/temp_uploads/
 tmp/
+
+# Database Logs
+data/compliance_audit.db
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
+! .streamlit/config.toml

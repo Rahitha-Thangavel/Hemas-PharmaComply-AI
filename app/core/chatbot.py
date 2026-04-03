@@ -68,8 +68,10 @@ class HemasPharmaComplyAI:
             
         st.success(f"📁 Found {len(all_files)} gazette file(s)")
         
-        if self._check_existing_vector_store(all_files):
-            st.info("✅ Loading existing vector store...")
+        missing_files = self._get_missing_files(all_files)
+        
+        if not missing_files:
+            st.info("✅ Loading existing vector store (Up to date)...")
             self.vector_store = Chroma(
                 persist_directory=str(self.vector_store_path),
                 embedding_function=self.embeddings
@@ -77,12 +79,24 @@ class HemasPharmaComplyAI:
             self.create_chain()
             return True
         else:
-            st.info("🔄 Processing gazette files...")
-            return self.process_files(all_files)
+            if self.vector_store_path.exists() and any(self.vector_store_path.iterdir()):
+                st.info(f"🔄 Found {len(missing_files)} new file(s). Updating database...")
+                self.vector_store = Chroma(
+                    persist_directory=str(self.vector_store_path),
+                    embedding_function=self.embeddings
+                )
+            else:
+                st.info("🔄 Initializing document database...")
+                
+            return self.process_files(missing_files)
 
-    def _check_existing_vector_store(self, current_files):
+    def _get_missing_files(self, current_files):
+        """
+        Identifies which files from the current list are not yet in the vector store.
+        """
         if not self.vector_store_path.exists() or not any(self.vector_store_path.iterdir()):
-            return False
+            return current_files
+            
         try:
             temp_store = Chroma(
                 persist_directory=str(self.vector_store_path),
@@ -90,12 +104,16 @@ class HemasPharmaComplyAI:
             )
             existing_data = temp_store._collection.get()
             if not existing_data['metadatas']:
-                return False
+                return current_files
+                
             existing_sources = set([m.get('source', '') for m in existing_data['metadatas']])
-            current_sources = set([Path(f).name for f in current_files])
-            return current_sources.issubset(existing_sources)
+            missing = []
+            for f in current_files:
+                if Path(f).name not in existing_sources:
+                    missing.append(f)
+            return missing
         except:
-            return False
+            return current_files
 
     def process_files(self, file_paths):
         try:
@@ -113,12 +131,16 @@ class HemasPharmaComplyAI:
             chunks = split_documents(documents, self.config)
             progress_bar.progress(0.7)
             
-            status_text.text("💾 Creating vector database...")
-            self.vector_store = Chroma.from_documents(
-                documents=chunks,
-                embedding=self.embeddings,
-                persist_directory=str(self.vector_store_path)
-            )
+            status_text.text("💾 Updating vector database...")
+            if self.vector_store is not None:
+                self.vector_store.add_documents(chunks)
+            else:
+                self.vector_store = Chroma.from_documents(
+                    documents=chunks,
+                    embedding=self.embeddings,
+                    persist_directory=str(self.vector_store_path)
+                )
+            
             self.create_chain()
             progress_bar.progress(1.0)
             
@@ -136,14 +158,25 @@ class HemasPharmaComplyAI:
             template=get_qa_prompt(),
             input_variables=["context", "question"]
         )
+        
+        # EXPLICIT CONTEXT LABELLING: This ensures the LLM sees the source/page for every chunk!
+        document_prompt = PromptTemplate(
+            input_variables=["page_content", "source", "page"],
+            template="[DOCUMENT: {source}, PAGE: {page}]\n{page_content}\n"
+        )
+        
         retriever = self.vector_store.as_retriever(
             search_kwargs={"k": self.config["retrieval"]["top_k"]}
         )
+        
         self.qa_chain = ConversationalRetrievalChain.from_llm(
             llm=self.llm,
             retriever=retriever,
             memory=self.memory,
-            combine_docs_chain_kwargs={"prompt": prompt},
+            combine_docs_chain_kwargs={
+                "prompt": prompt,
+                "document_prompt": document_prompt
+            },
             return_source_documents=True,
             verbose=False
         )
@@ -259,23 +292,88 @@ class HemasPharmaComplyAI:
             return []
 
     def _extract_sources(self, result):
+        answer = result.get('answer', '')
+        source_docs = result.get('source_documents', [])
         sources = []
         seen = set()
 
-        for doc in result.get('source_documents', []):
-            document = doc.metadata.get('source', 'Unknown')
-            page = doc.metadata.get('page', 'N/A')
-            excerpt = doc.page_content[:200].strip()
-            key = (document, page, excerpt)
+        # Helper to calculate basic keyword overlap (simple relevance check)
+        def get_relevance_score(text, ref_text):
+            text_words = set(text.lower().split())
+            ref_words = set(ref_text.lower().split())
+            # Basic score: how many words from the source are in the answer?
+            if not text_words: return 0
+            overlap = text_words.intersection(ref_words)
+            return len(overlap) / len(text_words)
 
-            if key in seen:
-                continue
+        # First pass: Look for explicit citations matching (Document, Page)
+        for doc in source_docs:
+            doc_name = doc.metadata.get('source', 'Unknown')
+            page = str(doc.metadata.get('page', ''))
+            doc_stem = Path(doc_name).stem.lower()
+            
+            # Check if both doc name and page are in the answer
+            citation_present = (doc_stem in answer.lower()) and (f"page {page}" in answer.lower() or f"p.{page}" in answer.lower() or f"p {page}" in answer.lower())
+            
+            if citation_present:
+                excerpt = doc.page_content[:400].replace('\n', ' ').strip()
+                key = (doc_name, page, excerpt[:100])
+                if key not in seen:
+                    seen.add(key)
+                    sources.append({
+                        "document": doc_name,
+                        "file_path": doc.metadata.get('file_path', ''),
+                        "page": page,
+                        "excerpt": f"{excerpt}..." if excerpt else "No excerpt available."
+                    })
 
-            seen.add(key)
+        # Second pass fallback: If no explicit citations matched, perform RELEVANCE SCORING
+        # this helps when the LLM misses the page number but uses the doc.
+        if not sources:
+            scored_sources = []
+            for doc in source_docs:
+                doc_name = doc.metadata.get('source', 'Unknown')
+                doc_stem = Path(doc_name).stem.lower()
+                
+                # Check if the document name is mentioned and if it has high keyword overlap
+                if doc_stem in answer.lower():
+                    # Check text overlap: is the content of this chunk actually in the answer?
+                    rel_score = get_relevance_score(answer, doc.page_content)
+                    
+                    # Threshold: if at least some significant keywords overlap
+                    if rel_score > 0.05: # Minimal threshold
+                        page = str(doc.metadata.get('page', 'N/A'))
+                        excerpt = doc.page_content[:400].replace('\n', ' ').strip()
+                        key = (doc_name, page, excerpt[:100])
+                        if key not in seen:
+                            seen.add(key)
+                            scored_sources.append({
+                                "score": rel_score,
+                                "document": doc_name,
+                                "file_path": doc.metadata.get('file_path', ''),
+                                "page": page,
+                                "excerpt": f"{excerpt}..."
+                            })
+            
+            # Sort by score and take the best ones (only if they are actually good)
+            scored_sources.sort(key=lambda x: x["score"], reverse=True)
+            # Only include sources that significantly relate (top 2 if no explicit citing)
+            for s in scored_sources[:2]:
+                sources.append({
+                    "document": s["document"],
+                    "file_path": s["file_path"],
+                    "page": s["page"],
+                    "excerpt": s["excerpt"]
+                })
+
+        # Final fallback: If still nothing, and not a refusal, show top 1
+        if not sources and source_docs and "i cannot find" not in answer.lower():
+            doc = source_docs[0]
             sources.append({
-                "document": document,
-                "page": page,
-                "excerpt": f"{excerpt}..." if excerpt else "No excerpt available."
+                "document": doc.metadata.get('source', 'Unknown'),
+                "file_path": doc.metadata.get('file_path', ''),
+                "page": doc.metadata.get('page', 'N/A'),
+                "excerpt": doc.page_content[:400].replace('\n', ' ').strip() + "..."
             })
 
         return sources
