@@ -28,5 +28,8 @@ retrieval:
 paths:
   data_dir: ./data/raw
   vector_store: ./vector_store_v2
+  nmra_legislation_url: https://www.nmra.gov.lk/pages/legislation
+  nmra_price_controls_url: https://www.nmra.gov.lk/pages/price-controls
+  # nmra_announcements_url: https://www.nmra.gov.lk/announcements
 
 auto_load: true
