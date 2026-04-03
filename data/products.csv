@@ -1,51 +1,59 @@
-product_brand,active_ingredient,current_mrp,category,status
-AVESTALO,Escitalopram,23.5,Mental Health,Active
-AZTOR 40,Atorvastatin,49.17,Cardiovascular,Active
-BUDEZ,Budesonide,326.4,Respiratory,Active
-LAMITOR 50,Lamotrigine,29.66,Neurology,Active
-OPTIVE,OPTIVE,1476.0,Ophthalmic,Active
-LIPITOR,Atorvastatin,22.1,Cardiovascular,Active
-TICACARD 90,Ticagrelor,113.0,Cardiovascular,Active
-VAGESTON,Progesterone,883.0,Reproductive Health,Active
-VASTAREL MR,Trimetazidine,49.31,Cardiovascular,Active
-Zabesta 5,Bisoprolol,35.0,Cardiovascular,Active
-KALCEF,Cefuroxime,640.0,Antibiotic,Active
-CANBEN,Clotrimazole,203.0,Antifungal,Active
-FRAMICIN,Framycetin,177.35,Antibiotic,Active
-FUSITOP,Fusidic Acid,839.77,Antibiotic,Active
-GABALEPT 100,Gabapentin,31.37,Neurology,Active
-GENSITA 100,Sitagliptin,57.0,Diabetes,Active
-GLIMPIR 1,Glimepiride,12.0,Diabetes,Active
-HYDROCORT 100,Hydrocortisone,286.0,Steroid,Active
-LECET,Levocetirizine,18.85,Antihistamine,Active
-LEVETAM 750,Levetiracetam,90.0,Neurology,Active
-LORID,Loratadine,416.0,Antihistamine,Active
-LOXINOL,Meloxicam,8.0,NSAID,Active
-LOZART,Losartan,8.0,Cardiovascular,Active
-DIAMET 850,Metformin,9.57,Diabetes,Active
-Metoclopramide,Metoclopramide,7.0,Gastrointestinal,Active
-MOTELAST 5,Montelukast,11.0,Respiratory,Active
-MYFORTIC 180,Mycophenolate,277.56,Immunosuppressant,Active
-NASOCLEAR,Nasal Saline,154.82,Respiratory,Active
-FLOBOID,Ofloxacin,192.0,Antibiotic,Active
-Oseltamivir,Oseltamivir,488.55,Antiviral,Active
-PANTO DR 20,Pantoprazole,25.0,Gastrointestinal,Active
-PARAMOL 500,Paracetamol,3.2,Analgesic,Active
-PHERAN,Phenylephrine,2311.52,Emergency,Active
-PICAM GEL,Piroxicam,475.0,NSAID,Active
-PROMACE,Promethazine,135.0,Antihistamine,Active
-RANITID,Ranitidine,111.46,Gastrointestinal,Active
-RESICALM 2,Risperidone,15.32,Antipsychotic,Active
-ROSUKE 10,Rosuvastatin,54.0,Cardiovascular,Active
-SALBUVENT,Salbutamol,1460.0,Respiratory,Active
-SILATIO,Sildenafil,41.81,Cardiovascular,Active
-TOPIRA 25,Topiramate,24.0,Neurology,Active
-VANCOTECH 1000,Vancomycin,2628.38,Antibiotic,Active
-VARILRIX,Varicella Vaccine,8910.0,Vaccine,Active
-VILDIPP 50,Vildagliptin,68.18,Diabetes,Active
-VINTOR 4000,Erythropoietin,1736.95,Hematology,Active
-WOSULIN,Insulin,913.14,Diabetes,Active
-ZYCOLAX 10,Bisacodyl,64.33,Laxative,Active
-Abacavir,Abacavir,350.0,Antiviral,Active
-Aciclovir Sodium,Aciclovir,978.0,Antiviral,Active
-Setallium,Alcohol Rub,405.0,Antiseptic,Active
+product_brand,active_ingredient,strength,current_mrp,category,status
+AVESTALO,Escitalopram,10mg,23.5,Mental Health,Active
+AZTOR 40,Atorvastatin,40mg,49.17,Cardiovascular,Active
+BUDEZ,Budesonide,200mcg,326.4,Respiratory,Active
+LAMITOR 50,Lamotrigine,50mg,29.66,Neurology,Active
+OPTIVE,OPTIVE,10ml,1476.0,Ophthalmic,Active
+LIPITOR,Atorvastatin,10mg,22.1,Cardiovascular,Active
+TICACARD 90,Ticagrelor,90mg,113.0,Cardiovascular,Active
+VAGESTON,Progesterone,200mg,883.0,Reproductive Health,Active
+VASTAREL MR,Trimetazidine,35mg,49.31,Cardiovascular,Active
+Zabesta 5,Bisoprolol,5mg,35.0,Cardiovascular,Active
+KALCEF,Cefuroxime,500mg,640.0,Antibiotic,Active
+CANBEN,Clotrimazole,10mg,203.0,Antifungal,Active
+HEM-ALBENDA,Albendazole,400mg,30.00,Antibiotic,Active
+HEM-AMOX CLAV,Amoxicillin+Clavulanic Acid,625mg,65.00,Antibiotic,Active
+HEM-AZITRO,Azithromycin,500mg,55.00,Antibiotic,Active
+HEM-AMLO,Amlodipine,5mg,15.00,Cardiovascular,Active
+HEM-ATOR,Atorvastatin,20mg,18.00,Cardiovascular,Active
+HEM-ROSU,Rosuvastatin,10mg,40.00,Cardiovascular,Active
+HEM-METFOR,Metformin,500mg,4.00,Diabetes,Active
+HEM-IBU,Ibuprofen,400mg,3.50,NSAID,Active
+FRAMICIN,Framycetin,1%,177.35,Antibiotic,Active
+FUSITOP,Fusidic Acid,2%,839.77,Antibiotic,Active
+GABALEPT 100,Gabapentin,100mg,31.37,Neurology,Active
+GENSITA 100,Sitagliptin,100mg,57.0,Diabetes,Active
+GLIMPIR 1,Glimepiride,1mg,12.0,Diabetes,Active
+HYDROCORT 100,Hydrocortisone,100mg,286.0,Steroid,Active
+LECET,Levocetirizine,5mg,18.85,Antihistamine,Active
+LEVETAM 750,Levetiracetam,750mg,90.0,Neurology,Active
+LORID,Loratadine,10mg,416.0,Antihistamine,Active
+LOXINOL,Meloxicam,7.5mg,8.0,NSAID,Active
+LOZART,Losartan,50mg,8.0,Cardiovascular,Active
+DIAMET 850,Metformin,850mg,9.57,Diabetes,Active
+Metoclopramide,Metoclopramide,10mg,7.0,Gastrointestinal,Active
+MOTELAST 5,Montelukast,5mg,11.0,Respiratory,Active
+MYFORTIC 180,Mycophenolate,180mg,277.56,Immunosuppressant,Active
+NASOCLEAR,Nasal Saline,0.9%,154.82,Respiratory,Active
+FLOBOID,Ofloxacin,200mg,192.0,Antibiotic,Active
+Oseltamivir,Oseltamivir,75mg,488.55,Antiviral,Active
+PANTO DR 20,Pantoprazole,20mg,25.0,Gastrointestinal,Active
+PARAMOL 500,Paracetamol,500mg,3.2,Analgesic,Active
+PHERAN,Phenylephrine,10mg,2311.52,Emergency,Active
+PICAM GEL,Piroxicam,0.5%,475.0,NSAID,Active
+PROMACE,Promethazine,25mg,135.0,Antihistamine,Active
+RANITID,Ranitidine,150mg,111.46,Gastrointestinal,Active
+RESICALM 2,Risperidone,2mg,15.32,Antipsychotic,Active
+ROSUKE 10,Rosuvastatin,10mg,54.0,Cardiovascular,Active
+SALBUVENT,Salbutamol,100mcg,1460.0,Respiratory,Active
+SILATIO,Sildenafil,50mg,41.81,Cardiovascular,Active
+TOPIRA 25,Topiramate,25mg,24.0,Neurology,Active
+VANCOTECH 1000,Vancomycin,1000mg,2628.38,Antibiotic,Active
+VARILRIX,Varicella Vaccine,0.5ml,8910.0,Vaccine,Active
+VILDIPP 50,Vildagliptin,50mg,68.18,Diabetes,Active
+VINTOR 4000,Erythropoietin,4000IU,1736.95,Hematology,Active
+WOSULIN,Insulin,40IU/ml,913.14,Diabetes,Active
+ZYCOLAX 10,Bisacodyl,10mg,64.33,Laxative,Active
+Abacavir,Abacavir,300mg,350.0,Antiviral,Active
+Aciclovir Sodium,Aciclovir,250mg,978.0,Antiviral,Active
+Setallium,Alcohol Rub,500ml,405.0,Antiseptic,Active

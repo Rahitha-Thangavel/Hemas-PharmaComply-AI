@@ -326,9 +326,15 @@
       }
     ]
   },
-  "e7a8f9a5-5d12-4ae4-9d10-58f1c999fc9d": {
-    "created_at": "2026-04-04 03:28:13",
-    "updated_at": "2026-04-04 03:28:18",
+  "eb3263a8-cb0c-457f-9bf1-629f3b073214": {
+    "created_at": "2026-04-04 03:35:44",
+    "updated_at": "2026-04-04 03:35:44",
+    "title": "New Chat - 2026-04-04 03:35:44",
+    "messages": []
+  },
+  "0e8f31a1-e327-440d-9c0b-78d5104c145d": {
+    "created_at": "2026-04-04 03:36:07",
+    "updated_at": "2026-04-04 03:36:30",
     "title": "hi",
     "messages": [
       {
@@ -337,8 +343,96 @@
       },
       {
         "role": "assistant",
+        "content": "According to the regulations, the Cosmetics, Devices and Drugs Authority shall prepare a register of every registered cosmetic and enter the following particulars: \n(a) the name of the cosmetic; \n(b) the name of the manufacturer; \n(c) the country of manufacture; \n(d) the registration number assigned to it; \n(e) the name and address of the holder of the certificate of registration; \n(f) whether he is an importer or manufacturer; and \n(g) the number of the licence issued to him (Source: cdd_regulations_05.pdf, Page 1). \n\nAdditionally, the licensed manufacturer of cosmetics shall provide information as required by the Authority, inform the Authority of any material alterations, and keep records of manufacture available for inspection (Source: NMRA_cdd_regulations_05.pdf, Page 5).",
+        "sources": [],
+        "suggestions": []
+      }
+    ]
+  },
+  "923d28eb-8be2-424c-bdf8-598a49a996f5": {
+    "created_at": "2026-04-04 03:36:38",
+    "updated_at": "2026-04-04 03:36:46",
+    "title": "Hi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi"
+      },
+      {
+        "role": "assistant",
+        "content": "I cannot find information about the specific requirements and process for registering cosmetics in Sri Lanka, including the necessary documentation, fees, and timelines in the uploaded documents. (Source: cdd_regulations_05.pdf, PAGE: 3-4) \n\nHowever, I can provide some general information about the licensing of importers of cosmetics. According to the document, every person desirous of obtaining a licence to import any registered cosmetic shall make a separate application to the Authority in respect of each such cosmetic which he intends to import (Source: cdd_regulations_05.pdf, PAGE: 3). The application shall be substantially in Form A of Schedule IV (Source: cdd_regulations_05.pdf, PAGE: 3). \n\nAdditionally, every licensed importer of cosmetics shall exhibit the licence issued to him under regulation 11 in a conspicuous place in the premises at which he sells, stores or distributes the cosmetics imported under that licence (Source: cdd_regulations_05.pdf, PAGE: 4). The Authority shall keep a register of all licensed importers of cosmetics and shall enter therein the name of the licensed importer, address of the premises, date of issue of the licence, and the number and data of the certificate of registration if any issued to him under the Business Names Ordinance (Chapter 149) (Source: cdd_regulations_05.pdf, PAGE: 4).",
+        "sources": [],
+        "suggestions": []
+      }
+    ]
+  },
+  "cb32cd91-2ab6-458e-b2bb-8bed2a646233": {
+    "created_at": "2026-04-04 03:37:00",
+    "updated_at": "2026-04-04 03:38:48",
+    "title": "Hi",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi"
+      },
+      {
+        "role": "assistant",
         "content": "Hello. I am Hemas PharmaComply AI, officially synchronized with the live NMRA database. I can help you with all types of NMRA regulations (Price Controls, Registration, Labelling, and more), compliance deadlines, and impact analysis. What would you like to know?",
         "sources": [],
+        "suggestions": []
+      },
+      {
+        "role": "user",
+        "content": "What are the basic cold chain equipment includes ?"
+      },
+      {
+        "role": "assistant",
+        "content": "The basic cold chain equipment includes:\n• For vaccine storage: Refrigerators and Cold-rooms.\n• For vaccine transport: Cold boxes, Vaccine carriers, Day-carriers, and Thermos flasks.\n• For cold chain monitoring: Thermometers, Cold Chain Monitors, Vaccine Vial Monitors, Freeze Watch Monitors, and data loggers.\n• For transport: Vehicles (Source: Guidelines for Handling and Storage of vaccines.pdf, Page 2)",
+        "sources": [
+          {
+            "document": "Guidelines for Handling and Storage of vaccines.pdf",
+            "file_path": "data\\raw\\Guidelines for Handling and Storage of vaccines.pdf",
+            "page": "2",
+            "excerpt": "The basic cold chain equipment includes: • For  vaccine  storage  :  Refrigerators  and   Cold-rooms. • For vaccine transport: Cold boxes, Vaccine  carriers, Day-carriers and Thermos flasks. • For cold chain monitoring: Thermometers,   Cold  Chain  Monitors,  Vaccine  Vial   Monitors, Freeze Watch Monitors and data   lodgers  • For transport : Vehicles   RECEIPT OF VACCINES 1. On receiving a consi..."
+          }
+        ],
+        "suggestions": [
+          "What are the ideal temperature ranges for vaccine storage in refrigerators and cold-rooms?",
+          "How often should cold chain equipment be monitored and maintained to ensure optimal performance?",
+          "What are the key differences between cold chain monitors and vaccine vial monitors in terms of their functions?"
+        ]
+      },
+      {
+        "role": "user",
+        "content": "What are the key differences between cold chain monitors and vaccine vial monitors in terms of their functions?"
+      },
+      {
+        "role": "assistant",
+        "content": "I cannot find information about the specific differences between cold chain monitors and vaccine vial monitors in the uploaded documents. (Source: Guidelines for Handling and Storage of vaccines.pdf, PAGE: 1-2) The documents only mention that both are part of the cold chain equipment used for monitoring, but do not provide a detailed comparison of their functions.",
+        "sources": [],
+        "suggestions": []
+      },
+      {
+        "role": "user",
+        "content": "What are the registration rules for Cosmetics ?"
+      },
+      {
+        "role": "assistant",
+        "content": "The registration rules for cosmetics are outlined in the Cosmetics, Devices and Drugs Act, No. 27 of 1980, as amended by Act, No. 38 of 1984. According to the regulations, every cosmetic shall be called a \"registered cosmetic\" (Source: cdd_regulations_05.pdf, Page 1). \n\nThe Cosmetics, Devices and Drugs Authority shall prepare a register of every registered cosmetic, which shall include the following particulars: \n(a) the name of the cosmetic; \n(b) the name of the manufacturer; \n(c) the country of manufacture; \n(d) the registration number assigned to it; \n(e) the name and address of the holder of the certificate of registration; \n(f) whether he is an importer or manufacturer; and \n(g) the number of the licence issued to him (Source: cdd_regulations_05.pdf, Page 1).\n\nThe application for registration of a cosmetic by a manufacturer should be made using the Application Form for Registration of a Cosmetic by a Manufacturer (Form C Regulation 4 (5)) (Source: cdd_regulations_05.pdf, Page 8). \n\nThe registration process begins after the expiry of a period of three months from the date of operation, which is January 1, 1986 (Source: cdd_regulations_05.pdf, Page 1).",
+        "sources": [
+          {
+            "document": "cdd_regulations_05.pdf",
+            "file_path": "data\\raw\\cdd_regulations_05.pdf",
+            "page": "1",
+            "excerpt": "on Ist January 1986, (hereinafter referred to as “ the date of operation ”). 2. For the purposes of these regulations every cosmetic under tho Cosmeties, Devices and Drugs Act, No. 27 of 1980, as amended by Act, No. 38 of 1984 (hereinafter referred to as “the Act”) shall be called “ s registered cosmetic.” Pasi I Reaistration or Cosmetics. : 3. Onor after the oxpiry of a period of three months fro..."
+          },
+          {
+            "document": "cdd_regulations_05.pdf",
+            "file_path": "data\\raw\\cdd_regulations_05.pdf",
+            "page": "8",
+            "excerpt": "FOR OFFICIAL USE ONLY. Application No. :..........65 Decision: Registered/Not rogistered. Registration No, : Fees Paid :......6+ Date :...seecseee vee Anthority. Sonmputz I Form C Regulation 4 (5) Arriication Form ror Czrrivicars or ReoistraTion or A Cosmetic sy A ManuracTuRER (To be filled in triplicate by Applicant) w+ OF -. ... hereby apply for registration of the cosmetic und formulation for m..."
+          }
+        ],
         "suggestions": []
       }
     ]

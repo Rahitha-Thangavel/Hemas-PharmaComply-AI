@@ -210,7 +210,7 @@ def main():
                     df_cat = pd.read_csv(products_csv)
                     st.success(f"Connected: `{len(df_cat)}` Products")
                     with st.expander("Preview Internal Prices"):
-                        st.dataframe(df_cat[['product_brand', 'active_ingredient', 'current_mrp']].head(10), use_container_width=True)
+                        st.dataframe(df_cat[['product_brand', 'active_ingredient', 'strength', 'current_mrp']].head(10), use_container_width=True)
                 else: st.error("products.csv not found!")
 
         # --- RUN ANALYSIS ---

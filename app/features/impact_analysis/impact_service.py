@@ -21,7 +21,7 @@ class ImpactService:
                 return df
             except Exception as e:
                 print(f"Error loading products: {e}")
-        return pd.DataFrame(columns=["product_brand", "active_ingredient", "current_mrp", "category", "status"])
+        return pd.DataFrame(columns=["product_brand", "active_ingredient", "strength", "current_mrp", "category", "status"])
 
     def predict_impact(self, target_filename=None):
         """
@@ -116,11 +116,26 @@ class ImpactService:
         return match.group(1).strip() if match else "TBD"
 
     def _find_matches(self, record):
-        """Standardized matching on ingredient (Step 6)"""
+        """Standardized matching on ingredient AND strength (Step 6)"""
         ingredient = record['ingredient'].lower().strip()
+        strength = record['strength'].lower().strip()
+        
         def check_row(row):
             cat_ingredient = str(row['active_ingredient']).lower()
-            return ingredient in cat_ingredient or cat_ingredient in ingredient
+            cat_strength = str(row.get('strength', '')).lower()
+            
+            # Match ingredient
+            name_match = (ingredient in cat_ingredient or cat_ingredient in ingredient)
+            
+            # Match strength (if provided in both)
+            strength_match = True
+            if strength and cat_strength:
+                # Basic normalization for matching (remove spaces, lowercase)
+                strength_match = (strength.replace(" ", "") in cat_strength.replace(" ", "") or 
+                                 cat_strength.replace(" ", "") in strength.replace(" ", ""))
+            
+            return name_match and strength_match
+            
         return self.products_df[self.products_df.apply(check_row, axis=1)]
 
     def _analyze_single_product_impact(self, product, record, deadline):
